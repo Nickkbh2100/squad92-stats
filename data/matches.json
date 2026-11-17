@@ -1,1 +1,3228 @@
-{"updatedAt":null,"members":[],"matches":[],"checked":{}}
+{
+ "updatedAt": "2026-11-17T11:00:12.683Z",
+ "members": [
+  {
+   "name": "Nick-kbh",
+   "accountId": "account.f6559dc6972f41b4832f875cf21451b4"
+  },
+  {
+   "name": "Vykso",
+   "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b"
+  },
+  {
+   "name": "92EFFEKTEN",
+   "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8"
+  },
+  {
+   "name": "92Diamond",
+   "accountId": "account.2b7c5c7edded414fb1031fece86cda59"
+  }
+ ],
+ "matches": [
+  {
+   "id": "8f030a8f-69ae-405a-8646-23dd633d19b6",
+   "createdAt": "2026-11-16T21:20:20Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1698,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 162.4,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1698,
+       "longestKill": 493.3,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 57.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1372,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 120.6,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 1698,
+       "longestKill": 48.8,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "7a7cf022-9af2-4991-9f2a-fa7b79274270",
+   "createdAt": "2026-11-16T20:51:08Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1656,
+   "teams": [
+    {
+     "rank": 2,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 413.3,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 1653,
+       "longestKill": 189.3,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 299.9,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1556,
+       "longestKill": 105.7,
+       "deathType": "byzone",
+       "winPlace": 2
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 267.1,
+       "kills": 0,
+       "assists": 2,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1573,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d2b9ba71-9f0d-4b8c-becf-a4ecddc37cad",
+   "createdAt": "2026-11-16T20:28:53Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1641,
+   "teams": [
+    {
+     "rank": 6,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 768,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 6
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 424.6,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 2,
+       "timeSurvived": 1211,
+       "longestKill": 3.5,
+       "deathType": "byplayer",
+       "winPlace": 6
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 385.4,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1206,
+       "longestKill": 4.1,
+       "deathType": "byplayer",
+       "winPlace": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fb0d8ee6-4eb3-47ad-9a31-f74f8639f6e5",
+   "createdAt": "2026-11-15T21:51:23Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1482,
+   "teams": [
+    {
+     "rank": 6,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 177.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 6
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 415.2,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 1175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 6
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 140.9,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 3,
+       "timeSurvived": 1175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 6
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 89.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1097,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d81ce603-c0a5-4fcc-a10c-1e3052f05aec",
+   "createdAt": "2026-11-15T21:25:07Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1581,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 349.1,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 4,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1451,
+       "longestKill": 255.4,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 545.5,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1451,
+       "longestKill": 266.1,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 382.9,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1404,
+       "longestKill": 7.7,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 480.9,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 1451,
+       "longestKill": 138.9,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "084e8514-b764-4f23-884c-8d63a1dc248f",
+   "createdAt": "2026-11-15T20:56:11Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1612,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 202.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1494,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 1
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 293.3,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1612,
+       "longestKill": 0,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 356.7,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1377,
+       "longestKill": 167.3,
+       "deathType": "byplayer",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 466.6,
+       "kills": 3,
+       "assists": 2,
+       "dbnos": 4,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1612,
+       "longestKill": 250.4,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1fafffd1-403c-4437-8879-c59e5856f678",
+   "createdAt": "2026-11-15T20:22:26Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1605,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 403.3,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1521,
+       "longestKill": 152.5,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 161.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1247,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "be057759-e4ca-47e7-ac95-749bc647fd61",
+   "createdAt": "2026-11-14T21:42:23Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1593,
+   "teams": [
+    {
+     "rank": 7,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 265.5,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1212,
+       "longestKill": 58.8,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 79.9,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 1212,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 55.7,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1006,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "92dcb478-d6e0-46cd-8b88-45ee0fa6732b",
+   "createdAt": "2026-11-14T21:27:41Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1709,
+   "teams": [
+    {
+     "rank": 12,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 40.7,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 635,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 12
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 375.3,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 766,
+       "longestKill": 22.2,
+       "deathType": "byplayer",
+       "winPlace": 12
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 766,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "79179dfa-f8ac-4f6f-87f1-c172165e9d18",
+   "createdAt": "2026-11-14T21:16:21Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1632,
+   "teams": [
+    {
+     "rank": 14,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 179.6,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 585,
+       "longestKill": 244.5,
+       "deathType": "byplayer",
+       "winPlace": 14
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 346,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 14
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 238.1,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 585,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 14
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a10fb6cb-404b-4f63-aec5-f9dcdbaa69d3",
+   "createdAt": "2026-11-14T21:06:07Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1469,
+   "teams": [
+    {
+     "rank": 13,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 100,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 2,
+       "timeSurvived": 511,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 92.8,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 512,
+       "longestKill": 80.3,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 512,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 13
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abc749ea-6e18-4daa-98a3-13f640c03167",
+   "createdAt": "2026-11-14T20:59:25Z",
+   "map": "Kiki_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1566,
+   "teams": [
+    {
+     "rank": 37,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 285,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 37
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 285,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 37
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "567d469a-0fb0-4de8-b7fe-cbb1a14b6b59",
+   "createdAt": "2026-11-14T20:54:23Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1520,
+   "teams": [
+    {
+     "rank": 38,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 206,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 38
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 97.2,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 206,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 38
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1da43182-5001-4465-8d68-6ab82a1843d8",
+   "createdAt": "2026-11-14T20:39:23Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1661,
+   "teams": [
+    {
+     "rank": 25,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 91.7,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 743,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 25
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 191.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 743,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 25
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ed762c88-c099-40fd-8d7f-f385b32c02fd",
+   "createdAt": "2026-11-12T21:49:09Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1542,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 358,
+       "kills": 2,
+       "assists": 2,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1542,
+       "longestKill": 46.9,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 783.1,
+       "kills": 6,
+       "assists": 1,
+       "dbnos": 5,
+       "headshots": 1,
+       "revives": 2,
+       "timeSurvived": 1542,
+       "longestKill": 319.5,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 399.6,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1542,
+       "longestKill": 428.5,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c9469ff5-4fdd-4629-867d-668fd800ccba",
+   "createdAt": "2026-11-12T21:24:30Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1685,
+   "teams": [
+    {
+     "rank": 5,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 323,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1227,
+       "longestKill": 284.3,
+       "deathType": "byplayer",
+       "winPlace": 5
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 50.3,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1246,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 5
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 453.3,
+       "kills": 4,
+       "assists": 0,
+       "dbnos": 5,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1386,
+       "longestKill": 289.6,
+       "deathType": "byplayer",
+       "winPlace": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bd688ebf-d6ae-496d-9af6-31c63662fde0",
+   "createdAt": "2026-11-12T21:09:57Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1287,
+   "teams": [
+    {
+     "rank": 9,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 725,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 9
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 687,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 11
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 725,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "08d16c50-adfe-435e-acf2-f3e68f732278",
+   "createdAt": "2026-11-12T20:49:04Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1532,
+   "teams": [
+    {
+     "rank": 8,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 899,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 8
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 95.8,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1144,
+       "longestKill": 37.1,
+       "deathType": "byplayer",
+       "winPlace": 8
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 365,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1144,
+       "longestKill": 28.5,
+       "deathType": "byplayer",
+       "winPlace": 8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1bdf92f1-0849-4ebe-b5ff-48da33bb08e0",
+   "createdAt": "2026-11-12T20:42:13Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1502,
+   "teams": [
+    {
+     "rank": 17,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 58.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 321,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 17
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 299,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 18
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 46.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 321,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 17
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "23c8cc8e-2fd5-4907-9f89-2a8e0eb30fcd",
+   "createdAt": "2026-11-12T20:32:26Z",
+   "map": "Kiki_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1606,
+   "teams": [
+    {
+     "rank": 20,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 19.1,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 476,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 20
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 476,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 20
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 200.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 450,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "51bbd8ea-ae30-455b-b46b-9fd07266db2e",
+   "createdAt": "2026-11-12T20:10:58Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1699,
+   "teams": [
+    {
+     "rank": 10,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 708.5,
+       "kills": 6,
+       "assists": 1,
+       "dbnos": 3,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1186,
+       "longestKill": 225.2,
+       "deathType": "byplayer",
+       "winPlace": 10
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 552.8,
+       "kills": 2,
+       "assists": 1,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1186,
+       "longestKill": 101,
+       "deathType": "byplayer",
+       "winPlace": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "09d215bd-c228-4f46-b0c9-f474f1efb544",
+   "createdAt": "2026-11-10T21:36:12Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1561,
+   "teams": [
+    {
+     "rank": 2,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 104.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1347,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 235.9,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1401,
+       "longestKill": 22.6,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 235,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1558,
+       "longestKill": 112.7,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 76.9,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1406,
+       "longestKill": 4.4,
+       "deathType": "byzone",
+       "winPlace": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "188e1a79-e78e-439e-a463-7231e21df5ae",
+   "createdAt": "2026-11-10T21:03:00Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1661,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 119.6,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1661,
+       "longestKill": 215.4,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 461,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 3,
+       "revives": 0,
+       "timeSurvived": 1661,
+       "longestKill": 178.4,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 365.6,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1661,
+       "longestKill": 69.9,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 306.7,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1661,
+       "longestKill": 54,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "28685829-2c45-474e-b965-e0b7037dfa97",
+   "createdAt": "2026-11-10T20:34:14Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1654,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 180.5,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1080,
+       "longestKill": 110.5,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 480.8,
+       "kills": 2,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1078,
+       "longestKill": 40.1,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 414.6,
+       "kills": 5,
+       "assists": 1,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1444,
+       "longestKill": 248.6,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 781.6,
+       "kills": 4,
+       "assists": 5,
+       "dbnos": 7,
+       "headshots": 0,
+       "revives": 3,
+       "timeSurvived": 1627,
+       "longestKill": 29.6,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "81ae87f4-5708-4e82-ab39-fde7e5372a34",
+   "createdAt": "2026-11-10T20:10:49Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1544,
+   "teams": [
+    {
+     "rank": 10,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 70.9,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1245,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 10
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 107.3,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1224,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 10
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 266.5,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1217,
+       "longestKill": 39.4,
+       "deathType": "byplayer",
+       "winPlace": 10
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2147c0da-7eec-4e67-acc7-23cd839bdaaa",
+   "createdAt": "2026-11-08T20:55:53Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1729,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 711.8,
+       "kills": 4,
+       "assists": 2,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1729,
+       "longestKill": 153.6,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 77.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1729,
+       "longestKill": 0,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 500.6,
+       "kills": 6,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1729,
+       "longestKill": 204.2,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 205.6,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1729,
+       "longestKill": 456.6,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5e70829b-bece-4846-bf45-01c04c1b8411",
+   "createdAt": "2026-11-08T20:33:47Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1600,
+   "teams": [
+    {
+     "rank": 7,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 208.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1233,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 364.3,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1232,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 56.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1154,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 194.7,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1233,
+       "longestKill": 86.4,
+       "deathType": "byplayer",
+       "winPlace": 7
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6470e1cb-8b93-4e8d-a598-cff3ef68f01e",
+   "createdAt": "2026-11-08T20:24:18Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1684,
+   "teams": [
+    {
+     "rank": 41,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 898,
+       "longestKill": 0,
+       "deathType": "byzone",
+       "winPlace": 41
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 772,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 41
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "7f16b20d-41ac-45e5-a83f-d73241bbc749",
+   "createdAt": "2026-11-08T20:12:48Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1589,
+   "teams": [
+    {
+     "rank": 23,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 227.3,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 764,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 23
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 164.4,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 759,
+       "longestKill": 78.2,
+       "deathType": "byplayer",
+       "winPlace": 23
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ec8ce8c3-1b29-429f-bb90-e02dc922b5e9",
+   "createdAt": "2026-11-08T20:04:21Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1557,
+   "teams": [
+    {
+     "rank": 29,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 138.7,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 382,
+       "longestKill": 1.4,
+       "deathType": "byplayer",
+       "winPlace": 29
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 186.9,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 382,
+       "longestKill": 19.8,
+       "deathType": "byplayer",
+       "winPlace": 29
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c955190a-2fe0-494d-8b99-43689b893c40",
+   "createdAt": "2026-11-06T21:17:43Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1661,
+   "teams": [
+    {
+     "rank": 8,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 620.3,
+       "kills": 3,
+       "assists": 1,
+       "dbnos": 6,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1204,
+       "longestKill": 88.4,
+       "deathType": "byplayer",
+       "winPlace": 8
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 318.8,
+       "kills": 3,
+       "assists": 1,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1255,
+       "longestKill": 70.8,
+       "deathType": "byplayer",
+       "winPlace": 8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ced74ed9-859b-4a2c-b48d-95eedd77c436",
+   "createdAt": "2026-11-06T20:56:38Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1672,
+   "teams": [
+    {
+     "rank": 15,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 788,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 15
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 227.9,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1132,
+       "longestKill": 33.9,
+       "deathType": "byplayer",
+       "winPlace": 15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1b0d6e18-e2db-4aff-99e5-e4b2046df2bd",
+   "createdAt": "2026-11-06T20:42:33Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1694,
+   "teams": [
+    {
+     "rank": 20,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 725,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 20
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 166.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 725,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f9a396d0-e4b9-40bf-abca-7f2a4fc82539",
+   "createdAt": "2026-11-05T22:32:56Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1486,
+   "teams": [
+    {
+     "rank": 8,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1035,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 344,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1120,
+       "longestKill": 13.3,
+       "deathType": "byplayer",
+       "winPlace": 8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "51e89cef-5c1f-4a89-a8ea-0cd0130c0274",
+   "createdAt": "2026-11-05T22:20:10Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1564,
+   "teams": [
+    {
+     "rank": 17,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 51.1,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 649,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 17
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 358.5,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 649,
+       "longestKill": 83,
+       "deathType": "byplayer",
+       "winPlace": 17
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "09b97d9b-7cc7-438f-b398-f3bb78e3404d",
+   "createdAt": "2026-11-05T22:11:19Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1623,
+   "teams": [
+    {
+     "rank": 28,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 10,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 374,
+       "longestKill": 21.9,
+       "deathType": "byplayer",
+       "winPlace": 28
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 374,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 28
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a49b3332-4483-4e55-81e3-8043c5c2e55b",
+   "createdAt": "2026-11-05T21:42:28Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1631,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 326.4,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1595,
+       "longestKill": 93.8,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 430.7,
+       "kills": 4,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1595,
+       "longestKill": 115,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "7da5a1ba-b92a-49cf-9802-328a28c7eb97",
+   "createdAt": "2026-11-05T10:41:52Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1631,
+   "teams": [
+    {
+     "rank": 26,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 56.7,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 509,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 26
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 257.6,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 509,
+       "longestKill": 19.2,
+       "deathType": "byplayer",
+       "winPlace": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8dcc360f-05dd-414a-97ed-dbb00d31e628",
+   "createdAt": "2026-11-05T10:33:07Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1470,
+   "teams": [
+    {
+     "rank": 26,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 19.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 405,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 26
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 28,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 434,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8dc95bc2-965a-4544-9e8e-395dbb6692d4",
+   "createdAt": "2026-11-05T10:26:23Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1560,
+   "teams": [
+    {
+     "rank": 32,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 33.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 258,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 32
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 244,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 32
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dc0e2f78-d58a-4b97-8d07-07b142f126a3",
+   "createdAt": "2026-11-05T10:22:34Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1579,
+   "teams": [
+    {
+     "rank": 46,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 103,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 46
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 143,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 46
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "0bb269ce-375f-4b99-b392-609559bd1151",
+   "createdAt": "2026-11-05T10:16:34Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1796,
+   "teams": [
+    {
+     "rank": 37,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 148,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 275,
+       "longestKill": 21.6,
+       "deathType": "byplayer",
+       "winPlace": 37
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 155,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 37
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f7dca995-c879-4c21-b025-dc21e18cd62a",
+   "createdAt": "2026-11-05T09:52:30Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 2064,
+   "teams": [
+    {
+     "rank": 5,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 844.1,
+       "kills": 4,
+       "assists": 5,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1303,
+       "longestKill": 369.8,
+       "deathType": "byplayer",
+       "winPlace": 5
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 580.5,
+       "kills": 9,
+       "assists": 1,
+       "dbnos": 4,
+       "headshots": 3,
+       "revives": 0,
+       "timeSurvived": 1283,
+       "longestKill": 264.1,
+       "deathType": "byplayer",
+       "winPlace": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4ad33767-4c21-43e8-96d3-f75447cb14ce",
+   "createdAt": "2026-11-05T08:09:10Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 2059,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 634.2,
+       "kills": 3,
+       "assists": 1,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1446,
+       "longestKill": 117.6,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 1092.3,
+       "kills": 8,
+       "assists": 1,
+       "dbnos": 5,
+       "headshots": 3,
+       "revives": 0,
+       "timeSurvived": 1446,
+       "longestKill": 201.1,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6e14a26d-2266-4e44-a528-48e869730c99",
+   "createdAt": "2026-11-05T07:50:17Z",
+   "map": "Neon_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1782,
+   "teams": [
+    {
+     "rank": 15,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 280.3,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1029,
+       "longestKill": 84.4,
+       "deathType": "byplayer",
+       "winPlace": 15
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 25.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1029,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 15
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "7bb765b4-f174-486c-95d1-2920ec46ff83",
+   "createdAt": "2026-11-05T07:25:44Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1846,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 173.9,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1236,
+       "longestKill": 33.9,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 684,
+       "kills": 7,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 2,
+       "revives": 2,
+       "timeSurvived": 1317,
+       "longestKill": 316,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfa0be73-04cb-4392-9288-a345f7dd284f",
+   "createdAt": "2026-11-04T21:35:44Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1669,
+   "teams": [
+    {
+     "rank": 4,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 236.5,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1420,
+       "longestKill": 61.2,
+       "deathType": "byplayer",
+       "winPlace": 4
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 373.1,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 2,
+       "revives": 2,
+       "timeSurvived": 1452,
+       "longestKill": 162.8,
+       "deathType": "byplayer",
+       "winPlace": 4
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 214.4,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1452,
+       "longestKill": 63.4,
+       "deathType": "byplayer",
+       "winPlace": 4
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 517.3,
+       "kills": 1,
+       "assists": 1,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1452,
+       "longestKill": 89.2,
+       "deathType": "byplayer",
+       "winPlace": 4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "87ba725b-c600-4442-8735-8bd16abe04fc",
+   "createdAt": "2026-11-04T21:04:24Z",
+   "map": "DihorOtok_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1573,
+   "teams": [
+    {
+     "rank": 2,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 493.4,
+       "kills": 4,
+       "assists": 1,
+       "dbnos": 3,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1564,
+       "longestKill": 40.4,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 283.1,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1570,
+       "longestKill": 36.7,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 803,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 290.2,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1564,
+       "longestKill": 14.2,
+       "deathType": "byzone",
+       "winPlace": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a7b67311-5f2c-47ac-b03d-f7622fc8365e",
+   "createdAt": "2026-11-04T20:34:23Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1672,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 100,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 3,
+       "timeSurvived": 1272,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 233.9,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1150,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 756.6,
+       "kills": 6,
+       "assists": 0,
+       "dbnos": 7,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1655,
+       "longestKill": 194.8,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 652,
+       "kills": 2,
+       "assists": 3,
+       "dbnos": 4,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1548,
+       "longestKill": 50.5,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4e5f37ba-94fd-4530-9da5-8f954c69a88e",
+   "createdAt": "2026-11-04T20:29:58Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1570,
+   "teams": [
+    {
+     "rank": 24,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 24
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 61.6,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 125,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 24
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 24
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 27.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 175,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 24
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "89a222dd-0547-4111-960a-6227b91e53bb",
+   "createdAt": "2026-11-04T20:18:17Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1694,
+   "teams": [
+    {
+     "rank": 48,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 105,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 153,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 48
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 153,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 48
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "42b43b71-b26a-4828-97cb-527898e8b76c",
+   "createdAt": "2026-11-04T20:05:33Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1657,
+   "teams": [
+    {
+     "rank": 42,
+     "won": false,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 177,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 42
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 49.7,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 202,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 42
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5ed91df8-f31f-41d4-ae66-e8cb035b309a",
+   "createdAt": "2026-11-03T21:34:25Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1526,
+   "teams": [
+    {
+     "rank": 32,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 206.1,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 332,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 32
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 86.8,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 332,
+       "longestKill": 35,
+       "deathType": "byplayer",
+       "winPlace": 32
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "96ba09fa-1553-4a43-aff7-09954db172bf",
+   "createdAt": "2026-11-03T21:31:32Z",
+   "map": "Chimera_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1222,
+   "teams": [
+    {
+     "rank": 29,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 100,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 78,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 29
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 71,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 29
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "495df316-1114-4013-bc4b-7860d3135bb7",
+   "createdAt": "2026-11-03T21:28:09Z",
+   "map": "Baltic_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1517,
+   "teams": [
+    {
+     "rank": 52,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 96,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 52
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 90,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 52
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3a9d3a85-db24-4e0e-8d64-bb1b62eea658",
+   "createdAt": "2026-11-03T21:25:05Z",
+   "map": "Chimera_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1320,
+   "teams": [
+    {
+     "rank": 30,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 82.8,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 84,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 30
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 67,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 84,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8f2e1be8-c5b4-4115-a813-833f5f3c2b77",
+   "createdAt": "2026-11-03T21:00:28Z",
+   "map": "Chimera_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1375,
+   "teams": [
+    {
+     "rank": 3,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 141,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1357,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 3
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 490,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 3,
+       "timeSurvived": 1361,
+       "longestKill": 141.9,
+       "deathType": "byplayer",
+       "winPlace": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "15546686-c878-47a7-8f4d-c3d8601a6015",
+   "createdAt": "2026-11-03T20:44:14Z",
+   "map": "Chimera_Main",
+   "gameMode": "duo-fpp",
+   "matchType": "official",
+   "duration": 1278,
+   "teams": [
+    {
+     "rank": 7,
+     "won": false,
+     "players": [
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 439.3,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 865,
+       "longestKill": 6.2,
+       "deathType": "byplayer",
+       "winPlace": 7
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 151.4,
+       "kills": 0,
+       "assists": 1,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 712,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 7
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "checked": {
+  "fb0d8ee6-4eb3-47ad-9a31-f74f8639f6e5": "2026-11-15T21:51:23Z",
+  "c9469ff5-4fdd-4629-867d-668fd800ccba": "2026-11-12T21:24:30Z",
+  "bd688ebf-d6ae-496d-9af6-31c63662fde0": "2026-11-12T21:09:57Z",
+  "08d16c50-adfe-435e-acf2-f3e68f732278": "2026-11-12T20:49:04Z",
+  "1bdf92f1-0849-4ebe-b5ff-48da33bb08e0": "2026-11-12T20:42:13Z",
+  "23c8cc8e-2fd5-4907-9f89-2a8e0eb30fcd": "2026-11-12T20:32:26Z",
+  "09d215bd-c228-4f46-b0c9-f474f1efb544": "2026-11-10T21:36:12Z",
+  "188e1a79-e78e-439e-a463-7231e21df5ae": "2026-11-10T21:03:00Z",
+  "28685829-2c45-474e-b965-e0b7037dfa97": "2026-11-10T20:34:14Z",
+  "2147c0da-7eec-4e67-acc7-23cd839bdaaa": "2026-11-08T20:55:53Z",
+  "5e70829b-bece-4846-bf45-01c04c1b8411": "2026-11-08T20:33:47Z",
+  "084e8514-b764-4f23-884c-8d63a1dc248f": "2026-11-15T20:56:11Z",
+  "d81ce603-c0a5-4fcc-a10c-1e3052f05aec": "2026-11-15T21:25:07Z",
+  "1fafffd1-403c-4437-8879-c59e5856f678": "2026-11-15T20:22:26Z",
+  "7f16b20d-41ac-45e5-a83f-d73241bbc749": "2026-11-08T20:12:48Z",
+  "ec8ce8c3-1b29-429f-bb90-e02dc922b5e9": "2026-11-08T20:04:21Z",
+  "f9a396d0-e4b9-40bf-abca-7f2a4fc82539": "2026-11-05T22:32:56Z",
+  "ed762c88-c099-40fd-8d7f-f385b32c02fd": "2026-11-12T21:49:09Z",
+  "51e89cef-5c1f-4a89-a8ea-0cd0130c0274": "2026-11-05T22:20:10Z",
+  "09b97d9b-7cc7-438f-b398-f3bb78e3404d": "2026-11-05T22:11:19Z",
+  "a49b3332-4483-4e55-81e3-8043c5c2e55b": "2026-11-05T21:42:28Z",
+  "8dcc360f-05dd-414a-97ed-dbb00d31e628": "2026-11-05T10:33:07Z",
+  "7da5a1ba-b92a-49cf-9802-328a28c7eb97": "2026-11-05T10:41:52Z",
+  "8dc95bc2-965a-4544-9e8e-395dbb6692d4": "2026-11-05T10:26:23Z",
+  "dc0e2f78-d58a-4b97-8d07-07b142f126a3": "2026-11-05T10:22:34Z",
+  "f7dca995-c879-4c21-b025-dc21e18cd62a": "2026-11-05T09:52:30Z",
+  "0bb269ce-375f-4b99-b392-609559bd1151": "2026-11-05T10:16:34Z",
+  "4ad33767-4c21-43e8-96d3-f75447cb14ce": "2026-11-05T08:09:10Z",
+  "6e14a26d-2266-4e44-a528-48e869730c99": "2026-11-05T07:50:17Z",
+  "7bb765b4-f174-486c-95d1-2920ec46ff83": "2026-11-05T07:25:44Z",
+  "cfa0be73-04cb-4392-9288-a345f7dd284f": "2026-11-04T21:35:44Z",
+  "87ba725b-c600-4442-8735-8bd16abe04fc": "2026-11-04T21:04:24Z",
+  "a7b67311-5f2c-47ac-b03d-f7622fc8365e": "2026-11-04T20:34:23Z",
+  "4e5f37ba-94fd-4530-9da5-8f954c69a88e": "2026-11-04T20:29:58Z",
+  "5ed91df8-f31f-41d4-ae66-e8cb035b309a": "2026-11-03T21:34:25Z",
+  "96ba09fa-1553-4a43-aff7-09954db172bf": "2026-11-03T21:31:32Z",
+  "495df316-1114-4013-bc4b-7860d3135bb7": "2026-11-03T21:28:09Z",
+  "3a9d3a85-db24-4e0e-8d64-bb1b62eea658": "2026-11-03T21:25:05Z",
+  "8f2e1be8-c5b4-4115-a813-833f5f3c2b77": "2026-11-03T21:00:28Z",
+  "15546686-c878-47a7-8f4d-c3d8601a6015": "2026-11-03T20:44:14Z",
+  "7a7cf022-9af2-4991-9f2a-fa7b79274270": "2026-11-16T20:51:08Z",
+  "8f030a8f-69ae-405a-8646-23dd633d19b6": "2026-11-16T21:20:20Z",
+  "d2b9ba71-9f0d-4b8c-becf-a4ecddc37cad": "2026-11-16T20:28:53Z",
+  "92dcb478-d6e0-46cd-8b88-45ee0fa6732b": "2026-11-14T21:27:41Z",
+  "be057759-e4ca-47e7-ac95-749bc647fd61": "2026-11-14T21:42:23Z",
+  "79179dfa-f8ac-4f6f-87f1-c172165e9d18": "2026-11-14T21:16:21Z",
+  "567d469a-0fb0-4de8-b7fe-cbb1a14b6b59": "2026-11-14T20:54:23Z",
+  "a10fb6cb-404b-4f63-aec5-f9dcdbaa69d3": "2026-11-14T21:06:07Z",
+  "abc749ea-6e18-4daa-98a3-13f640c03167": "2026-11-14T20:59:25Z",
+  "1da43182-5001-4465-8d68-6ab82a1843d8": "2026-11-14T20:39:23Z",
+  "51bbd8ea-ae30-455b-b46b-9fd07266db2e": "2026-11-12T20:10:58Z",
+  "94ec3142-56f2-4c3e-9db5-272971290713": "2026-11-12T20:01:44Z",
+  "81ae87f4-5708-4e82-ab39-fde7e5372a34": "2026-11-10T20:10:49Z",
+  "b8cea159-6550-4fb1-af07-d220f87521ef": "2026-11-08T20:31:40Z",
+  "6470e1cb-8b93-4e8d-a598-cff3ef68f01e": "2026-11-08T20:24:18Z",
+  "ced74ed9-859b-4a2c-b48d-95eedd77c436": "2026-11-06T20:56:38Z",
+  "1b0d6e18-e2db-4aff-99e5-e4b2046df2bd": "2026-11-06T20:42:33Z",
+  "c955190a-2fe0-494d-8b99-43689b893c40": "2026-11-06T21:17:43Z",
+  "89a222dd-0547-4111-960a-6227b91e53bb": "2026-11-04T20:18:17Z",
+  "42b43b71-b26a-4828-97cb-527898e8b76c": "2026-11-04T20:05:33Z",
+  "48c20b86-7690-4db7-9f13-5291b8093369": "2026-11-13T21:26:50Z",
+  "5c9cba04-4db6-4253-880b-0765687b6f0f": "2026-11-13T21:12:36Z",
+  "15f16b6c-e4cf-4b62-85f1-feabbcf7a0f0": "2026-11-14T20:19:26Z",
+  "df710917-a9aa-4cc2-b7c1-b04568639c68": "2026-11-16T20:20:52Z",
+  "5f117e29-275c-4882-83a0-8f2df165e825": "2026-11-13T13:58:51Z",
+  "7d5a7b9c-9464-4146-9bc4-e7653b564071": "2026-11-13T21:18:45Z",
+  "468e4427-4594-4518-8075-a42212fb0747": "2026-11-13T14:02:31Z",
+  "aad41d01-5943-4473-b235-bce45ef53a98": "2026-11-13T13:53:03Z",
+  "7ac249ee-f8a9-47e0-b4d9-56950eadd62c": "2026-11-13T20:51:37Z",
+  "47f63cd0-236e-4f05-85fb-54d4dfc9a1ff": "2026-11-13T13:14:55Z",
+  "a11a7165-79c9-49b5-82ef-23850e6176fb": "2026-11-09T21:34:20Z",
+  "8c4c5173-b26b-43f6-9b65-9edd4bd2ccdb": "2026-11-12T14:38:51Z",
+  "66d1d8de-8d7c-4f4c-b372-7b09cfd71980": "2026-11-09T21:20:26Z",
+  "6679e3ea-0095-4e6d-bbb8-c2e34844226a": "2026-11-09T21:14:32Z",
+  "0b926c4d-1424-4764-9ebc-e9530add2d92": "2026-11-09T20:45:35Z",
+  "350468d6-259b-45c2-af56-802b77b46217": "2026-11-08T19:43:44Z",
+  "30c360ef-2d1e-4606-8420-861c9e56b277": "2026-11-08T19:38:59Z",
+  "2c5b04bf-721e-48ef-8bf0-7fd1538681ed": "2026-11-07T21:44:16Z",
+  "e53af266-4a1d-4951-abfc-30f6d2029835": "2026-11-07T22:14:08Z",
+  "58e21f30-3d44-4e58-9823-c96ea75e85f6": "2026-11-07T21:58:23Z",
+  "77fb0445-22cb-4aa0-9486-af8281d837a8": "2026-11-07T21:21:29Z",
+  "fee398ab-71ee-4729-a124-1c409aeef7cf": "2026-11-06T13:29:11Z",
+  "dbef4c7a-16d0-4f03-897a-db7f98ebc767": "2026-11-07T21:38:17Z",
+  "d0b1e805-9033-4eda-9476-f7fcb6119ac4": "2026-11-06T13:12:51Z",
+  "ae357cae-68fa-4e35-8253-3e6e250fe2c1": "2026-11-06T13:06:03Z",
+  "2fb9f217-61dc-4678-a078-28ca97f74d3a": "2026-11-06T12:44:37Z",
+  "d75083fa-cceb-49d4-b861-85836a831576": "2026-11-17T08:07:29Z",
+  "9227da71-6e15-4a66-9b7f-d570e9fff8ee": "2026-11-17T07:39:44Z",
+  "705998b9-05ee-41e7-911d-28e8634eda83": "2026-11-17T07:24:29Z",
+  "e965b588-bb2e-4458-9413-79c2dad74623": "2026-11-03T20:19:16Z",
+  "910ed122-abb5-4e5f-b016-6a0e7cbfc4d3": "2026-11-17T07:03:21Z",
+  "c3e0a33d-31bb-4792-8d4a-3c274e9deda9": "2026-11-03T20:37:42Z",
+  "ceffcf72-3b05-453c-995c-ccef7c52b8bb": "2026-11-17T06:45:42Z",
+  "8f96e0fd-f62c-40bf-a070-d27a968f26ba": "2026-11-16T09:37:21Z",
+  "c0ef5e8d-8bef-4795-9b1e-97eef600e7a3": "2026-11-16T09:24:00Z",
+  "fc902afd-e4dc-4dcf-94e2-b0cdcc6eb88f": "2026-11-16T09:02:03Z",
+  "0d490124-9a85-45c1-8d23-bc957fb7bb5a": "2026-11-16T08:33:10Z",
+  "195914a8-bbe7-49f7-9c29-771a3fbe4cf6": "2026-11-13T09:10:03Z",
+  "c72a43b0-46bc-4f03-a84d-76bdcbc71611": "2026-11-16T07:04:04Z",
+  "7fcc7d0a-f64c-4efb-ac98-33c38a445624": "2026-11-16T06:42:23Z",
+  "e3402649-3320-403f-9f48-8c9fe7e773d1": "2026-11-13T08:50:24Z",
+  "2cd9403d-bf9e-4171-8b36-a672fa34ce73": "2026-11-13T08:25:23Z",
+  "c3975072-637f-4554-a407-9483b411beff": "2026-11-12T06:53:19Z",
+  "a3c7332d-fd02-4b8a-8f28-239e05d27bb3": "2026-11-12T06:41:58Z",
+  "d419a631-ac85-4910-a97e-0a8ba1091146": "2026-11-13T08:15:51Z",
+  "3d851b7a-6a3b-4d5e-8d64-6abd547edd2e": "2026-11-11T08:59:15Z",
+  "6ca394ae-e60b-410c-8663-b2deb25e78f0": "2026-11-11T09:33:54Z",
+  "2bbc5768-3931-4cd8-abdb-e3806d94541d": "2026-11-11T09:25:24Z",
+  "d39c3db5-fdf9-43ea-b59f-45ecf2c7251c": "2026-11-11T08:39:07Z",
+  "22ca0ab0-507e-4088-8583-7bf5d728fb22": "2026-11-11T08:35:08Z",
+  "b8935652-75bc-460f-8c93-0d0556d2b13e": "2026-11-11T08:28:49Z",
+  "a40c7516-bd7c-402a-b46e-4d14578e8522": "2026-11-11T08:24:22Z",
+  "e4245b10-4ba4-477b-a98f-e7002e6972f6": "2026-11-06T09:17:20Z",
+  "cb7ca8ff-8c75-42f4-9f3e-d812d6cee88c": "2026-11-05T06:48:56Z",
+  "7b61c9d8-8433-4eff-b02b-3bee8a0d3b1b": "2026-11-06T09:14:18Z",
+  "2793bbd3-9685-4c8b-a21d-8e4ac736ba48": "2026-11-04T08:41:08Z",
+  "90c66be4-4ca1-46eb-991b-7bef6c5483c4": "2026-11-04T08:45:32Z",
+  "6b457fff-968e-48d2-8176-44ee2a57ee37": "2026-11-04T08:25:09Z",
+  "aa925a5f-a935-49c8-8d8a-2fbc23528c89": "2026-11-04T08:19:11Z"
+ }
+}

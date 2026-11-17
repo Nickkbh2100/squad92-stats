@@ -5,68 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Squad92 Stats</title>
 <meta name="description" content="PUBG-statistik for Squad92: top 4 efter gennemsnitlig skade i de sidste 20 fælles kampe.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23eda100'/><text x='16' y='22' font-size='15' font-family='system-ui' font-weight='800' text-anchor='middle' fill='%230b0b0b'>92</text></svg>">
+<meta name="theme-color" content="#070d1f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b1a4a'/><circle cx='16' cy='16' r='11' fill='none' stroke='%23fff' stroke-width='2'/><text x='16' y='21' font-size='13' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23f2a900'>92</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --surface-2: #232321;
-    --text: #f0efec;
-    --text-2: #c3c2b7;
-    --muted: #898781;
-    --grid: #2c2c2a;
-    --axis: #383835;
-    --ring: rgba(255,255,255,0.10);
-    --accent: #eda100;
+    --page: #070d1f;
+    --surface: #0f1836;
+    --surface-2: #17224a;
+    --text: #f3f5fb;
+    --text-2: #b7bfd8;
+    --muted: #8690b0;
+    --grid: #1f2a52;
+    --axis: #34406b;
+    --ring: rgba(255,255,255,0.08);
+    --pubg: #f2a900;          /* PUBG-gul */
+    --fck: #2350e6;           /* FCK-blå */
+    --white: #ffffff;
     --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
     --s5: #d55181; --s6: #0ca30c; --s7: #9085e9; --s8: #e66767;
-    --win: #0ca30c;
-  }
-  @media (prefers-color-scheme: light) {
-    :root:not([data-theme="dark"]) {
-      color-scheme: light;
-      --page: #f9f9f7; --surface: #fcfcfb; --surface-2: #f0efec;
-      --text: #0b0b0b; --text-2: #52514e; --muted: #6d6b66;
-      --grid: #e1e0d9; --axis: #c3c2b7; --ring: rgba(11,11,11,0.10);
-      --accent: #b87d00;
-      --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
-      --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
-      --win: #006300;
-    }
+    --win: #2fc24a;
+    --stencil: "Saira Stencil One", Impact, sans-serif;
+    --cond: "Teko", "Arial Narrow", sans-serif;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
   body {
-    background: var(--page); color: var(--text);
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(35,80,230,0.22), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(242,169,0,0.06), transparent 60%),
+      var(--page);
+    color: var(--text);
     font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
     font-variant-numeric: tabular-nums;
+    min-height: 100vh;
   }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 16px 64px; }
-  header { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; }
-  h1 { margin: 0; font-size: 34px; letter-spacing: -0.02em; line-height: 1.1; font-weight: 800; }
-  h1 span { color: var(--accent); }
-  .sub { color: var(--text-2); margin: 6px 0 0; font-size: 14px; }
-  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-2); margin: 40px 0 14px; font-weight: 700; }
-  .controls { display: flex; gap: 8px; align-items: center; color: var(--text-2); font-size: 14px; }
+  /* FCK-striber i toppen */
+  .kit { height: 6px; background: repeating-linear-gradient(90deg, var(--white) 0 28px, var(--fck) 28px 56px); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; border-radius: 18px; padding: 28px 28px 24px;
+    background:
+      linear-gradient(90deg, rgba(7,13,31,0.95) 0%, rgba(7,13,31,0.65) 55%, rgba(7,13,31,0.2) 100%),
+      linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(135deg, #0b1a4a, #10235e 60%, #1a2f7a);
+    border: 1px solid var(--ring);
+    display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between;
+  }
+  .hero svg.zone { position: absolute; right: -40px; top: -90px; width: 420px; height: 420px; pointer-events: none; opacity: 0.9; }
+  .hero > * { position: relative; }
+  .eyebrow { font-family: var(--cond); font-size: 18px; letter-spacing: 0.18em; color: var(--pubg); text-transform: uppercase; line-height: 1; }
+  h1 { margin: 6px 0 0; font-family: var(--stencil); font-weight: 400; font-size: clamp(44px, 9vw, 84px); line-height: 0.95; letter-spacing: 0.02em; }
+  h1 .n { color: var(--pubg); }
+  .tagline { font-family: var(--cond); font-size: 22px; color: var(--text-2); letter-spacing: 0.04em; margin-top: 4px; line-height: 1.1; }
+  .sub { color: var(--muted); margin: 10px 0 0; font-size: 13px; }
+
+  .toolbar { display: flex; justify-content: flex-end; margin: 28px 0 -24px; }
+  .controls { display: flex; gap: 10px; align-items: center; }
+  .controls label { font-family: var(--cond); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2); font-size: 16px; line-height: 1; }
   .seg { display: inline-flex; background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 3px; }
-  .seg button {
-    all: unset; cursor: pointer; padding: 6px 12px; border-radius: 7px; font-size: 14px; color: var(--text-2);
+  .seg button { all: unset; cursor: pointer; padding: 6px 13px; border-radius: 7px; font-size: 14px; color: var(--text-2); font-weight: 600; }
+  .seg button[aria-pressed="true"] { background: var(--pubg); color: #111; }
+  .seg button:focus-visible { outline: 2px solid var(--white); outline-offset: 1px; }
+
+  h2 {
+    font-family: var(--cond); font-weight: 500; font-size: 26px; letter-spacing: 0.06em; text-transform: uppercase;
+    margin: 40px 0 14px; line-height: 1; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
-  .seg button[aria-pressed="true"] { background: var(--surface-2); color: var(--text); font-weight: 650; box-shadow: 0 0 0 1px var(--ring); }
-  .seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  h2::before { content: ""; width: 10px; height: 22px; background: linear-gradient(var(--white) 50%, var(--fck) 50%); border-radius: 2px; transform: translateY(-2px); }
+  h2 small { font-family: system-ui, sans-serif; font-size: 13px; letter-spacing: 0; text-transform: none; color: var(--muted); font-weight: 400; transform: translateY(-2px); }
 
   .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 14px; }
+
+  /* Squad-KPI'er */
+  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 16px; }
+  .kpi { padding: 14px 16px; }
+  .kpi .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .kpi .v { font-family: var(--cond); font-size: 40px; line-height: 1; margin-top: 6px; font-weight: 500; }
+  .kpi .s { color: var(--text-2); font-size: 13px; }
 
   /* Top 4 */
   .podium { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .p { padding: 18px 18px 16px; position: relative; overflow: hidden; }
-  .p.first { border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
-  .p .rank { font-size: 13px; font-weight: 800; color: var(--muted); letter-spacing: 0.04em; }
-  .p.first .rank { color: var(--accent); }
-  .p .name { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; margin: 6px 0 14px; overflow-wrap: anywhere; }
+  .p::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--c); }
+  .p.first { background: linear-gradient(180deg, rgba(242,169,0,0.12), transparent 55%), var(--surface); border-color: rgba(242,169,0,0.5); }
+  .p.first::before { background: var(--pubg); }
+  .p .top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .p .rank { font-family: var(--stencil); font-size: 30px; line-height: 1; color: var(--muted); }
+  .p.first .rank { color: var(--pubg); }
+  .role { font-family: var(--cond); font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2); display: inline-flex; align-items: center; gap: 6px; line-height: 1; }
+  .armband { display: inline-grid; place-items: center; width: 26px; height: 18px; background: var(--pubg); color: #111; font: 800 12px/1 system-ui, sans-serif; border-radius: 3px; }
+  .p .name { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px; margin: 12px 0 10px; overflow-wrap: anywhere; }
   .key { width: 10px; height: 10px; border-radius: 3px; flex: none; }
-  .p .big { font-size: 38px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+  .p .big { font-family: var(--cond); font-size: 64px; font-weight: 500; line-height: 0.85; }
   .p .unit { color: var(--text-2); font-size: 13px; margin-top: 4px; }
   .meter { height: 6px; background: var(--grid); border-radius: 3px; margin: 14px 0 12px; overflow: hidden; }
   .meter i { display: block; height: 100%; border-radius: 3px; }
@@ -78,16 +115,15 @@
   /* Small multiples */
   .multi { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .chart { padding: 16px 16px 10px; }
-  .chart h3 { margin: 0 0 2px; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+  .chart h3 { margin: 0 0 2px; font-size: 16px; display: flex; align-items: center; gap: 8px; }
   .chart .meta { color: var(--text-2); font-size: 13px; margin-bottom: 8px; }
   .chart svg { display: block; width: 100%; height: 170px; overflow: visible; }
   .chart svg text { fill: var(--muted); font-size: 11px; }
-  .chart .bar { cursor: default; }
-  .chart .bar:hover .vis, .chart .bar:focus .vis { filter: brightness(1.25); }
+  .chart .bar:hover .vis, .chart .bar:focus .vis { filter: brightness(1.3); }
   .chart .bar:focus { outline: none; }
-  .chart .bar:focus-visible rect.hit { stroke: var(--accent); stroke-width: 2; }
+  .chart .bar:focus-visible rect.hit { stroke: var(--pubg); stroke-width: 2; }
 
-  /* Tables */
+  /* Tabel */
   .tablewrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; }
   th, td { padding: 10px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--grid); }
@@ -96,49 +132,80 @@
   tr:last-child td { border-bottom: 0; }
   .who { display: inline-flex; align-items: center; gap: 8px; font-weight: 650; }
 
-  .mlist > div { display: grid; grid-template-columns: 120px 150px 120px 1fr; gap: 6px 16px; padding: 12px 16px; border-bottom: 1px solid var(--grid); align-items: start; }
+  /* Kampliste */
+  .mlist > div { display: grid; grid-template-columns: 120px 150px 160px 1fr; gap: 6px 16px; padding: 12px 16px; border-bottom: 1px solid var(--grid); align-items: start; }
   .mlist > div:last-child { border-bottom: 0; }
+  .mlist > div.won { background: linear-gradient(90deg, rgba(47,194,74,0.10), transparent 40%); }
   .mlist .mode { color: var(--text-2); font-size: 13px; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .chip { display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2); border-radius: 8px; padding: 3px 8px; font-size: 13px; white-space: nowrap; }
   .chip b { font-weight: 650; }
   .chip span { color: var(--text-2); }
-  .place { font-weight: 700; }
-  .place.win { color: var(--win); }
+  .place { font-family: var(--cond); font-size: 24px; line-height: 1; font-weight: 500; }
+  .place.win { color: var(--win); font-size: 20px; letter-spacing: 0.04em; }
   .dim { color: var(--text-2); }
 
   .tip {
-    position: fixed; pointer-events: none; z-index: 10; min-width: 170px;
-    background: var(--surface-2); border: 1px solid var(--ring); border-radius: 10px;
-    padding: 10px 12px; font-size: 13px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    position: fixed; pointer-events: none; z-index: 10; min-width: 180px;
+    background: #1b2756; border: 1px solid rgba(255,255,255,0.14); border-radius: 10px;
+    padding: 10px 12px; font-size: 13px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     opacity: 0; transition: opacity .08s;
   }
-  .tip .v { font-size: 20px; font-weight: 800; }
+  .tip .v { font-family: var(--cond); font-size: 30px; line-height: 1; font-weight: 500; }
   .tip .r { color: var(--text-2); }
   .empty { padding: 28px; text-align: center; color: var(--text-2); }
-  footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
-  footer li { margin: 2px 0; }
 
-  @media (max-width: 900px) { .podium { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 700px) { .multi { grid-template-columns: 1fr; } }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--grid); padding-top: 20px; }
+  footer strong { color: var(--text-2); }
+  footer li { margin: 2px 0; }
+  .sig { font-family: var(--cond); font-size: 18px; letter-spacing: 0.12em; color: var(--text-2); margin-top: 16px; text-transform: uppercase; }
+  .sig b { color: var(--pubg); font-weight: 500; }
+
+  @media (max-width: 900px) { .podium { grid-template-columns: repeat(2, 1fr); } .kpis { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 700px) {
+    .multi { grid-template-columns: 1fr; }
     .mlist > div { grid-template-columns: 1fr auto; }
     .mlist .when { grid-column: 1 / -1; font-size: 13px; }
     .mlist .chips { grid-column: 1 / -1; }
+    .hero { padding: 22px 18px 18px; }
+    .hero svg.zone { width: 300px; height: 300px; right: -110px; top: -60px; opacity: 0.6; }
   }
-  @media (max-width: 460px) { h1 { font-size: 28px; } .p { padding: 14px; } .p .big { font-size: 30px; } .p dl { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 460px) {
+    .toolbar { justify-content: flex-start; margin-bottom: -16px; }
+    .kpis .kpi:last-child { grid-column: span 2; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    .p { padding: 14px; } .p .big { font-size: 50px; } .p dl { grid-template-columns: repeat(2, 1fr); }
+    .role { font-size: 13px; letter-spacing: 0.06em; }
+  }
   @media (max-width: 340px) { .podium { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+<div class="kit" aria-hidden="true"></div>
 <div class="wrap">
-  <header>
+  <header class="hero">
+    <!-- PUBG-zone: blå zone, hvid sikker zone, flyets rute -->
+    <svg class="zone" viewBox="0 0 420 420" aria-hidden="true">
+      <circle cx="230" cy="210" r="175" fill="rgba(35,80,230,0.10)" stroke="#2350e6" stroke-width="3"/>
+      <circle cx="260" cy="230" r="92" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+      <line x1="-20" y1="390" x2="440" y2="40" stroke="#f2a900" stroke-width="2" stroke-dasharray="10 8" opacity="0.8"/>
+      <g transform="translate(330 116) rotate(-37)" fill="#f2a900">
+        <path d="M-14 -2 L10 -2 L16 0 L10 2 L-14 2 Z"/><path d="M-2 -2 L-8 -14 L-4 -14 L6 -2 Z"/><path d="M-2 2 L-8 14 L-4 14 L6 2 Z"/><path d="M-14 -1 L-18 -6 L-15 -6 L-10 -1 Z"/><path d="M-14 1 L-18 6 L-15 6 L-10 1 Z"/>
+      </g>
+      <g stroke="#ffffff" stroke-width="1.5" opacity="0.8"><line x1="260" y1="222" x2="260" y2="238"/><line x1="252" y1="230" x2="268" y2="230"/></g>
+    </svg>
     <div>
-      <h1><span>SQUAD92</span> Stats</h1>
+      <div class="eyebrow">Est. 1992 · København</div>
+      <h1>SQUAD<span class="n">92</span></h1>
+      <div class="tagline">Fra Parken til Erangel</div>
       <p class="sub" id="sub">Indlæser …</p>
     </div>
+  </header>
+
+  <section id="kpis"></section>
+  <div class="toolbar">
     <div class="controls">
-      <span id="ctl-label">Kampe pr. spiller</span>
+      <label id="ctl-label">Kampe pr. spiller</label>
       <div class="seg" role="group" aria-labelledby="ctl-label" id="seg">
         <button data-n="10" aria-pressed="false">10</button>
         <button data-n="20" aria-pressed="true">20</button>
@@ -146,8 +213,7 @@
         <button data-n="0" aria-pressed="false">Alle</button>
       </div>
     </div>
-  </header>
-
+  </div>
   <main id="app"></main>
 
   <footer>
@@ -158,6 +224,7 @@
       <li>Hver spillers gennemsnit regnes ud fra hans egne seneste godkendte kampe.</li>
       <li>Data hentes automatisk fra PUBG's officielle API ca. én gang i timen.</li>
     </ul>
+    <div class="sig">Squad<b>92</b> · Ingen er større end klubben</div>
   </footer>
 </div>
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
@@ -169,9 +236,16 @@ const MAPS = {
   Kiki_Main: 'Deston', Heaven_Main: 'Haven', Neon_Main: 'Rondo', Range_Main: 'Camp Jackal',
 };
 const MODES = { duo: 'Duo', 'duo-fpp': 'Duo FPP', squad: 'Squad', 'squad-fpp': 'Squad FPP' };
+const ROLES = [
+  { label: 'Anfører', armband: true },
+  { label: 'Viceanfører' },
+  { label: 'Stamspiller' },
+  { label: 'Bænken' },
+];
 const mapName = (m) => MAPS[m] || m.replace(/_Main$/, '');
 const fmt = (n, d = 0) => Number(n).toLocaleString('da-DK', { minimumFractionDigits: d, maximumFractionDigits: d });
 const dateFmt = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+const dayFmt = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short' });
 const rel = (iso) => {
   const s = (Date.now() - Date.parse(iso)) / 1000;
   if (s < 3600) return `${Math.max(1, Math.round(s / 60))} min siden`;
@@ -206,7 +280,7 @@ async function load() {
   render();
 }
 
-// Bygger hver spillers kampliste (nyeste først)
+// Hver spillers kampliste (nyeste først)
 function playerGames() {
   const { config, data } = state;
   const idByName = new Map((data.members || []).map((m) => [m.name.toLowerCase(), m.accountId]));
@@ -245,20 +319,37 @@ function summarise(p, n) {
   };
 }
 
+function kpi(label, value, sub) {
+  return el('div', { class: 'card kpi' }, el('div', { class: 'l' }, label), el('div', { class: 'v' }, value), sub ? el('div', { class: 's' }, sub) : null);
+}
+
 function render() {
   const app = document.getElementById('app');
   app.replaceChildren();
-  const { config, data } = state;
-  const sub = document.getElementById('sub');
-  sub.textContent = `PUBG · PC · ${data.matches.length} fælles kampe gemt` +
+  const { data } = state;
+  document.getElementById('sub').textContent = 'PUBG · PC' +
     (data.updatedAt ? ` · senest opdateret ${rel(data.updatedAt)}` : '');
 
   if (!data.matches.length) {
-    app.append(el('div', { class: 'card empty' },
+    app.append(el('div', { class: 'card empty', style: 'margin-top:16px' },
       el('strong', {}, 'Ingen kampe endnu.'), el('br'),
       'Når I har spillet en duo- eller squad-kamp sammen, dukker den op her inden for en time.'));
     return;
   }
+
+  // --- Squad-overblik (alle gemte kampe) ---
+  const teams = data.matches.flatMap((m) => m.teams.map((t) => ({ m, t })));
+  const dinners = teams.filter((x) => x.t.won).length;
+  const top10 = teams.filter((x) => x.t.rank <= 10).length;
+  const avgPlace = teams.reduce((s, x) => s + x.t.rank, 0) / teams.length;
+  const squadDmg = teams.reduce((s, x) => s + x.t.players.reduce((a, p) => a + p.damage, 0), 0);
+  document.getElementById('kpis').replaceChildren(el('div', { class: 'kpis' },
+    kpi('Fælles kampe', fmt(teams.length), `siden ${dayFmt.format(new Date(data.matches.at(-1).createdAt))}`),
+    kpi('Chicken dinners', fmt(dinners), `${fmt((dinners / teams.length) * 100, 1)} % win rate`),
+    kpi('Top 10', `${fmt((top10 / teams.length) * 100)} %`, `${top10} af ${teams.length} kampe`),
+    kpi('Gns. placering', `#${fmt(avgPlace, 1)}`, 'som hold'),
+    kpi('Skade i alt', fmt(squadDmg), 'hele squaddet'),
+  ));
 
   const n = state.n;
   const players = playerGames().map((p) => summarise(p, n));
@@ -267,11 +358,14 @@ function render() {
   const nLabel = n ? `sidste ${n} kampe` : 'alle gemte kampe';
 
   // --- Top 4 ---
-  app.append(el('h2', {}, `Top ${Math.min(4, ranked.length)} · gns. skade, ${nLabel}`));
+  app.append(el('h2', {}, `Top ${Math.min(4, ranked.length)}`, el('small', {}, `gns. skade · ${nLabel}`)));
   const podium = el('div', { class: 'podium' });
   ranked.slice(0, 4).forEach((p, i) => {
-    podium.append(el('article', { class: 'card p' + (i === 0 ? ' first' : '') },
-      el('div', { class: 'rank' }, `#${i + 1}`),
+    const role = ROLES[i] || { label: '' };
+    podium.append(el('article', { class: 'card p' + (i === 0 ? ' first' : ''), style: `--c:${p.color}` },
+      el('div', { class: 'top' },
+        el('div', { class: 'rank' }, `#${i + 1}`),
+        el('div', { class: 'role' }, role.armband ? el('span', { class: 'armband', title: 'Anførerbind' }, 'C') : null, role.label)),
       el('div', { class: 'name' }, el('span', { class: 'key', style: `background:${p.color}` }), p.name),
       el('div', { class: 'big' }, p.count ? fmt(p.avgDmg) : '–'),
       el('div', { class: 'unit' }, 'gns. skade pr. kamp'),
@@ -279,20 +373,20 @@ function render() {
       el('dl', {},
         el('div', {}, el('dt', {}, 'Kills'), el('dd', {}, fmt(p.avgKills, 2))),
         el('div', {}, el('dt', {}, 'K/D'), el('dd', {}, fmt(p.kd, 2))),
-        el('div', {}, el('dt', {}, 'Wins'), el('dd', {}, p.wins)),
+        el('div', {}, el('dt', {}, 'Dinners'), el('dd', {}, p.wins)),
       ),
       el('div', { class: 'few' }, n && p.count < n ? `Kun ${p.count} af ${n} kampe registreret` : `${p.count} kampe`),
     ));
   });
   app.append(podium);
 
-  // --- Skade pr. kamp (small multiples) ---
-  app.append(el('h2', {}, `Skade pr. kamp · ældste → nyeste`));
+  // --- Skade pr. kamp ---
+  app.append(el('h2', {}, 'Skade pr. kamp', el('small', {}, 'ældste → nyeste · 🍗 = chicken dinner')));
   const multi = el('div', { class: 'multi' });
   const yMax = niceMax(Math.max(100, ...players.flatMap((p) => p.games.map((g) => g.me.damage))));
   const charts = [];
   for (const p of players) {
-    const box = el('div', { class: 'chart-body' });
+    const box = el('div');
     multi.append(el('section', { class: 'card chart' },
       el('h3', {}, el('span', { class: 'key', style: `background:${p.color}` }), p.name),
       el('div', { class: 'meta' }, p.count ? `Gns. ${fmt(p.avgDmg)} · bedste ${fmt(p.bestDmg)} · ${p.count} kampe` : 'Ingen kampe endnu'),
@@ -305,8 +399,8 @@ function render() {
   window.onresize = () => { clearTimeout(window._rz); window._rz = setTimeout(drawAll, 100); };
 
   // --- Tabel ---
-  app.append(el('h2', {}, `Alle stats · ${nLabel}`));
-  const head = ['Spiller', 'Kampe', 'Gns. skade', 'Bedste', 'Kills/kamp', 'K/D', 'Knocks/kamp', 'Assists/kamp', 'Headshots', 'Wins', 'Top 10', 'Gns. plac.'];
+  app.append(el('h2', {}, 'Alle stats', el('small', {}, nLabel)));
+  const head = ['Spiller', 'Kampe', 'Gns. skade', 'Bedste', 'Kills/kamp', 'K/D', 'Knocks/kamp', 'Assists/kamp', 'Headshots', 'Dinners', 'Top 10', 'Gns. plac.'];
   const tbody = el('tbody');
   for (const p of ranked) {
     tbody.append(el('tr', {},
@@ -325,10 +419,10 @@ function render() {
   const list = el('div', { class: 'card mlist' });
   for (const m of data.matches.slice(0, 15)) {
     for (const t of m.teams) {
-      list.append(el('div', {},
+      list.append(el('div', { class: t.won ? 'won' : '' },
         el('div', { class: 'when dim' }, dateFmt.format(new Date(m.createdAt))),
         el('div', {}, mapName(m.map), el('div', { class: 'mode' }, (MODES[m.gameMode] || m.gameMode) + (m.matchType === 'competitive' ? ' · Ranked' : ''))),
-        el('div', {}, el('span', { class: 'place' + (t.won ? ' win' : '') }, t.won ? 'Chicken dinner' : `#${t.rank}`)),
+        el('div', {}, el('span', { class: 'place' + (t.won ? ' win' : '') }, t.won ? '🍗 Chicken dinner' : `#${t.rank}`)),
         el('div', { class: 'chips' }, [...t.players].sort((a, b) => b.damage - a.damage).map((pl) =>
           el('span', { class: 'chip' },
             el('span', { class: 'key', style: `background:${colorOf.get(pl.name.toLowerCase()) || 'var(--muted)'}` }),
@@ -344,46 +438,42 @@ function niceMax(v) {
 }
 
 const tip = document.getElementById('tip');
-function showTip(evt, g, color) {
+function showTip(evt, g) {
   const m = g.match;
   tip.replaceChildren(
-    el('div', { class: 'v' }, `${fmt(g.me.damage)} `, el('span', { class: 'r', style: 'font-size:13px;font-weight:400' }, 'skade')),
+    el('div', { class: 'v' }, `${fmt(g.me.damage)} `, el('span', { class: 'r', style: 'font:400 13px system-ui,sans-serif' }, 'skade')),
     el('div', {}, `${g.me.kills} kills · ${g.me.dbnos} knocks · ${g.me.assists} assists`),
-    el('div', {}, g.team.won ? 'Winner winner chicken dinner' : `Placering #${g.team.rank}`),
+    el('div', {}, g.team.won ? '🍗 Winner winner chicken dinner' : `Placering #${g.team.rank}`),
     el('div', { class: 'r' }, `${mapName(m.map)} · ${MODES[m.gameMode] || m.gameMode}`),
     el('div', { class: 'r' }, dateFmt.format(new Date(m.createdAt))),
     el('div', { class: 'r' }, 'Med: ' + (g.mates.map((x) => x.name).join(', ') || '–')),
   );
-  const r = evt.target.getBoundingClientRect?.() || { left: evt.clientX, top: evt.clientY, width: 0 };
-  const x = evt.clientX ?? r.left + r.width / 2, y = evt.clientY ?? r.top;
   tip.style.opacity = '1';
   const w = tip.offsetWidth, h = tip.offsetHeight;
-  tip.style.left = Math.min(window.innerWidth - w - 8, Math.max(8, x + 14)) + 'px';
-  tip.style.top = Math.max(8, y - h - 12) + 'px';
+  tip.style.left = Math.min(window.innerWidth - w - 8, Math.max(8, evt.clientX + 14)) + 'px';
+  tip.style.top = Math.max(8, evt.clientY - h - 12) + 'px';
 }
 const hideTip = () => { tip.style.opacity = '0'; };
 
 function drawBars(box, p, yMax) {
   box.replaceChildren();
   const W = box.clientWidth || 300, H = 170;
-  const m = { l: 34, r: 8, t: 12, b: 20 };
+  const m = { l: 34, r: 8, t: 16, b: 20 };
   const iw = W - m.l - m.r, ih = H - m.t - m.b;
   const svg = sv('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Skade pr. kamp for ${p.name}` });
   const y = (v) => m.t + ih - (v / yMax) * ih;
-  const ticks = [0, yMax / 2, yMax];
-  for (const t of ticks) {
+  for (const t of [0, yMax / 2, yMax]) {
     svg.append(sv('line', { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), stroke: t === 0 ? 'var(--axis)' : 'var(--grid)', 'stroke-width': 1 }));
     const tx = sv('text', { x: m.l - 6, y: y(t) + 4, 'text-anchor': 'end' }); tx.textContent = fmt(t); svg.append(tx);
   }
   const games = [...p.games].reverse(); // ældste -> nyeste
-  const slots = Math.max(games.length, 10);
-  const slot = iw / slots;
+  const slot = iw / Math.max(games.length, 10);
   const bw = Math.max(3, Math.min(26, slot - 2));
   games.forEach((g, i) => {
     const cx = m.l + slot * i + slot / 2;
-    const top = y(g.me.damage), h = m.t + ih - top;
+    const top = y(g.me.damage), b = m.t + ih, h = b - top;
     const r = Math.min(4, bw / 2, h);
-    const x0 = cx - bw / 2, x1 = cx + bw / 2, b = m.t + ih;
+    const x0 = cx - bw / 2, x1 = cx + bw / 2;
     const grp = sv('g', { class: 'bar', tabindex: '0' });
     grp.append(sv('rect', { class: 'hit', x: m.l + slot * i, y: m.t, width: slot, height: ih, fill: 'transparent' }));
     if (h > 0.5) grp.append(sv('path', {
@@ -391,20 +481,20 @@ function drawBars(box, p, yMax) {
       d: `M${x0},${b} V${top + r} Q${x0},${top} ${x0 + r},${top} H${x1 - r} Q${x1},${top} ${x1},${top + r} V${b} Z`,
       fill: p.color,
     }));
-    grp.addEventListener('pointermove', (e) => showTip(e, g, p.color));
+    grp.addEventListener('pointermove', (e) => showTip(e, g));
     grp.addEventListener('pointerleave', hideTip);
-    grp.addEventListener('focus', (e) => { const rc = grp.getBoundingClientRect(); showTip({ clientX: rc.left + rc.width / 2, clientY: rc.top + 30, target: grp }, g, p.color); });
+    grp.addEventListener('focus', () => { const rc = grp.getBoundingClientRect(); showTip({ clientX: rc.left + rc.width / 2, clientY: rc.top + 30 }, g); });
     grp.addEventListener('blur', hideTip);
     if (g.team.won) {
-      const s = sv('text', { x: cx, y: top - 4, 'text-anchor': 'middle', style: 'font-size:10px;fill:var(--win);font-weight:700' });
-      s.textContent = 'W'; grp.append(s);
+      const s = sv('text', { x: cx, y: top - 3, 'text-anchor': 'middle', style: 'font-size:11px', 'pointer-events': 'none' });
+      s.textContent = '🍗'; grp.append(s);
     }
     svg.append(grp);
   });
   if (games.length) {
     const ay = y(p.avgDmg);
     svg.append(sv('line', { x1: m.l, x2: W - m.r, y1: ay, y2: ay, stroke: 'var(--text-2)', 'stroke-width': 1.5, 'stroke-dasharray': '4 4', 'pointer-events': 'none' }));
-    const lb = sv('text', { x: W - m.r, y: ay - 5, 'text-anchor': 'end', style: 'fill:var(--text-2);font-weight:600', 'pointer-events': 'none' });
+    const lb = sv('text', { x: W - m.r, y: ay - 5, 'text-anchor': 'end', style: 'fill:var(--text);font-weight:600', 'pointer-events': 'none' });
     lb.textContent = `Ø ${fmt(p.avgDmg)}`; svg.append(lb);
   }
   box.append(svg);
