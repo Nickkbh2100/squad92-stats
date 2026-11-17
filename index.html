@@ -161,9 +161,46 @@
   .sig { font-family: var(--cond); font-size: 18px; letter-spacing: 0.12em; color: var(--text-2); margin-top: 16px; text-transform: uppercase; }
   .sig b { color: var(--pubg); font-weight: 500; }
 
+  /* Personlige stats */
+  .divider { margin: 56px 0 0; padding: 18px 20px; border-radius: 14px; border: 1px dashed rgba(242,169,0,0.35); color: var(--text-2); font-size: 14px; background: rgba(242,169,0,0.04); }
+  .divider b { font-family: var(--cond); font-weight: 500; font-size: 24px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--pubg); display: block; line-height: 1; margin-bottom: 4px; }
+  .records { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .rec { padding: 14px 16px; }
+  .rec .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .rec .v { font-family: var(--cond); font-size: 40px; line-height: 1; margin-top: 6px; font-weight: 500; }
+  .rec .v small { font-size: 20px; color: var(--text-2); margin-left: 4px; }
+  .rec .who { margin-top: 4px; }
+  .rec .s { color: var(--text-2); font-size: 13px; }
+  .ptabs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .ptab { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 10px; background: var(--surface); border: 1px solid var(--ring); font-weight: 650; font-size: 14px; color: var(--text-2); }
+  .ptab[aria-selected="true"] { color: var(--text); border-color: var(--c); box-shadow: inset 0 -3px 0 var(--c); }
+  .ptab:focus-visible { outline: 2px solid var(--pubg); outline-offset: 2px; }
+  .ptabs .seg { margin-left: auto; }
+  .profile { display: grid; grid-template-columns: 1.15fr 1fr; gap: 12px; }
+  .pcard { padding: 18px; }
+  .pcard h3 { margin: 0 0 12px; font-family: var(--cond); font-weight: 500; font-size: 22px; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; }
+  .pcard h3 small { font-family: system-ui, sans-serif; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 400; margin-left: 6px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 12px; }
+  .tile .l { color: var(--muted); font-size: 12px; }
+  .tile .v { font-family: var(--cond); font-size: 34px; line-height: 1; font-weight: 500; margin-top: 4px; }
+  .tile .s { color: var(--text-2); font-size: 12px; }
+  .best { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .best > div { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
+  .wrows { display: grid; gap: 7px; }
+  .wrow { display: grid; grid-template-columns: 96px 1fr 44px; gap: 10px; align-items: center; font-size: 14px; border-radius: 6px; padding: 2px 0; outline: none; }
+  .wrow:hover .wbar i, .wrow:focus-visible .wbar i { filter: brightness(1.3); }
+  .wrow:focus-visible { box-shadow: 0 0 0 2px var(--pubg); }
+  .wrow .wn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wrow .wv { text-align: right; font-weight: 650; }
+  .wbar { height: 14px; }
+  .wbar i { display: block; height: 100%; border-radius: 0 4px 4px 0; min-width: 2px; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+
   @media (max-width: 900px) { .podium { grid-template-columns: repeat(2, 1fr); } .kpis { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 700px) {
     .multi { grid-template-columns: 1fr; }
+    .profile { grid-template-columns: 1fr; }
+    .records { grid-template-columns: repeat(2, 1fr); }
     .mlist > div { grid-template-columns: 1fr auto; }
     .mlist .when { grid-column: 1 / -1; font-size: 13px; }
     .mlist .chips { grid-column: 1 / -1; }
@@ -173,6 +210,10 @@
   @media (max-width: 460px) {
     .toolbar { justify-content: flex-start; margin-bottom: -16px; }
     .kpis .kpi:last-child { grid-column: span 2; }
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .records { grid-template-columns: 1fr; }
+    .ptabs .seg { margin-left: 0; }
+    .best { grid-template-columns: 1fr; }
     .kpis { grid-template-columns: repeat(2, 1fr); }
     .p { padding: 14px; } .p .big { font-size: 50px; } .p dl { grid-template-columns: repeat(2, 1fr); }
     .role { font-size: 13px; letter-spacing: 0.06em; }
@@ -210,6 +251,7 @@
         <button data-n="10" aria-pressed="false">10</button>
         <button data-n="20" aria-pressed="true">20</button>
         <button data-n="50" aria-pressed="false">50</button>
+        <button data-n="year" aria-pressed="false">1 år</button>
         <button data-n="0" aria-pressed="false">Alle</button>
       </div>
     </div>
@@ -267,14 +309,15 @@ function sv(tag, attrs = {}) {
   return e;
 }
 
-let state = { n: 20, config: null, data: null };
+let state = { n: 20, config: null, data: null, prof: null, profile: 0, scope: 'year' };
 
 async function load() {
-  const [config, data] = await Promise.all([
+  const [config, data, prof] = await Promise.all([
     fetch('config.json', { cache: 'no-store' }).then((r) => r.json()),
     fetch('data/matches.json', { cache: 'no-store' }).then((r) => r.json()),
+    fetch('data/players.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]);
-  state.config = config; state.data = data;
+  state.config = config; state.data = data; state.prof = prof;
   state.n = config.matchesPerPlayer || 20;
   for (const b of document.querySelectorAll('#seg button')) b.setAttribute('aria-pressed', String(Number(b.dataset.n) === state.n));
   render();
@@ -299,7 +342,8 @@ function playerGames() {
 }
 
 function summarise(p, n) {
-  const g = n ? p.all.slice(0, n) : p.all;
+  const g = n === 'year' ? p.all.filter((x) => Date.parse(x.match.createdAt) > Date.now() - 365 * 864e5)
+    : n ? p.all.slice(0, n) : p.all;
   const sum = (f) => g.reduce((s, x) => s + f(x), 0);
   const count = g.length;
   const deaths = g.filter((x) => x.me.deathType && x.me.deathType !== 'alive').length;
@@ -355,7 +399,7 @@ function render() {
   const players = playerGames().map((p) => summarise(p, n));
   const ranked = [...players].sort((a, b) => (b.count > 0) - (a.count > 0) || b.avgDmg - a.avgDmg);
   const maxAvg = Math.max(1, ...players.map((p) => p.avgDmg));
-  const nLabel = n ? `sidste ${n} kampe` : 'alle gemte kampe';
+  const nLabel = n === 'year' ? 'seneste år' : n ? `sidste ${n} kampe` : 'alle gemte kampe';
 
   // --- Top 4 ---
   app.append(el('h2', {}, `Top ${Math.min(4, ranked.length)}`, el('small', {}, `gns. skade · ${nLabel}`)));
@@ -375,7 +419,7 @@ function render() {
         el('div', {}, el('dt', {}, 'K/D'), el('dd', {}, fmt(p.kd, 2))),
         el('div', {}, el('dt', {}, 'Dinners'), el('dd', {}, p.wins)),
       ),
-      el('div', { class: 'few' }, n && p.count < n ? `Kun ${p.count} af ${n} kampe registreret` : `${p.count} kampe`),
+      el('div', { class: 'few' }, typeof n === 'number' && n && p.count < n ? `Kun ${p.count} af ${n} kampe registreret` : `${p.count} kampe`),
     ));
   });
   app.append(podium);
@@ -430,6 +474,142 @@ function render() {
     }
   }
   app.append(list);
+
+  renderPersonal(app, players);
+}
+
+// ================= Personlige stats =================
+const hours = (sec) => sec / 3600;
+function profileFor(name) {
+  const prof = state.prof;
+  if (!prof) return null;
+  const id = (state.data.members || []).find((m) => m.name.toLowerCase() === name.toLowerCase())?.accountId;
+  return (id && prof.players[id]) || Object.values(prof.players).find((p) => p.name.toLowerCase() === name.toLowerCase()) || null;
+}
+const maxBy = (arr, f) => arr.reduce((best, x) => (best == null || f(x) > f(best) ? x : best), null);
+function trackedSince() {
+  const all = Object.values(state.prof?.players || {}).flatMap((p) => p.games.map((g) => Date.parse(g.at)));
+  return all.length ? dayFmt.format(new Date(Math.min(...all))) : '–';
+}
+function whoEl(pl) {
+  return el('div', { class: 'who' }, el('span', { class: 'key', style: `background:${pl.color}` }), pl.name);
+}
+
+function renderPersonal(app, players) {
+  if (!state.prof) return;
+  const ps = players.map((p) => ({ ...p, prof: profileFor(p.name) })).filter((p) => p.prof);
+  if (!ps.length) return;
+  const since = trackedSince();
+
+  app.append(el('div', { class: 'divider' }, el('b', {}, 'Personlige stats'),
+    'Herunder tæller ALLE kampe, også solo og med andre spillere. Tallene kommer fra PUBG\'s egne profil-stats.'));
+
+  // --- Rekorder ---
+  app.append(el('h2', {}, 'Squad-rekorder'));
+  const recs = [];
+  const add = (label, pl, value, unit, sub) => pl && recs.push(el('div', { class: 'card rec' },
+    el('div', { class: 'l' }, label), el('div', { class: 'v' }, value, unit ? el('small', {}, unit) : null), whoEl(pl), sub ? el('div', { class: 's' }, sub) : null));
+
+  let p = maxBy(ps.filter((x) => x.prof.year), (x) => x.prof.year.seconds);
+  add('Flest timer i kamp · seneste år', p, p && fmt(hours(p.prof.year.seconds)), 't', p && `${fmt(p.prof.year.rounds)} kampe`);
+  p = maxBy(ps.filter((x) => x.prof.lifetime), (x) => x.prof.lifetime.longestKill);
+  add('Længste kill · karriere', p, p && fmt(p.prof.lifetime.longestKill), 'm');
+  const dmgBest = ps.map((x) => ({ x, g: maxBy(x.prof.games, (g) => g.dmg) })).filter((o) => o.g);
+  const db = maxBy(dmgBest, (o) => o.g.dmg);
+  add('Mest skade i én kamp', db?.x, db && fmt(db.g.dmg), null, db && `${mapName(db.g.map)} · ${dayFmt.format(new Date(db.g.at))} · registreret siden ${since}`);
+  const wb = maxBy(ps.filter((x) => x.prof.weapons?.length).map((x) => ({ x, w: x.prof.weapons[0] })), (o) => o.w.kills);
+  add('Flest kills med ét våben', wb?.x, wb && fmt(wb.w.kills), null, wb && `med ${wb.w.name}`);
+  p = maxBy(ps.filter((x) => x.prof.lifetime), (x) => x.prof.lifetime.roundMostKills);
+  add('Flest kills i én kamp · karriere', p, p && p.prof.lifetime.roundMostKills);
+  p = maxBy(ps.filter((x) => x.prof.lifetime), (x) => x.prof.lifetime.seconds);
+  add('Flest timer i kamp · karriere', p, p && fmt(hours(p.prof.lifetime.seconds)), 't', p && `${fmt(p.prof.lifetime.rounds)} kampe`);
+  app.append(el('div', { class: 'records' }, recs));
+
+  // --- Spillerprofil ---
+  app.append(el('h2', {}, 'Spillerprofil'));
+  const host = el('div');
+  app.append(host);
+  const draw = () => drawProfile(host, ps, since);
+  draw();
+}
+
+function drawProfile(host, ps, since) {
+  host.replaceChildren();
+  const idx = Math.min(state.profile, ps.length - 1);
+  const p = ps[idx], pr = p.prof;
+  const tabs = el('div', { class: 'ptabs', role: 'tablist', 'aria-label': 'Vælg spiller' });
+  ps.forEach((x, i) => {
+    const b = el('button', { class: 'ptab', role: 'tab', 'aria-selected': String(i === idx), style: `--c:${x.color}` },
+      el('span', { class: 'key', style: `background:${x.color}` }), x.name);
+    b.addEventListener('click', () => { state.profile = i; drawProfile(host, ps, since); });
+    tabs.append(b);
+  });
+  const seg = el('div', { class: 'seg', role: 'group', 'aria-label': 'Periode' });
+  for (const [k, label] of [['year', 'Seneste år'], ['lifetime', 'Karriere']]) {
+    const b = el('button', { 'aria-pressed': String(state.scope === k) }, label);
+    b.addEventListener('click', () => { state.scope = k; drawProfile(host, ps, since); });
+    seg.append(b);
+  }
+  tabs.append(seg);
+  host.append(tabs);
+
+  const st = pr[state.scope] || pr.lifetime;
+  const tiles = el('div', { class: 'tiles' });
+  const tile = (l, v, sub) => tiles.append(el('div', { class: 'tile' }, el('div', { class: 'l' }, l), el('div', { class: 'v' }, v), sub ? el('div', { class: 's' }, sub) : null));
+  if (st) {
+    const deaths = Math.max(1, st.rounds - st.wins);
+    tile('Timer i kamp', fmt(hours(st.seconds)), 'tid i live i kampe');
+    tile('Kampe', fmt(st.rounds), `${fmt((st.wins / Math.max(1, st.rounds)) * 100, 1)} % vundet`);
+    tile('Kills', fmt(st.kills), `K/D ${fmt(st.kills / deaths, 2)}`);
+    tile('Gns. skade', fmt(st.damage / Math.max(1, st.rounds)), 'pr. kamp');
+    tile('Længste kill', `${fmt(st.longestKill)} m`);
+    tile('Flest kills i én kamp', fmt(st.roundMostKills));
+    tile('Chicken dinners', fmt(st.wins), `${fmt(st.top10s)} × top 10`);
+    tile('Headshots', `${fmt((st.headshots / Math.max(1, st.kills)) * 100)} %`, `${fmt(st.headshots)} i alt`);
+  }
+  const bestDmg = maxBy(pr.games, (g) => g.dmg), bestKills = maxBy(pr.games, (g) => g.k);
+  const bestBox = (label, g, val) => el('div', {}, el('div', { class: 'l', style: 'color:var(--muted);font-size:12px' }, label),
+    el('div', { style: 'font-family:var(--cond);font-size:34px;line-height:1;margin-top:4px;font-weight:500' }, g ? val : '–'),
+    g ? el('div', { class: 'dim', style: 'font-size:12px' }, `${mapName(g.map)} · ${MODES[g.mode] || g.mode} · ${dayFmt.format(new Date(g.at))}`) : null);
+
+  const left = el('section', { class: 'card pcard' },
+    el('h3', {}, state.scope === 'year' ? 'Seneste år' : 'Hele karrieren',
+      el('small', {}, state.scope === 'year' ? `${(state.prof.seasons?.year || []).length} seneste PUBG-sæsoner` : 'alle spiltyper')),
+    tiles,
+    el('div', { class: 'best' },
+      bestBox('Mest skade i én kamp', bestDmg, bestDmg && `${fmt(bestDmg.dmg)}`),
+      bestBox('Flest kills i én kamp', bestKills, bestKills && `${bestKills.k} kills`)),
+    el('div', { class: 'note' }, `"Mest skade/kills i én kamp" er fra kampe registreret siden ${since} (PUBG gemmer kun kampe i 14 dage). Timer er tid i live i kampe, ikke tid i lobby.`));
+
+  // Våben (karriere)
+  const ws = (pr.weapons || []).slice(0, 10);
+  const maxK = Math.max(1, ...ws.map((w) => w.kills));
+  const rows = el('div', { class: 'wrows' });
+  for (const w of ws) {
+    const row = el('div', { class: 'wrow', tabindex: '0', 'aria-label': `${w.name}: ${w.kills} kills` },
+      el('span', { class: 'wn' }, w.name),
+      el('span', { class: 'wbar' }, el('i', { style: `width:${(w.kills / maxK) * 100}%;background:${p.color}` })),
+      el('span', { class: 'wv' }, fmt(w.kills)));
+    const nodes = () => [
+      el('div', { class: 'v' }, `${fmt(w.kills)} `, el('span', { class: 'r', style: 'font:400 13px system-ui,sans-serif' }, `kills · ${w.name}`)),
+      el('div', {}, `${fmt(w.damage)} skade · ${fmt(w.knocks)} knocks`),
+      el('div', {}, `${fmt(w.headshots)} headshots (${fmt((w.headshots / Math.max(1, w.kills)) * 100)} %)`),
+      el('div', { class: 'r' }, `Længste kill: ${fmt(w.longestKill)} m`),
+      el('div', { class: 'r' }, `Flest kills i én kamp: ${w.mostKillsInAGame}`),
+    ];
+    row.addEventListener('pointermove', (e) => showTipNodes(e, nodes()));
+    row.addEventListener('pointerleave', hideTip);
+    row.addEventListener('focus', () => { const rc = row.getBoundingClientRect(); showTipNodes({ clientX: rc.left + rc.width / 2, clientY: rc.top }, nodes()); });
+    row.addEventListener('blur', hideTip);
+    rows.append(row);
+  }
+  const longest = maxBy(pr.weapons || [], (w) => w.longestKill);
+  const right = el('section', { class: 'card pcard' },
+    el('h3', {}, 'Kills pr. våben', el('small', {}, 'top 10 · karriere')),
+    ws.length ? rows : el('div', { class: 'dim' }, 'Ingen våbendata endnu.'),
+    longest ? el('div', { class: 'note' }, `Længste kill: ${fmt(longest.longestKill)} m med ${longest.name}. Våbental er fra PUBG's weapon mastery (samme som i spillet).`) : null);
+
+  host.append(el('div', { class: 'profile', role: 'tabpanel' }, left, right));
 }
 
 function niceMax(v) {
@@ -454,6 +634,13 @@ function showTip(evt, g) {
   tip.style.top = Math.max(8, evt.clientY - h - 12) + 'px';
 }
 const hideTip = () => { tip.style.opacity = '0'; };
+function showTipNodes(evt, nodes) {
+  tip.replaceChildren(...nodes);
+  tip.style.opacity = '1';
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  tip.style.left = Math.min(window.innerWidth - w - 8, Math.max(8, evt.clientX + 14)) + 'px';
+  tip.style.top = Math.max(8, evt.clientY - h - 12) + 'px';
+}
 
 function drawBars(box, p, yMax) {
   box.replaceChildren();
@@ -502,7 +689,7 @@ function drawBars(box, p, yMax) {
 
 document.getElementById('seg').addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
-  state.n = Number(b.dataset.n);
+  state.n = b.dataset.n === 'year' ? 'year' : Number(b.dataset.n);
   for (const x of document.querySelectorAll('#seg button')) x.setAttribute('aria-pressed', String(x === b));
   render();
 });

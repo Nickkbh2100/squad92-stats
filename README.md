@@ -9,6 +9,12 @@ PUBG-statistik for Squad92: top 4 efter gennemsnitlig skade i hver spillers sids
 2. **Settings → Pages**: Source = *Deploy from a branch*, branch = `main`, mappe = `/ (root)`.
 3. **Actions → "Opdater PUBG stats" → Run workflow** for at hente data første gang. Derefter kører den hver time.
 
+## Hvad siden viser
+- **Squad-delen** (top 4, grafer, tabel, seneste kampe): kun fælles kampe efter reglerne ovenfor. Filter: 10/20/50 kampe, 1 år eller alle.
+- **Personlige stats** (rekorder og spillerprofiler): alle kampe, også solo. Timer, kampe, kills, længste kill osv. for seneste år (de 6 seneste PUBG-sæsoner) og hele karrieren, plus kills pr. våben (weapon mastery). "Mest skade i én kamp" måles fra de kampe, siden selv har registreret.
+
+Profilerne opdateres hver 6. time (`profileRefreshHours` i config.json) for at holde sig under PUBG's grænse på 10 opslag/minut.
+
 ## Tilpasning
 Alt styres i `config.json`: medlemmer, spiltyper, antal kampe pr. spiller osv. Nye clan-medlemmer tilføjes bare i `members`.
 
