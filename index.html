@@ -701,6 +701,18 @@ document.getElementById('seg').addEventListener('click', (e) => {
   render();
 });
 
+// Hent nye data automatisk hvert 5. minut, mens siden er åben
+setInterval(async () => {
+  if (document.hidden || !state.data) return;
+  try {
+    const data = await fetch('data/matches.json', { cache: 'no-store' }).then((r) => r.json());
+    if (data.updatedAt === state.data.updatedAt) return;
+    state.data = data;
+    state.prof = await fetch('data/players.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : state.prof)).catch(() => state.prof);
+    render();
+  } catch { /* prøv igen næste gang */ }
+}, 5 * 60 * 1000);
+
 load().catch((err) => {
   document.getElementById('sub').textContent = 'Kunne ikke indlæse data.';
   document.getElementById('app').append(el('div', { class: 'card empty' }, String(err)));

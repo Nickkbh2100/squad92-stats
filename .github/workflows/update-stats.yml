@@ -2,7 +2,9 @@ name: Opdater PUBG stats
 
 on:
   schedule:
-    - cron: "23 * * * *"   # hver time
+    # GitHub bruger UTC. 19-23 UTC dækker kl. 21-01 dansk tid både vinter (UTC+1) og sommer (UTC+2).
+    - cron: "3-59/10 19-23 * * *"   # aften: hvert 10. minut
+    - cron: "23 0-18 * * *"         # resten af døgnet: hver time
   workflow_dispatch: {}      # kan også startes manuelt under "Actions"
 
 permissions:
