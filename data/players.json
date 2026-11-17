@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T21:51:07.754Z",
+ "updatedAt": "2026-11-17T21:56:32.411Z",
  "profilesAt": "2026-11-17T19:28:02.868Z",
  "seasons": {
   "at": "2026-11-17T11:38:01.985Z",
@@ -17,6 +17,19 @@
   "account.f6559dc6972f41b4832f875cf21451b4": {
    "name": "Nick-kbh",
    "games": [
+    {
+     "id": "24ae575d-1f4c-4871-9348-a0362360a4ab",
+     "at": "2026-11-17T21:26:24Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 326,
+     "k": 3,
+     "kn": 2,
+     "place": 4,
+     "lk": 31,
+     "t": 1299
+    },
     {
      "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
      "at": "2026-11-17T21:02:18Z",
@@ -1172,6 +1185,19 @@
   "account.5a44325cf7ce46f78d3fb7ce9d2cd74b": {
    "name": "Vykso",
    "games": [
+    {
+     "id": "24ae575d-1f4c-4871-9348-a0362360a4ab",
+     "at": "2026-11-17T21:26:24Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 224,
+     "k": 0,
+     "kn": 1,
+     "place": 4,
+     "lk": 0,
+     "t": 1396
+    },
     {
      "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
      "at": "2026-11-17T21:02:18Z",
@@ -3835,6 +3861,19 @@
    "name": "92Diamond",
    "games": [
     {
+     "id": "24ae575d-1f4c-4871-9348-a0362360a4ab",
+     "at": "2026-11-17T21:26:24Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 190,
+     "k": 1,
+     "kn": 2,
+     "place": 4,
+     "lk": 26,
+     "t": 1180
+    },
+    {
      "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
      "at": "2026-11-17T21:02:18Z",
      "mode": "squad-fpp",
@@ -5981,6 +6020,7 @@
   "0695f7b9-39a5-4cd1-ab79-5c0edec65a17": "2026-11-17T19:48:26Z",
   "bf43ca28-3889-4db8-9481-988f950c81f2": "2026-11-17T20:28:17Z",
   "689ce318-66d0-470a-81e0-9abf12b1790a": "2026-11-17T19:38:49Z",
-  "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d": "2026-11-17T21:02:18Z"
+  "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d": "2026-11-17T21:02:18Z",
+  "24ae575d-1f4c-4871-9348-a0362360a4ab": "2026-11-17T21:26:24Z"
  }
 }

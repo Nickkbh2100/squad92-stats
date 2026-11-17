@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T21:51:07.752Z",
+ "updatedAt": "2026-11-17T21:56:32.409Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -19,6 +19,66 @@
   }
  ],
  "matches": [
+  {
+   "id": "24ae575d-1f4c-4871-9348-a0362360a4ab",
+   "createdAt": "2026-11-17T21:26:24Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1664,
+   "teams": [
+    {
+     "rank": 4,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 224.3,
+       "kills": 0,
+       "assists": 2,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1396,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 4
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 190.4,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1180,
+       "longestKill": 25.8,
+       "deathType": "byplayer",
+       "winPlace": 4
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 326.3,
+       "kills": 3,
+       "assists": 1,
+       "dbnos": 2,
+       "headshots": 2,
+       "revives": 2,
+       "timeSurvived": 1299,
+       "longestKill": 30.8,
+       "deathType": "byzone",
+       "winPlace": 4
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/17/21/55/96443dac-e2d1-11f1-ba0b-8657f63d2ee7-telemetry.json",
+   "replay": 1
+  },
   {
    "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
    "createdAt": "2026-11-17T21:02:18Z",
@@ -3391,6 +3451,7 @@
   "0695f7b9-39a5-4cd1-ab79-5c0edec65a17": "2026-11-17T19:48:26Z",
   "bf43ca28-3889-4db8-9481-988f950c81f2": "2026-11-17T20:28:17Z",
   "689ce318-66d0-470a-81e0-9abf12b1790a": "2026-11-17T19:38:49Z",
-  "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d": "2026-11-17T21:02:18Z"
+  "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d": "2026-11-17T21:02:18Z",
+  "24ae575d-1f4c-4871-9348-a0362360a4ab": "2026-11-17T21:26:24Z"
  }
 }
