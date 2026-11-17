@@ -5,11 +5,14 @@
 // data/players.json  – profiler: karriere- og sidste-års-stats, våben og en personlig kamplog (alle kampe)
 
 import fs from 'node:fs/promises';
+import { buildReplay } from './replay.mjs';
 
 const root = new URL('..', import.meta.url);
 const config = JSON.parse(await fs.readFile(new URL('config.json', root), 'utf8'));
 const matchesPath = new URL('data/matches.json', root);
 const playersPath = new URL('data/players.json', root);
+const replayDir = new URL('data/replays/', root);
+const REPLAY_FULL_KEEP = config.replayFullKeep ?? 40; // så mange nyeste replays beholder alle andre spillere
 
 const KEY = process.env.PUBG_API_KEY;
 if (!KEY) {
@@ -220,7 +223,10 @@ async function worker() {
     const at = json.data.attributes.createdAt;
     if (!data.checked[id] && !known.has(id)) {
       const match = analyseSquadMatch(json, isMember);
-      if (match) { data.matches.push(match); added++; }
+      if (match) {
+        match.telemetry = json.included.find((i) => i.type === 'asset')?.attributes?.URL;
+        data.matches.push(match); added++;
+      }
     }
     data.checked[id] = at;
     if (!prof.logged[id]) {
@@ -243,7 +249,37 @@ for (const p of Object.values(prof.players)) {
 }
 data.matches.sort((x, y) => Date.parse(y.createdAt) - Date.parse(x.createdAt));
 
-// 2) Profiler (karriere, sidste år, våben) – kun hver X. time pga. rate limit
+// 2) 2D-replays for fælles kampe (telemetri findes kun i 14 dage)
+await fs.mkdir(replayDir, { recursive: true });
+let builtReplays = 0;
+for (const match of data.matches) {
+  if (match.replay || Date.parse(match.createdAt) < now - 13.5 * 864e5) continue;
+  try {
+    if (!match.telemetry) {
+      const json = await api(`/matches/${match.id}`, { auth: false });
+      match.telemetry = json?.included?.find((i) => i.type === 'asset')?.attributes?.URL;
+      if (!match.telemetry) continue;
+    }
+    const res = await fetch(match.telemetry);
+    if (!res.ok) { console.warn(`Telemetri for ${match.id}: HTTP ${res.status}`); continue; }
+    const replay = buildReplay(await res.json(), { matchId: match.id, memberIds });
+    if (!replay) continue;
+    await fs.writeFile(new URL(`${match.id}.json`, replayDir), JSON.stringify(replay));
+    match.replay = 1;
+    builtReplays++;
+  } catch (err) {
+    console.warn(`Kunne ikke bygge replay for ${match.id}: ${err.message}`);
+  }
+}
+// Ældre replays: fjern de andre spillere for at spare plads (jeres egne spor og hændelser beholdes)
+for (const match of data.matches.filter((x) => x.replay).slice(REPLAY_FULL_KEEP)) {
+  const file = new URL(`${match.id}.json`, replayDir);
+  const r = await readJson(file, null);
+  if (r?.others?.length) { r.others = []; await fs.writeFile(file, JSON.stringify(r)); }
+}
+if (builtReplays) console.log(`${builtReplays} nye 2D-replays bygget.`);
+
+// 3) Profiler (karriere, sidste år, våben) – kun hver X. time pga. rate limit
 const due = !prof.profilesAt || now - Date.parse(prof.profilesAt) > PROFILE_REFRESH_HOURS * 3600e3 || process.env.FORCE_PROFILES;
 if (due) {
   if (!prof.seasons || now - Date.parse(prof.seasons.at) > 24 * 3600e3) {

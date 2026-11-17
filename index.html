@@ -140,6 +140,10 @@
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .chip { display: inline-flex; align-items: center; gap: 6px; background: var(--surface-2); border-radius: 8px; padding: 3px 8px; font-size: 13px; white-space: nowrap; }
   .chip b { font-weight: 650; }
+  a.chip.replay { background: var(--pubg); color: #111; font-weight: 700; text-decoration: none; }
+  a.chip.replay:hover { filter: brightness(1.1); }
+  .herolink { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; background: var(--pubg); color: #111; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 10px; font-size: 14px; }
+  .herolink:hover { filter: brightness(1.1); }
   .chip span { color: var(--text-2); }
   .place { font-family: var(--cond); font-size: 24px; line-height: 1; font-weight: 500; }
   .place.win { color: var(--win); font-size: 20px; letter-spacing: 0.04em; }
@@ -240,6 +244,7 @@
       <h1>SQUAD<span class="n">92</span></h1>
       <div class="tagline">Fra Parken til Erangel</div>
       <p class="sub" id="sub">Indlæser …</p>
+      <a class="herolink" href="replay.html">▶ Se 2D-replays af jeres kampe</a>
     </div>
   </header>
 
@@ -267,6 +272,7 @@
       <li>Data hentes automatisk fra PUBG's officielle API ca. én gang i timen.</li>
     </ul>
     <div class="sig">Squad<b>92</b> · Ingen er større end klubben</div>
+    <p>Kort og data fra PUBG's officielle API og developer assets. Squad92 er en uofficiel fanside og er ikke tilknyttet PUBG/KRAFTON eller F.C. København.</p>
   </footer>
 </div>
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
@@ -470,7 +476,8 @@ function render() {
         el('div', { class: 'chips' }, [...t.players].sort((a, b) => b.damage - a.damage).map((pl) =>
           el('span', { class: 'chip' },
             el('span', { class: 'key', style: `background:${colorOf.get(pl.name.toLowerCase()) || 'var(--muted)'}` }),
-            el('b', {}, pl.name), el('span', {}, `${fmt(pl.damage)} dmg · ${pl.kills} k`))))));
+            el('b', {}, pl.name), el('span', {}, `${fmt(pl.damage)} dmg · ${pl.kills} k`))),
+          m.replay ? el('a', { class: 'chip replay', href: `replay.html?m=${encodeURIComponent(m.id)}` }, '▶ 2D-replay') : null)));
     }
   }
   app.append(list);

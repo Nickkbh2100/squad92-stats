@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squad92 Replay</title>
+<meta name="description" content="2D-replay af Squad92's seneste fælles PUBG-kampe.">
+<meta name="theme-color" content="#070d1f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230b1a4a'/><circle cx='16' cy='16' r='11' fill='none' stroke='%23fff' stroke-width='2'/><text x='16' y='21' font-size='13' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23f2a900'>92</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --page: #070d1f; --surface: #0f1836; --surface-2: #17224a;
+    --text: #f3f5fb; --text-2: #b7bfd8; --muted: #8690b0;
+    --grid: #1f2a52; --ring: rgba(255,255,255,0.08);
+    --pubg: #f2a900; --fck: #2350e6; --white: #ffffff;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+    --s5: #d55181; --s6: #0ca30c; --s7: #9085e9; --s8: #e66767;
+    --win: #2fc24a; --bad: #e5484d; --heal: #2fc24a;
+    --stencil: "Saira Stencil One", Impact, sans-serif;
+    --cond: "Teko", "Arial Narrow", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: radial-gradient(1200px 500px at 85% -10%, rgba(35,80,230,0.22), transparent 60%), var(--page);
+    color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; min-height: 100vh;
+  }
+  .kit { height: 6px; background: repeating-linear-gradient(90deg, var(--white) 0 28px, var(--fck) 28px 56px); }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 18px 16px 48px; }
+  .top { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .brand a { color: var(--text-2); text-decoration: none; font-size: 14px; }
+  .brand a:hover { color: var(--text); }
+  h1 { margin: 0; font-family: var(--stencil); font-weight: 400; font-size: 40px; line-height: 1; }
+  h1 .n { color: var(--pubg); }
+  h1 small { font-family: var(--cond); font-size: 26px; color: var(--text-2); letter-spacing: 0.08em; margin-left: 8px; }
+  select {
+    appearance: none; background: var(--surface) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' stroke='%23b7bfd8' stroke-width='2' fill='none'/></svg>") no-repeat right 12px center;
+    color: var(--text); border: 1px solid var(--ring); border-radius: 10px; padding: 9px 36px 9px 12px; font: inherit; font-size: 14px; max-width: 100%;
+  }
+  select:focus-visible { outline: 2px solid var(--pubg); }
+  .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 14px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 14px; align-items: start; }
+  .viewer { padding: 10px; }
+  .stage { position: relative; aspect-ratio: 1 / 1; width: 100%; max-width: max(320px, calc(100vh - 210px)); margin: 0 auto; border-radius: 10px; overflow: hidden; background: #0a1230; touch-action: none; cursor: grab; }
+  .stage.drag { cursor: grabbing; }
+  canvas { display: block; width: 100%; height: 100%; }
+  .hud { position: absolute; top: 10px; right: 10px; display: flex; gap: 6px; flex-direction: column; align-items: flex-end; pointer-events: none; }
+  .pill { background: rgba(7,13,31,0.82); border: 1px solid var(--ring); border-radius: 8px; padding: 4px 10px; font-size: 13px; }
+  .pill b { font-family: var(--cond); font-size: 22px; font-weight: 500; line-height: 1; }
+  .feed { position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 4px; pointer-events: none; max-width: 65%; }
+  .feed div { background: rgba(7,13,31,0.82); border-left: 3px solid var(--muted); border-radius: 6px; padding: 3px 8px; font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed .good { border-color: var(--pubg); } .feed .bad { border-color: var(--bad); } .feed .heal { border-color: var(--heal); }
+  .feed .w { color: var(--text-2); }
+  .zoom { position: absolute; right: 10px; bottom: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .zoom button, .ctrl button.icon {
+    all: unset; cursor: pointer; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 9px;
+    background: rgba(7,13,31,0.85); border: 1px solid rgba(255,255,255,0.14); font-size: 18px; font-weight: 700;
+  }
+  .zoom button:focus-visible, .ctrl button:focus-visible, .seg button:focus-visible { outline: 2px solid var(--pubg); }
+  .ctrl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 4px 2px; }
+  .ctrl button.play { width: 44px; height: 44px; background: var(--pubg); color: #111; border: 0; font-size: 18px; }
+  .time { font-family: var(--cond); font-size: 24px; min-width: 104px; line-height: 1; }
+  .time span { color: var(--muted); }
+  .seg { display: inline-flex; background: var(--page); border: 1px solid var(--ring); border-radius: 10px; padding: 3px; }
+  .seg button { all: unset; cursor: pointer; padding: 5px 10px; border-radius: 7px; font-size: 13px; color: var(--text-2); font-weight: 600; }
+  .seg button[aria-pressed="true"] { background: var(--pubg); color: #111; }
+  .toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-2); cursor: pointer; user-select: none; }
+  .toggle input { accent-color: var(--pubg); width: 16px; height: 16px; }
+  .tl { position: relative; width: 100%; padding: 14px 4px 4px; }
+  .ticks { position: absolute; left: 12px; right: 12px; top: 2px; height: 12px; pointer-events: none; }
+  .ticks i { position: absolute; top: 0; width: 3px; height: 10px; border-radius: 2px; transform: translateX(-1px); }
+  input[type=range] { width: 100%; accent-color: var(--pubg); margin: 0; height: 22px; }
+  .side { display: grid; gap: 14px; }
+  .panel { padding: 14px 16px; }
+  .panel h2 { margin: 0 0 10px; font-family: var(--cond); font-weight: 500; font-size: 22px; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1; display: flex; align-items: center; gap: 8px; }
+  .panel h2::before { content: ""; width: 8px; height: 18px; background: linear-gradient(var(--white) 50%, var(--fck) 50%); border-radius: 2px; transform: translateY(-2px); }
+  .result { font-family: var(--cond); font-size: 30px; line-height: 1; margin-bottom: 8px; }
+  .result.win { color: var(--win); }
+  .players { display: grid; gap: 6px; }
+  .pl { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; font-size: 14px; }
+  .pl .nm { display: flex; align-items: center; gap: 8px; font-weight: 650; min-width: 0; }
+  .pl .nm span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pl .st { color: var(--text-2); font-size: 13px; text-align: right; }
+  .key { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+  .hl { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; max-height: 520px; overflow: auto; }
+  .hl button { all: unset; cursor: pointer; display: grid; grid-template-columns: 44px 1fr; gap: 8px; width: 100%; box-sizing: border-box; padding: 6px 8px; border-radius: 8px; font-size: 13.5px; line-height: 1.35; border-left: 3px solid transparent; }
+  .hl button:hover, .hl button:focus-visible { background: var(--surface-2); }
+  .hl button.now { background: var(--surface-2); }
+  .hl .good { border-left-color: var(--pubg); } .hl .bad { border-left-color: var(--bad); } .hl .heal { border-left-color: var(--heal); } .hl .info { border-left-color: var(--muted); }
+  .hl .tm { color: var(--muted); font-family: var(--cond); font-size: 18px; line-height: 1.1; }
+  .hl .w { color: var(--text-2); }
+  .badge { display: inline-block; background: var(--pubg); color: #111; font-weight: 700; font-size: 11px; border-radius: 4px; padding: 0 5px; margin-left: 4px; }
+  .badge.tk { background: var(--bad); color: #fff; }
+  .filters { display: flex; gap: 8px; margin-bottom: 8px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--text-2); font-size: 12px; padding: 6px 4px 0; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { display: inline-block; width: 14px; height: 0; border-top: 2px solid; }
+  .legend i.dot { width: 8px; height: 8px; border: 0; border-radius: 50%; }
+  .empty { padding: 40px; text-align: center; color: var(--text-2); }
+  footer { margin-top: 28px; color: var(--muted); font-size: 12px; }
+  @media (max-width: 960px) { .layout { grid-template-columns: 1fr; } .hl { max-height: 380px; } }
+  @media (max-width: 520px) {
+    .top label, select { width: 100%; }
+    .ctrl { gap: 8px; } h1 { font-size: 32px; } h1 small { font-size: 22px; } .viewer { padding: 6px; } .time { font-size: 20px; min-width: 88px; } }
+</style>
+</head>
+<body>
+<div class="kit" aria-hidden="true"></div>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <h1>SQUAD<span class="n">92</span><small>2D-replay</small></h1>
+      <a href="./">← Tilbage til stats</a>
+    </div>
+    <label><span class="sr" style="position:absolute;left:-9999px">Vælg kamp</span><select id="pick" aria-label="Vælg kamp"></select></label>
+  </div>
+
+  <div class="layout" id="layout">
+    <section class="card viewer">
+      <div class="stage" id="stage">
+        <canvas id="cv" aria-label="2D-kort med spillernes bevægelser"></canvas>
+        <div class="feed" id="feed" aria-live="polite"></div>
+        <div class="hud"><div class="pill" id="alive"></div></div>
+        <div class="zoom">
+          <button id="zin" aria-label="Zoom ind">+</button>
+          <button id="zout" aria-label="Zoom ud">−</button>
+          <button id="zfit" aria-label="Vis hele kortet" style="font-size:14px">⤢</button>
+        </div>
+      </div>
+      <div class="tl">
+        <div class="ticks" id="ticks"></div>
+        <input type="range" id="scrub" min="0" max="100" step="0.1" value="0" aria-label="Tidslinje">
+      </div>
+      <div class="ctrl">
+        <button class="icon play" id="play" aria-label="Afspil">▶</button>
+        <div class="time" id="time">0:00 <span>/ 0:00</span></div>
+        <div class="seg" id="speed" role="group" aria-label="Hastighed">
+          <button data-s="1">1×</button><button data-s="5">5×</button><button data-s="10" aria-pressed="true">10×</button><button data-s="30">30×</button><button data-s="60">60×</button>
+        </div>
+        <label class="toggle"><input type="checkbox" id="follow"> Følg holdet</label>
+        <label class="toggle"><input type="checkbox" id="others" checked> Vis andre spillere</label>
+      </div>
+      <div class="legend">
+        <span><i style="border-color:#5b8cff"></i>Blå zone</span>
+        <span><i style="border-color:#fff"></i>Næste zone</span>
+        <span><i style="border-color:#f2a900;border-top-style:dashed"></i>Flyets rute</span>
+        <span><i class="dot" style="background:#c9cfdf"></i>Andre spillere</span>
+        <span><i class="dot" style="background:#f2a900"></i>Jeres knock/kill</span>
+        <span><i class="dot" style="background:#e5484d"></i>I blev ramt</span>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="card panel">
+        <h2>Holdet</h2>
+        <div id="result" class="result"></div>
+        <div class="players" id="players"></div>
+      </section>
+      <section class="card panel">
+        <h2>Highlights</h2>
+        <div class="filters">
+          <div class="seg" id="hlfilter" role="group" aria-label="Filtrer highlights">
+            <button data-f="fights" aria-pressed="true">Kampe</button><button data-f="all">Alt</button>
+          </div>
+        </div>
+        <ul class="hl" id="hl"></ul>
+      </section>
+    </aside>
+  </div>
+
+  <footer>Kort og data fra PUBG's officielle API og developer assets. Squad92 er en uofficiel fanside og er ikke tilknyttet PUBG/KRAFTON eller F.C. København.</footer>
+</div>
+
+<script>
+const MAPIMG = {
+  Baltic_Main: 'Erangel', Erangel_Main: 'Erangel', Desert_Main: 'Miramar', Savage_Main: 'Sanhok', DihorOtok_Main: 'Vikendi',
+  Summerland_Main: 'Karakin', Chimera_Main: 'Paramo', Tiger_Main: 'Taego', Kiki_Main: 'Deston', Heaven_Main: 'Haven',
+  Neon_Main: 'Rondo', Range_Main: 'Camp_Jackal',
+};
+const MAPS = { ...MAPIMG, Range_Main: 'Camp Jackal' };
+const MODES = { duo: 'Duo', 'duo-fpp': 'Duo FPP', squad: 'Squad', 'squad-fpp': 'Squad FPP' };
+const dateFmt = new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+const fmt = (n) => Number(n).toLocaleString('da-DK', { maximumFractionDigits: 0 });
+const mmss = (t) => { t = Math.max(0, Math.floor(t)); return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; };
+function el(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === 'class') e.className = v; else if (k === 'style') e.style.cssText = v; else e.setAttribute(k, v); }
+  for (const k of kids.flat()) if (k != null) e.append(k instanceof Node ? k : document.createTextNode(String(k)));
+  return e;
+}
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+const S = {
+  config: null, matches: [], match: null, R: null, img: null,
+  t: 0, playing: false, speed: 10, last: 0,
+  view: { cx: 0, cy: 0, zoom: 1 }, follow: false, showOthers: true,
+  colors: {}, knockState: null, hlFilter: 'fights',
+};
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d'), stage = document.getElementById('stage');
+
+// ---------- Data ----------
+async function init() {
+  const [config, data] = await Promise.all([
+    fetch('config.json', { cache: 'no-store' }).then((r) => r.json()),
+    fetch('data/matches.json', { cache: 'no-store' }).then((r) => r.json()),
+  ]);
+  S.config = config;
+  S.matches = data.matches.filter((m) => m.replay);
+  config.members.forEach((n, i) => { S.colors[n.toLowerCase()] = css(`--s${i + 1}`); });
+  const pick = document.getElementById('pick');
+  if (!S.matches.length) {
+    document.getElementById('layout').replaceChildren(el('div', { class: 'card empty' }, 'Ingen replays endnu. De bygges automatisk efter jeres næste fælles kamp.'));
+    pick.hidden = true;
+    return;
+  }
+  for (const m of S.matches) {
+    const t = m.teams[0];
+    pick.append(el('option', { value: m.id }, `${dateFmt.format(new Date(m.createdAt))} · ${MAPS[m.map] || m.map} · ${MODES[m.gameMode] || m.gameMode} · ${t.won ? '🍗 Vundet' : '#' + t.rank}`));
+  }
+  const want = new URLSearchParams(location.search).get('m');
+  const start = S.matches.find((m) => m.id === want) ? want : S.matches[0].id;
+  pick.value = start;
+  pick.addEventListener('change', () => { history.replaceState(null, '', `?m=${pick.value}`); loadMatch(pick.value); });
+  await loadMatch(start);
+}
+
+async function loadMatch(id) {
+  S.playing = false; updatePlay();
+  S.match = S.matches.find((m) => m.id === id);
+  const R = await fetch(`data/replays/${id}.json`).then((r) => r.json());
+  // Pak spor ud til arrays af [t,x,y]
+  const unpack = (a) => { const o = []; for (let i = 0; i < a.length; i += 3) o.push([a[i], a[i + 1], a[i + 2]]); return o; };
+  R.trk = Object.fromEntries(Object.entries(R.tracks).map(([n, a]) => [n, unpack(a)]));
+  R.oth = R.others.map((o) => ({ d: o.d, p: unpack(o.p) }));
+  R.names = new Set(R.team.map((p) => p.name));
+  R.deaths = {};
+  for (const e of R.events) if (e.k === 'kill' && R.names.has(e.v)) R.deaths[e.v] = e.t;
+  S.R = R;
+  S.img = null;
+  const img = new Image();
+  img.onload = () => { S.img = img; draw(); };
+  img.src = `assets/maps/${MAPIMG[R.map] || 'Erangel'}.webp`;
+  const firstJump = R.events.find((e) => e.k === 'jump')?.t ?? 0;
+  S.t = Math.max(0, firstJump - 5);
+  fitView();
+  const scrub = document.getElementById('scrub');
+  scrub.max = R.dur; scrub.value = S.t;
+  renderTicks(); renderTeam(); renderHighlights();
+  draw();
+}
+
+// ---------- Hjælpere ----------
+function posAt(track, t) {
+  if (!track.length || t < track[0][0]) return null;
+  let lo = 0, hi = track.length - 1;
+  if (t >= track[hi][0]) return [track[hi][1], track[hi][2]];
+  while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (track[mid][0] <= t) lo = mid; else hi = mid; }
+  const a = track[lo], b = track[hi], f = (t - a[0]) / Math.max(0.001, b[0] - a[0]);
+  return [a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f];
+}
+function zoneAt(t) {
+  const z = S.R.zone;
+  if (!z.length) return null;
+  let i = 0;
+  while (i + 1 < z.length && z[i + 1][0] <= t) i++;
+  const a = z[i], b = z[i + 1];
+  if (!b || t < a[0]) return a;
+  const f = (t - a[0]) / Math.max(1, b[0] - a[0]);
+  // Kun den blå zone bevæger sig glidende; den hvide skifter brat
+  const lerp = (k) => a[k] + (b[k] - a[k]) * f;
+  return [t, lerp(1), lerp(2), lerp(3), a[4], a[5], a[6]];
+}
+function aliveAt(t) {
+  let n = null;
+  for (const [tt, c] of S.R.alive || []) { if (tt <= t) n = c; else break; }
+  return n;
+}
+function stateOf(name, t) {
+  // 'alive' | 'knocked' | 'dead'
+  if (S.R.deaths[name] != null && t >= S.R.deaths[name]) return 'dead';
+  let st = 'alive';
+  for (const e of S.R.events) {
+    if (e.t > t) break;
+    if (e.v !== name) continue;
+    if (e.k === 'knock') st = 'knocked';
+    else if (e.k === 'revive') st = 'alive';
+  }
+  return st;
+}
+const colorOf = (name) => S.colors[name.toLowerCase()] || '#ffffff';
+
+// ---------- Visning ----------
+let W = 0, H = 0, DPR = 1;
+function resize() {
+  const r = stage.getBoundingClientRect();
+  DPR = Math.min(2, window.devicePixelRatio || 1);
+  W = r.width; H = r.height;
+  cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+  draw();
+}
+const scale = () => (Math.min(W, H) / S.R.size) * S.view.zoom;
+const toScreen = (x, y) => { const s = scale(); return [(x - S.view.cx) * s + W / 2, (y - S.view.cy) * s + H / 2]; };
+const toWorld = (sx, sy) => { const s = scale(); return [(sx - W / 2) / s + S.view.cx, (sy - H / 2) / s + S.view.cy]; };
+function fitView() { S.view = { cx: S.R.size / 2, cy: S.R.size / 2, zoom: 1 }; }
+function clampView() {
+  S.view.zoom = Math.min(24, Math.max(1, S.view.zoom));
+  const half = S.R.size / 2 / S.view.zoom;
+  S.view.cx = Math.min(S.R.size - half * 0.2, Math.max(half * 0.2, S.view.cx));
+  S.view.cy = Math.min(S.R.size - half * 0.2, Math.max(half * 0.2, S.view.cy));
+}
+function zoomAt(f, sx = W / 2, sy = H / 2) {
+  const [wx, wy] = toWorld(sx, sy);
+  S.view.zoom *= f; clampView();
+  const [nx, ny] = toWorld(sx, sy);
+  S.view.cx += wx - nx; S.view.cy += wy - ny; clampView();
+  draw();
+}
+
+function draw() {
+  if (!S.R || !W) return;
+  const R = S.R, t = S.t, s = scale();
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  ctx.fillStyle = '#0a1230'; ctx.fillRect(0, 0, W, H);
+
+  if (S.follow) {
+    const pts = R.team.map((p) => (stateOf(p.name, t) !== 'dead' ? posAt(R.trk[p.name] || [], t) : null)).filter(Boolean);
+    if (pts.length) {
+      const cx = pts.reduce((a, p) => a + p[0], 0) / pts.length, cy = pts.reduce((a, p) => a + p[1], 0) / pts.length;
+      S.view.cx += (cx - S.view.cx) * 0.25; S.view.cy += (cy - S.view.cy) * 0.25;
+      if (S.view.zoom < 4) S.view.zoom = 4;
+      clampView();
+    }
+  }
+
+  const [ox, oy] = toScreen(0, 0);
+  if (S.img) ctx.drawImage(S.img, ox, oy, R.size * s, R.size * s);
+
+  // Zoner
+  const z = zoneAt(t);
+  if (z) {
+    const [bx, by] = toScreen(z[1], z[2]), br = z[3] * s;
+    if (z[3] > 0 && z[3] < R.size * 0.75) {
+      ctx.save();
+      ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.arc(bx, by, br, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(35,80,230,0.28)'; ctx.fill('evenodd');
+      ctx.restore();
+      ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2); ctx.strokeStyle = '#5b8cff'; ctx.lineWidth = 2; ctx.stroke();
+    }
+    if (z[6] > 0) {
+      const [wx, wy] = toScreen(z[4], z[5]);
+      ctx.beginPath(); ctx.arc(wx, wy, z[6] * s, 0, Math.PI * 2); ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2; ctx.stroke();
+    }
+  }
+
+  // Flyets rute
+  if (R.plane) {
+    const [[x1, y1], [x2, y2]] = R.plane;
+    const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1, ext = R.size * 1.5;
+    const a = toScreen(x1 - (dx / len) * ext, y1 - (dy / len) * ext), b = toScreen(x2 + (dx / len) * ext, y2 + (dy / len) * ext);
+    ctx.save(); ctx.setLineDash([10, 8]); ctx.strokeStyle = 'rgba(242,169,0,' + (t < 240 ? 0.9 : 0.35) + ')'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke(); ctx.restore();
+  }
+
+  // Andre spillere
+  if (S.showOthers) {
+    ctx.fillStyle = 'rgba(214,220,236,0.75)';
+    for (const o of R.oth) {
+      if (o.d != null && t > o.d) continue;
+      const p = posAt(o.p, t);
+      if (!p) continue;
+      const [x, y] = toScreen(p[0], p[1]);
+      if (x < -5 || y < -5 || x > W + 5 || y > H + 5) continue;
+      ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+
+  // Hændelses-pings
+  for (const e of R.events) {
+    if (e.t > t) break;
+    if (t - e.t > 4 || !['kill', 'knock', 'revive'].includes(e.k)) continue;
+    const age = (t - e.t) / 4;
+    const [x, y] = toScreen(e.x, e.y);
+    const col = e.k === 'revive' ? '47,194,74' : e.us ? '242,169,0' : '229,72,77';
+    ctx.beginPath(); ctx.arc(x, y, 6 + age * 26, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(${col},${1 - age})`; ctx.lineWidth = 3; ctx.stroke();
+    if (e.k === 'kill') { ctx.fillStyle = `rgba(${col},${1 - age})`; drawX(x, y, 5, 3, ctx.fillStyle); }
+  }
+
+  // Holdet
+  const labels = [];
+  const pulse = (Math.sin(performance.now() / 180) + 1) / 2;
+  for (const p of R.team) {
+    const trk = R.trk[p.name] || [];
+    const st = stateOf(p.name, t);
+    const pos = posAt(trk, t);
+    if (!pos) continue;
+    const [x, y] = toScreen(pos[0], pos[1]);
+    const col = colorOf(p.name);
+    if (st === 'dead') { drawX(x, y, 7, 3.5, col); continue; }
+    if (st === 'knocked') {
+      ctx.beginPath(); ctx.arc(x, y, 11 + pulse * 4, 0, Math.PI * 2); ctx.strokeStyle = 'rgba(229,72,77,0.9)'; ctx.lineWidth = 2.5; ctx.stroke();
+    }
+    ctx.beginPath(); ctx.arc(x, y, 7, 0, Math.PI * 2);
+    ctx.fillStyle = col; ctx.globalAlpha = st === 'knocked' ? 0.55 : 1; ctx.fill(); ctx.globalAlpha = 1;
+    ctx.lineWidth = 2; ctx.strokeStyle = '#ffffff'; ctx.stroke();
+    labels.push({ x, y, name: p.name, col });
+  }
+  // Navneskilte – skubbes ned, så de ikke overlapper hinanden
+  ctx.font = '600 12px system-ui, sans-serif';
+  const placed = [];
+  for (const l of labels.sort((a, b) => a.y - b.y)) {
+    const w = ctx.measureText(l.name).width + 12;
+    let lx = l.x + 11, ly = l.y - 9;
+    while (placed.some((r) => lx < r.x + r.w && lx + w > r.x && ly < r.y + 18 && ly + 18 > r.y)) ly += 20;
+    placed.push({ x: lx, y: ly, w });
+    if (ly !== l.y - 9) { ctx.beginPath(); ctx.moveTo(l.x, l.y); ctx.lineTo(lx, ly + 9); ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1; ctx.stroke(); }
+    ctx.fillStyle = 'rgba(7,13,31,0.85)'; roundRect(lx, ly, w, 18, 5); ctx.fill();
+    ctx.fillStyle = l.col; ctx.fillRect(lx, ly + 4, 3, 10);
+    ctx.fillStyle = '#f3f5fb'; ctx.fillText(l.name, lx + 7, ly + 13.5);
+  }
+
+  // HUD
+  document.getElementById('time').replaceChildren(mmss(t) + ' ', el('span', {}, '/ ' + mmss(R.dur)));
+  const n = aliveAt(t);
+  document.getElementById('alive').replaceChildren(el('b', {}, n ?? '–'), ' i live');
+  renderFeed();
+  highlightNow();
+}
+function drawX(x, y, r, w, col) {
+  ctx.save(); ctx.strokeStyle = col; ctx.lineWidth = w; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(x - r, y - r); ctx.lineTo(x + r, y + r); ctx.moveTo(x + r, y - r); ctx.lineTo(x - r, y + r); ctx.stroke();
+  ctx.restore();
+}
+function roundRect(x, y, w, h, r) {
+  ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+}
+
+// ---------- Tekst for hændelser ----------
+function cls(e) {
+  if (e.k === 'revive') return 'heal';
+  if (e.k === 'jump' || e.k === 'land') return 'info';
+  return e.us && !S.R.names.has(e.v) ? 'good' : 'bad';
+}
+function evText(e) {
+  const verb = { kill: 'dræbte', knock: 'knockede', revive: 'genoplivede' }[e.k];
+  if (e.k === 'jump') return [el('b', {}, e.a), ' hoppede ud af flyet'];
+  if (e.k === 'land') return [el('b', {}, e.a), ' landede'];
+  const w = e.w && e.w !== 'Player' ? `${e.w}${e.d ? ` · ${fmt(e.d)} m` : ''}` : e.d ? `${fmt(e.d)} m` : '';
+  return [el('b', {}, e.a || 'Zonen'), ` ${verb} `, el('b', {}, e.v), w ? el('span', { class: 'w' }, ` (${w})`) : null];
+}
+
+function renderFeed() {
+  const feed = document.getElementById('feed');
+  const recent = S.R.events.filter((e) => e.t <= S.t && S.t - e.t < 10 && ['kill', 'knock', 'revive'].includes(e.k)).slice(-5);
+  const key = recent.map((e) => e.t + e.k + e.v).join('|');
+  if (feed.dataset.key === key) return;
+  feed.dataset.key = key;
+  feed.replaceChildren(...recent.map((e) => el('div', { class: cls(e) }, ...evText(e))));
+}
+
+function renderTicks() {
+  const ticks = document.getElementById('ticks');
+  ticks.replaceChildren(...S.R.events.filter((e) => ['kill', 'knock'].includes(e.k)).map((e) => {
+    const c = cls(e) === 'good' ? 'var(--pubg)' : 'var(--bad)';
+    return el('i', { style: `left:${(e.t / S.R.dur) * 100}%;background:${c}`, title: `${mmss(e.t)} ${e.a} → ${e.v}` });
+  }));
+}
+
+function renderTeam() {
+  const t = S.match.teams.find((x) => x.players.some((p) => S.R.names.has(p.name))) || S.match.teams[0];
+  const res = document.getElementById('result');
+  res.className = 'result' + (t.won ? ' win' : '');
+  res.textContent = t.won ? '🍗 Winner winner chicken dinner' : `Placering #${t.rank}`;
+  const box = document.getElementById('players');
+  box.replaceChildren(el('div', { class: 'dim', style: 'color:var(--text-2);font-size:13px;margin-bottom:4px' },
+    `${MAPS[S.match.map] || S.match.map} · ${MODES[S.match.gameMode] || S.match.gameMode} · ${dateFmt.format(new Date(S.match.createdAt))}`));
+  for (const p of [...t.players].sort((a, b) => b.damage - a.damage)) {
+    box.append(el('div', { class: 'pl' },
+      el('div', { class: 'nm' }, el('span', { class: 'key', style: `background:${colorOf(p.name)}` }), el('span', {}, p.name)),
+      el('div', { class: 'st' }, `${fmt(p.damage)} dmg`),
+      el('div', { class: 'st' }, `${p.kills} k · ${p.dbnos} kn`)));
+  }
+}
+
+function renderHighlights() {
+  const ul = document.getElementById('hl');
+  const evs = S.R.events.filter((e) => S.hlFilter === 'all' || ['kill', 'knock', 'revive'].includes(e.k));
+  // Multi-knocks: samme spiller knocker/dræber flere fjender inden for 30 sek.
+  const streak = new Map();
+  const ours = S.R.events.filter((e) => (e.k === 'knock' || e.k === 'kill') && e.us && !S.R.names.has(e.v));
+  for (const e of ours) {
+    const n = ours.filter((o) => o.a === e.a && o.t <= e.t && e.t - o.t <= 30 && o.k === 'knock').length;
+    if (e.k === 'knock' && n >= 2) streak.set(e, n);
+  }
+  ul.replaceChildren(...evs.map((e) => {
+    const tk = e.us && S.R.names.has(e.v) && e.k !== 'revive';
+    const b = el('button', { class: cls(e), 'data-t': e.t },
+      el('span', { class: 'tm' }, mmss(e.t)),
+      el('span', {}, ...evText(e), streak.has(e) ? el('span', { class: 'badge' }, `${streak.get(e)}× på 30 sek`) : null,
+        tk ? el('span', { class: 'badge tk' }, 'TEAMKILL') : null));
+    b.addEventListener('click', () => {
+      S.t = Math.max(0, e.t - 4); S.follow = false; document.getElementById('follow').checked = false;
+      S.view.cx = e.x; S.view.cy = e.y; S.view.zoom = Math.max(S.view.zoom, 6); clampView();
+      document.getElementById('scrub').value = S.t;
+      S.playing = true; S.speed = Math.min(S.speed, 5); syncSpeed(); updatePlay();
+      draw();
+    });
+    return el('li', {}, b);
+  }));
+  if (!evs.length) ul.append(el('li', { class: 'dim', style: 'color:var(--text-2);font-size:13px;padding:6px' }, 'Ingen kampe i denne runde.'));
+}
+let lastNow = null;
+function highlightNow() {
+  const btns = [...document.querySelectorAll('#hl button')];
+  let cur = null;
+  for (const b of btns) if (Number(b.dataset.t) <= S.t + 0.05) cur = b;
+  if (cur === lastNow) return;
+  lastNow?.classList.remove('now'); cur?.classList.add('now'); lastNow = cur;
+}
+
+// ---------- Afspilning ----------
+function updatePlay() {
+  const b = document.getElementById('play');
+  b.textContent = S.playing ? '❚❚' : '▶';
+  b.setAttribute('aria-label', S.playing ? 'Pause' : 'Afspil');
+}
+function syncSpeed() {
+  for (const b of document.querySelectorAll('#speed button')) b.setAttribute('aria-pressed', String(Number(b.dataset.s) === S.speed));
+}
+function tick(now) {
+  const dt = S.last ? (now - S.last) / 1000 : 0;
+  S.last = now;
+  if (S.playing && S.R) {
+    S.t = Math.min(S.R.dur, S.t + dt * S.speed);
+    if (S.t >= S.R.dur) { S.playing = false; updatePlay(); }
+    document.getElementById('scrub').value = S.t;
+  }
+  if (S.R) draw();
+  requestAnimationFrame(tick);
+}
+
+document.getElementById('play').addEventListener('click', () => {
+  if (S.t >= S.R.dur) S.t = 0;
+  S.playing = !S.playing; updatePlay();
+});
+document.getElementById('scrub').addEventListener('input', (e) => { S.t = Number(e.target.value); draw(); });
+document.getElementById('speed').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.speed = Number(b.dataset.s); syncSpeed();
+});
+document.getElementById('hlfilter').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  S.hlFilter = b.dataset.f;
+  for (const x of document.querySelectorAll('#hlfilter button')) x.setAttribute('aria-pressed', String(x === b));
+  lastNow = null; renderHighlights();
+});
+document.getElementById('follow').addEventListener('change', (e) => { S.follow = e.target.checked; draw(); });
+document.getElementById('others').addEventListener('change', (e) => { S.showOthers = e.target.checked; draw(); });
+document.getElementById('zin').addEventListener('click', () => zoomAt(1.6));
+document.getElementById('zout').addEventListener('click', () => zoomAt(1 / 1.6));
+document.getElementById('zfit').addEventListener('click', () => { S.follow = false; document.getElementById('follow').checked = false; fitView(); draw(); });
+document.addEventListener('keydown', (e) => {
+  if (e.target.matches('input, select, textarea')) return;
+  if (e.code === 'Space') { e.preventDefault(); document.getElementById('play').click(); }
+  if (e.key === 'ArrowRight') { S.t = Math.min(S.R.dur, S.t + 10); document.getElementById('scrub').value = S.t; }
+  if (e.key === 'ArrowLeft') { S.t = Math.max(0, S.t - 10); document.getElementById('scrub').value = S.t; }
+});
+
+// Pan og zoom (mus, touch og pinch)
+const pointers = new Map();
+let pinch = null;
+stage.addEventListener('pointerdown', (e) => {
+  if (e.target.closest('button')) return;
+  stage.setPointerCapture(e.pointerId);
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  stage.classList.add('drag');
+  if (pointers.size === 2) {
+    const [a, b] = [...pointers.values()];
+    pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) };
+  }
+});
+stage.addEventListener('pointermove', (e) => {
+  if (!pointers.has(e.pointerId)) return;
+  const prev = pointers.get(e.pointerId);
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  const r = stage.getBoundingClientRect();
+  if (pointers.size === 2 && pinch) {
+    const [a, b] = [...pointers.values()];
+    const d = Math.hypot(a.x - b.x, a.y - b.y);
+    zoomAt(d / pinch.d, (a.x + b.x) / 2 - r.left, (a.y + b.y) / 2 - r.top);
+    pinch.d = d;
+    return;
+  }
+  const s = scale();
+  S.view.cx -= (e.clientX - prev.x) / s; S.view.cy -= (e.clientY - prev.y) / s;
+  if (Math.abs(e.clientX - prev.x) + Math.abs(e.clientY - prev.y) > 1 && S.follow) { S.follow = false; document.getElementById('follow').checked = false; }
+  clampView(); draw();
+});
+const endPointer = (e) => { pointers.delete(e.pointerId); if (pointers.size < 2) pinch = null; if (!pointers.size) stage.classList.remove('drag'); };
+stage.addEventListener('pointerup', endPointer);
+stage.addEventListener('pointercancel', endPointer);
+stage.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const r = stage.getBoundingClientRect();
+  zoomAt(Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
+}, { passive: false });
+stage.addEventListener('dblclick', (e) => { const r = stage.getBoundingClientRect(); zoomAt(2, e.clientX - r.left, e.clientY - r.top); });
+
+new ResizeObserver(resize).observe(stage);
+requestAnimationFrame(tick);
+init().catch((err) => {
+  document.getElementById('layout').replaceChildren(el('div', { class: 'card empty' }, 'Kunne ikke indlæse replay: ' + err));
+});
+</script>
+</body>
+</html>

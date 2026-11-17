@@ -15,6 +15,11 @@ PUBG-statistik for Squad92: top 4 efter gennemsnitlig skade i hver spillers sids
 
 Profilerne opdateres hver 6. time (`profileRefreshHours` i config.json) for at holde sig under PUBG's grænse på 10 opslag/minut.
 
+## 2D-replay (`replay.html`)
+For hver fælles kamp henter workflowet PUBG's telemetri (positioner, zoner, knocks, kills, revives) og gemmer en kompakt replay i `data/replays/`. Telemetri findes kun i 14 dage, så replays bygges løbende. De nyeste 40 replays (`replayFullKeep`) viser også alle andre spillere; ældre beholder kun jeres egne spor og hændelser.
+
+Kortbilleder: PUBG's officielle [api-assets](https://github.com/pubg/api-assets), skaleret til 4096 px WebP i `assets/maps/`.
+
 ## Tilpasning
 Alt styres i `config.json`: medlemmer, spiltyper, antal kampe pr. spiller osv. Nye clan-medlemmer tilføjes bare i `members`.
 
