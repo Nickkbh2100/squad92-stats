@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T21:02:07.872Z",
+ "updatedAt": "2026-11-17T21:51:07.754Z",
  "profilesAt": "2026-11-17T19:28:02.868Z",
  "seasons": {
   "at": "2026-11-17T11:38:01.985Z",
@@ -17,6 +17,19 @@
   "account.f6559dc6972f41b4832f875cf21451b4": {
    "name": "Nick-kbh",
    "games": [
+    {
+     "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
+     "at": "2026-11-17T21:02:18Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Baltic_Main",
+     "dmg": 391,
+     "k": 0,
+     "kn": 0,
+     "place": 6,
+     "lk": 0,
+     "t": 1286
+    },
     {
      "id": "fb0d8ee6-4eb3-47ad-9a31-f74f8639f6e5",
      "at": "2026-11-15T21:51:23Z",
@@ -1159,6 +1172,19 @@
   "account.5a44325cf7ce46f78d3fb7ce9d2cd74b": {
    "name": "Vykso",
    "games": [
+    {
+     "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
+     "at": "2026-11-17T21:02:18Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Baltic_Main",
+     "dmg": 231,
+     "k": 1,
+     "kn": 1,
+     "place": 6,
+     "lk": 258,
+     "t": 1202
+    },
     {
      "id": "8f030a8f-69ae-405a-8646-23dd633d19b6",
      "at": "2026-11-16T21:20:20Z",
@@ -3809,6 +3835,19 @@
    "name": "92Diamond",
    "games": [
     {
+     "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
+     "at": "2026-11-17T21:02:18Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Baltic_Main",
+     "dmg": 30,
+     "k": 0,
+     "kn": 1,
+     "place": 6,
+     "lk": 0,
+     "t": 1270
+    },
+    {
      "id": "d75083fa-cceb-49d4-b861-85836a831576",
      "at": "2026-11-17T08:07:29Z",
      "mode": "duo-fpp",
@@ -5941,6 +5980,7 @@
   "aa925a5f-a935-49c8-8d8a-2fbc23528c89": "2026-11-04T08:19:11Z",
   "0695f7b9-39a5-4cd1-ab79-5c0edec65a17": "2026-11-17T19:48:26Z",
   "bf43ca28-3889-4db8-9481-988f950c81f2": "2026-11-17T20:28:17Z",
-  "689ce318-66d0-470a-81e0-9abf12b1790a": "2026-11-17T19:38:49Z"
+  "689ce318-66d0-470a-81e0-9abf12b1790a": "2026-11-17T19:38:49Z",
+  "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d": "2026-11-17T21:02:18Z"
  }
 }
