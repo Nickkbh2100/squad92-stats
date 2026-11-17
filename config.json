@@ -1,0 +1,9 @@
+{
+  "clanName": "Squad92",
+  "platform": "steam",
+  "members": ["Nick-kbh", "Vykso", "92Effekten", "92Diamond"],
+  "gameModes": ["duo", "duo-fpp", "squad", "squad-fpp"],
+  "matchTypes": ["official", "competitive"],
+  "matchesPerPlayer": 20,
+  "minClanMembersInTeam": 2
+}
