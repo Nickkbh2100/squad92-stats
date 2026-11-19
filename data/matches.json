@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-19T09:27:53.181Z",
+ "updatedAt": "2026-11-19T21:55:13.183Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -19,6 +19,126 @@
   }
  ],
  "matches": [
+  {
+   "id": "b89a6148-145f-48cb-b679-1c4a76ca7ef4",
+   "createdAt": "2026-11-19T21:10:39Z",
+   "map": "Savage_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1503,
+   "teams": [
+    {
+     "rank": 2,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 543.8,
+       "kills": 2,
+       "assists": 1,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1149,
+       "longestKill": 69.2,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 261.5,
+       "kills": 3,
+       "assists": 1,
+       "dbnos": 3,
+       "headshots": 2,
+       "revives": 1,
+       "timeSurvived": 1042,
+       "longestKill": 79.4,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 264.8,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1084,
+       "longestKill": 2.6,
+       "deathType": "byplayer",
+       "winPlace": 2
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/19/21/35/1e1f5685-e461-11f1-b07e-066b47a5a05e-telemetry.json",
+   "replay": 1
+  },
+  {
+   "id": "e7655640-460e-4047-a2b3-e742390a3488",
+   "createdAt": "2026-11-19T20:39:34Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1703,
+   "teams": [
+    {
+     "rank": 2,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 541.4,
+       "kills": 3,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1700,
+       "longestKill": 68,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 306.2,
+       "kills": 4,
+       "assists": 1,
+       "dbnos": 5,
+       "headshots": 2,
+       "revives": 2,
+       "timeSurvived": 1700,
+       "longestKill": 156.5,
+       "deathType": "byplayer",
+       "winPlace": 2
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 556.5,
+       "kills": 1,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1451,
+       "longestKill": 77.3,
+       "deathType": "byplayer",
+       "winPlace": 2
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/19/21/09/85b5bb97-e45d-11f1-b07e-066b47a5a05e-telemetry.json",
+   "replay": 1
+  },
   {
    "id": "d6afb737-2588-4ed2-a2b1-7ec72e8c599d",
    "createdAt": "2026-11-17T21:51:40Z",
@@ -3519,6 +3639,8 @@
   "8a51385c-88c1-43eb-acf0-62f94320a061": "2026-11-19T08:23:20Z",
   "1e56aa5b-1f3a-46ac-9b90-23d011333712": "2026-11-19T07:27:02Z",
   "b5b42024-f2ae-477b-80c7-ab2e80614afa": "2026-11-19T08:20:10Z",
-  "1924a58d-a7eb-41b3-9318-bc9a2da82b57": "2026-11-19T07:20:06Z"
+  "1924a58d-a7eb-41b3-9318-bc9a2da82b57": "2026-11-19T07:20:06Z",
+  "b89a6148-145f-48cb-b679-1c4a76ca7ef4": "2026-11-19T21:10:39Z",
+  "e7655640-460e-4047-a2b3-e742390a3488": "2026-11-19T20:39:34Z"
  }
 }
