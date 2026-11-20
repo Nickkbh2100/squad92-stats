@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T21:50:05.952Z",
+ "updatedAt": "2026-11-20T22:23:14.592Z",
  "profilesAt": "2026-11-20T21:50:05.946Z",
  "seasons": {
   "at": "2026-11-20T21:49:06.856Z",
@@ -17,6 +17,19 @@
   "account.f6559dc6972f41b4832f875cf21451b4": {
    "name": "Nick-kbh",
    "games": [
+    {
+     "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
+     "at": "2026-11-20T21:35:15Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 100,
+     "k": 0,
+     "kn": 1,
+     "place": 9,
+     "lk": 0,
+     "t": 446
+    },
     {
      "id": "fda26c5c-40ec-44d8-80c8-5cdc24703572",
      "at": "2026-11-20T21:15:40Z",
@@ -1289,6 +1302,19 @@
   "account.5a44325cf7ce46f78d3fb7ce9d2cd74b": {
    "name": "Vykso",
    "games": [
+    {
+     "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
+     "at": "2026-11-20T21:35:15Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 250,
+     "k": 0,
+     "kn": 2,
+     "place": 9,
+     "lk": 0,
+     "t": 969
+    },
     {
      "id": "fda26c5c-40ec-44d8-80c8-5cdc24703572",
      "at": "2026-11-20T21:15:40Z",
@@ -2568,6 +2594,19 @@
   "account.a4b778ccd1024edc8934a50ed618d5a8": {
    "name": "92EFFEKTEN",
    "games": [
+    {
+     "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
+     "at": "2026-11-20T21:35:15Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 43,
+     "k": 0,
+     "kn": 0,
+     "place": 9,
+     "lk": 0,
+     "t": 719
+    },
     {
      "id": "fda26c5c-40ec-44d8-80c8-5cdc24703572",
      "at": "2026-11-20T21:15:40Z",
@@ -4133,6 +4172,19 @@
   "account.2b7c5c7edded414fb1031fece86cda59": {
    "name": "92Diamond",
    "games": [
+    {
+     "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
+     "at": "2026-11-20T21:35:15Z",
+     "mode": "squad-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 0,
+     "k": 0,
+     "kn": 0,
+     "place": 9,
+     "lk": 0,
+     "t": 708
+    },
     {
      "id": "fda26c5c-40ec-44d8-80c8-5cdc24703572",
      "at": "2026-11-20T21:15:40Z",
@@ -6425,6 +6477,7 @@
   "f0c026bd-e9c4-40c7-b5e2-f66c2e8bd10a": "2026-11-20T20:17:25Z",
   "a5bbfaa3-ed7f-469b-a37c-5bf28d47d7d4": "2026-11-20T20:54:35Z",
   "14296efd-411e-4ebe-8fa8-fb4fe445e92a": "2026-11-20T20:30:12Z",
-  "fda26c5c-40ec-44d8-80c8-5cdc24703572": "2026-11-20T21:15:40Z"
+  "fda26c5c-40ec-44d8-80c8-5cdc24703572": "2026-11-20T21:15:40Z",
+  "895e0402-e549-4fc6-8f99-ff5b284c5f83": "2026-11-20T21:35:15Z"
  }
 }
