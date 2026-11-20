@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T22:23:14.589Z",
+ "updatedAt": "2026-11-20T22:28:45.670Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -19,6 +19,140 @@
   }
  ],
  "matches": [
+  {
+   "id": "75f2b33c-c9d5-4b7a-9803-8ef24cf00857",
+   "createdAt": "2026-11-20T21:54:02Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1745,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 212,
+       "kills": 2,
+       "assists": 0,
+       "dbnos": 2,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1659,
+       "longestKill": 130.8,
+       "deathType": "byplayer",
+       "winPlace": 1
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 723.8,
+       "kills": 5,
+       "assists": 2,
+       "dbnos": 3,
+       "headshots": 1,
+       "revives": 3,
+       "timeSurvived": 1691,
+       "longestKill": 237.6,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 231.5,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1163,
+       "longestKill": 3.3,
+       "deathType": "byplayer",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 291.7,
+       "kills": 2,
+       "assists": 2,
+       "dbnos": 1,
+       "headshots": 2,
+       "revives": 0,
+       "timeSurvived": 1691,
+       "longestKill": 29.4,
+       "deathType": "alive",
+       "winPlace": 1
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/20/22/23/04e0f4d3-e531-11f1-bbef-f66eb03579c8-telemetry.json",
+   "weapons": {
+    "92Diamond": {
+     "M24": [
+      55,
+      0,
+      0
+     ],
+     "RPD": [
+      157,
+      2,
+      2
+     ]
+    },
+    "Vykso": {
+     "Mini 14": [
+      194,
+      0,
+      0
+     ],
+     "MP5K": [
+      37,
+      0,
+      1
+     ]
+    },
+    "Nick-kbh": {
+     "Kar98k": [
+      151,
+      1,
+      1
+     ],
+     "Mortar Projectile": [
+      189,
+      1,
+      2
+     ],
+     "AUG A3": [
+      384,
+      1,
+      2
+     ]
+    },
+    "92EFFEKTEN": {
+     "Mini 14": [
+      123,
+      0,
+      0
+     ],
+     "RPD": [
+      118,
+      1,
+      2
+     ],
+     "Kar98k": [
+      51,
+      0,
+      0
+     ]
+    }
+   },
+   "replay": 1
+  },
   {
    "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
    "createdAt": "2026-11-20T21:35:15Z",
@@ -91,7 +225,31 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/20/21/57/71532a26-e52d-11f1-a1c8-263ebedd3b5a-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Vykso": {
+     "VSS": [
+      250,
+      2,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "Mk12": [
+      100,
+      1,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "MP5K": [
+      43,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "fda26c5c-40ec-44d8-80c8-5cdc24703572",
@@ -165,7 +323,31 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/20/21/41/2cc292b9-e52b-11f1-b042-da69f3d20f76-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Vykso": {
+     "VSS": [
+      123,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "Mk12": [
+      54,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Dragunov": [
+      408,
+      1,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "a5bbfaa3-ed7f-469b-a37c-5bf28d47d7d4",
@@ -239,7 +421,36 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/20/21/18/fcb60294-e527-11f1-bbef-f66eb03579c8-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Nick-kbh": {
+     "VSS": [
+      95,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      46,
+      0,
+      0
+     ],
+     "Mini 14": [
+      72,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "M24": [
+      92,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "14296efd-411e-4ebe-8fa8-fb4fe445e92a",
@@ -299,7 +510,45 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/20/20/53/819ff015-e524-11f1-a2e7-768fa0fb22be-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Nick-kbh": {
+     "Mk12": [
+      307,
+      2,
+      2
+     ],
+     "M416": [
+      24,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      470,
+      2,
+      5
+     ],
+     "Mini 14": [
+      23,
+      1,
+      1
+     ],
+     "Frag Grenade": [
+      46,
+      0,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      281,
+      1,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "249b820a-0589-43bb-ab67-d54d0b97e582",
@@ -359,7 +608,34 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/19/22/03/fe3fc434-e464-11f1-80dd-f66eb03579c8-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "Mini 14": [
+      162,
+      1,
+      1
+     ],
+     "RPD": [
+      83,
+      1,
+      1
+     ],
+     "Bluezone Grenade": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {},
+    "92EFFEKTEN": {
+     "M24": [
+      295,
+      1,
+      3
+     ]
+    }
+   }
   },
   {
    "id": "b89a6148-145f-48cb-b679-1c4a76ca7ef4",
@@ -419,7 +695,50 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/19/21/35/1e1f5685-e461-11f1-b07e-066b47a5a05e-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "MP5K": [
+      224,
+      0,
+      1
+     ],
+     "Mini 14": [
+      41,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "AUG A3": [
+      268,
+      0,
+      0
+     ],
+     "Mk12": [
+      276,
+      1,
+      2
+     ]
+    },
+    "92EFFEKTEN": {
+     "M249": [
+      203,
+      3,
+      2
+     ],
+     "Frag Grenade": [
+      39,
+      0,
+      0
+     ],
+     "M24": [
+      20,
+      0,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "e7655640-460e-4047-a2b3-e742390a3488",
@@ -479,7 +798,60 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/19/21/09/85b5bb97-e45d-11f1-b07e-066b47a5a05e-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Nick-kbh": {
+     "M249": [
+      71,
+      1,
+      1
+     ],
+     "Kar98k": [
+      235,
+      4,
+      3
+     ]
+    },
+    "Vykso": {
+     "ACE32": [
+      32,
+      0,
+      1
+     ],
+     "VSS": [
+      384,
+      1,
+      2
+     ],
+     "UMP9": [
+      125,
+      2,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      168,
+      1,
+      0
+     ],
+     "Vector": [
+      118,
+      1,
+      0
+     ],
+     "VSS": [
+      195,
+      1,
+      1
+     ],
+     "AKM": [
+      76,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "d6afb737-2588-4ed2-a2b1-7ec72e8c599d",
@@ -539,7 +911,65 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/17/22/20/24c8f7e7-e2d5-11f1-a45c-8eeb8552e052-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Beryl": [
+      155,
+      1,
+      1
+     ]
+    },
+    "Vykso": {
+     "Frag Grenade": [
+      40,
+      0,
+      0
+     ],
+     "JS9": [
+      246,
+      1,
+      2
+     ],
+     "Lynx AMR": [
+      192,
+      1,
+      1
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      399,
+      2,
+      3
+     ],
+     "JS9": [
+      57,
+      0,
+      1
+     ],
+     "Panzerfaust Projectile": [
+      74,
+      1,
+      1
+     ],
+     "Mk47 Mutant": [
+      30,
+      1,
+      1
+     ],
+     "MP5K": [
+      135,
+      0,
+      1
+     ],
+     "Frag Grenade": [
+      27,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "24ae575d-1f4c-4871-9348-a0362360a4ab",
@@ -599,7 +1029,40 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/17/21/55/96443dac-e2d1-11f1-ba0b-8657f63d2ee7-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "MP5K": [
+      212,
+      1,
+      0
+     ],
+     "Frag Grenade": [
+      13,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "RPD": [
+      190,
+      2,
+      1
+     ]
+    },
+    "Nick-kbh": {
+     "M416": [
+      284,
+      2,
+      3
+     ],
+     "M24": [
+      42,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "c886ff45-aeb2-4dbe-bcdf-aa0ff85fc15d",
@@ -659,7 +1122,40 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/17/21/27/b77a4e5e-e2cd-11f1-a45c-8eeb8552e052-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Kar98k": [
+      30,
+      1,
+      0
+     ]
+    },
+    "Vykso": {
+     "Mini 14": [
+      184,
+      1,
+      1
+     ],
+     "MP5K": [
+      48,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      334,
+      0,
+      0
+     ],
+     "AUG A3": [
+      56,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "8f030a8f-69ae-405a-8646-23dd633d19b6",
@@ -719,7 +1215,50 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/16/21/50/b11ca17b-e207-11f1-8938-d25074e01907-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Kar98k": [
+      57,
+      1,
+      0
+     ]
+    },
+    "Vykso": {
+     "Dragunov": [
+      45,
+      0,
+      0
+     ],
+     "Kar98k": [
+      56,
+      0,
+      1
+     ],
+     "MP9": [
+      31,
+      0,
+      0
+     ],
+     "VSS": [
+      30,
+      1,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "M24": [
+      21,
+      0,
+      0
+     ],
+     "MP9": [
+      100,
+      0,
+      3
+     ]
+    }
+   }
   },
   {
    "id": "7a7cf022-9af2-4991-9f2a-fa7b79274270",
@@ -779,7 +1318,50 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/16/21/20/8742d7ef-e203-11f1-8124-9e4215ea4a69-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Kar98k": [
+      238,
+      2,
+      1
+     ],
+     "M249": [
+      175,
+      1,
+      2
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      98,
+      0,
+      0
+     ],
+     "Mk12": [
+      52,
+      0,
+      0
+     ],
+     "Mini 14": [
+      122,
+      1,
+      2
+     ],
+     "Frag Grenade": [
+      28,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      267,
+      1,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "d2b9ba71-9f0d-4b8c-becf-a4ecddc37cad",
@@ -839,7 +1421,44 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/16/20/57/54e2579f-e200-11f1-9866-6ae5ecc9bfd0-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Vykso": {
+     "MP5K": [
+      170,
+      2,
+      1
+     ],
+     "Frag Grenade": [
+      145,
+      1,
+      0
+     ],
+     "Molotov Fire": [
+      20,
+      0,
+      0
+     ],
+     "Molotov Fire Damage": [
+      50,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "MP5K": [
+      340,
+      1,
+      1
+     ],
+     "M24": [
+      84,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "fb0d8ee6-4eb3-47ad-9a31-f74f8639f6e5",
@@ -913,7 +1532,47 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/15/22/17/599e1375-e142-11f1-bde4-deb3722f0c5a-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "M24": [
+      149,
+      0,
+      0
+     ],
+     "UMP9": [
+      29,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "VSS": [
+      90,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "M24": [
+      121,
+      0,
+      0
+     ],
+     "MP5K": [
+      20,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      415,
+      3,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "d81ce603-c0a5-4fcc-a10c-1e3052f05aec",
@@ -987,7 +1646,62 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/15/21/52/e2465c7c-e13e-11f1-881b-16afde358d0b-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "M249": [
+      48,
+      1,
+      1
+     ],
+     "Kar98k": [
+      214,
+      3,
+      2
+     ],
+     "Frag Grenade": [
+      87,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      97,
+      0,
+      1
+     ],
+     "VSS": [
+      286,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "AUG A3": [
+      55,
+      0,
+      0
+     ],
+     "VSS": [
+      426,
+      1,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      160,
+      1,
+      1
+     ],
+     "M24": [
+      386,
+      2,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "084e8514-b764-4f23-884c-8d63a1dc248f",
@@ -1061,7 +1775,47 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/15/21/24/ec7fd8f3-e13a-11f1-8608-c639d19f2477-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "Mini 14": [
+      202,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      208,
+      0,
+      0
+     ],
+     "UMP9": [
+      85,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "Mk12": [
+      357,
+      2,
+      3
+     ]
+    },
+    "92EFFEKTEN": {
+     "M24": [
+      418,
+      4,
+      3
+     ],
+     "UMP9": [
+      48,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "1fafffd1-403c-4437-8879-c59e5856f678",
@@ -1107,7 +1861,43 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/15/20/51/46ddabca-e136-11f1-9171-fa36d98810e5-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Nick-kbh": {
+     "Kar98k": [
+      67,
+      0,
+      0
+     ],
+     "AUG A3": [
+      95,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "Mk12": [
+      123,
+      0,
+      1
+     ],
+     "Mk47 Mutant": [
+      56,
+      0,
+      0
+     ],
+     "Dragunov": [
+      151,
+      0,
+      0
+     ],
+     "MP9": [
+      73,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "be057759-e4ca-47e7-ac95-749bc647fd61",
@@ -1167,7 +1957,35 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/22/10/234b4d62-e078-11f1-bde4-deb3722f0c5a-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92EFFEKTEN": {
+     "UMP9": [
+      80,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "Beryl": [
+      56,
+      1,
+      0
+     ]
+    },
+    "Vykso": {
+     "VSS": [
+      174,
+      1,
+      1
+     ],
+     "MP5K": [
+      91,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "92dcb478-d6e0-46cd-8b88-45ee0fa6732b",
@@ -1227,7 +2045,29 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/57/5808e7d0-e076-11f1-9171-fa36d98810e5-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Vykso": {
+     "Frag Grenade": [
+      41,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Frag Grenade": [
+      98,
+      0,
+      0
+     ],
+     "UMP9": [
+      278,
+      2,
+      3
+     ]
+    }
+   }
   },
   {
    "id": "79179dfa-f8ac-4f6f-87f1-c172165e9d18",
@@ -1287,7 +2127,34 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/44/9589d7e9-e074-11f1-ae5e-8e98088a89e7-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "Mini 14": [
+      126,
+      0,
+      0
+     ],
+     "MP9": [
+      112,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "M24": [
+      160,
+      1,
+      1
+     ],
+     "M416": [
+      20,
+      1,
+      0
+     ]
+    },
+    "92EFFEKTEN": {}
+   }
   },
   {
    "id": "a10fb6cb-404b-4f63-aec5-f9dcdbaa69d3",
@@ -1347,7 +2214,24 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/31/c9fb3707-e072-11f1-881b-16afde358d0b-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "UMP9": [
+      100,
+      1,
+      0
+     ]
+    },
+    "92Diamond": {},
+    "92EFFEKTEN": {
+     "M24": [
+      93,
+      1,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "abc749ea-6e18-4daa-98a3-13f640c03167",
@@ -1393,7 +2277,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/26/119c6d9e-e072-11f1-9171-fa36d98810e5-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {},
+    "92EFFEKTEN": {}
+   }
   },
   {
    "id": "567d469a-0fb0-4de8-b7fe-cbb1a14b6b59",
@@ -1439,7 +2327,17 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/21/4c8315a0-e071-11f1-bb80-c6e7c7fc94e6-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "M16A4": [
+      97,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {}
+   }
   },
   {
    "id": "1da43182-5001-4465-8d68-6ab82a1843d8",
@@ -1485,7 +2383,28 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/14/21/08/7ede29ae-e06f-11f1-96f7-3e58deed0ffa-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "M24": [
+      133,
+      0,
+      0
+     ],
+     "Frag Grenade": [
+      58,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      92,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "ed762c88-c099-40fd-8d7f-f385b32c02fd",
@@ -1545,7 +2464,65 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/22/16/b7d04f1d-dee6-11f1-881b-16afde358d0b-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Kar98k": [
+      300,
+      2,
+      1
+     ],
+     "MP5K": [
+      100,
+      1,
+      0
+     ]
+    },
+    "Vykso": {
+     "VSS": [
+      20,
+      0,
+      0
+     ],
+     "MP5K": [
+      195,
+      1,
+      2
+     ],
+     "M24": [
+      143,
+      1,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "Kar98k": [
+      254,
+      2,
+      2
+     ],
+     "MP5K": [
+      299,
+      2,
+      2
+     ],
+     "Frag Grenade": [
+      30,
+      0,
+      0
+     ],
+     "Groza": [
+      100,
+      0,
+      1
+     ],
+     "Køretøj": [
+      100,
+      1,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "c9469ff5-4fdd-4629-867d-668fd800ccba",
@@ -1605,7 +2582,50 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/21/53/85f2ca36-dee3-11f1-9683-aa9d014bba16-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "RPD": [
+      50,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "Mini 14": [
+      84,
+      2,
+      1
+     ],
+     "JS9": [
+      332,
+      3,
+      3
+     ],
+     "Frag Grenade": [
+      37,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "AUG A3": [
+      228,
+      2,
+      2
+     ],
+     "Køretøj": [
+      59,
+      0,
+      1
+     ],
+     "Frag Grenade": [
+      36,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "bd688ebf-d6ae-496d-9af6-31c63662fde0",
@@ -1665,7 +2685,12 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/21/32/9c350db0-dee0-11f1-881b-16afde358d0b-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Nick-kbh": {},
+    "Vykso": {}
+   }
   },
   {
    "id": "08d16c50-adfe-435e-acf2-f3e68f732278",
@@ -1725,7 +2750,29 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/21/15/3f232a4a-dede-11f1-bde4-deb3722f0c5a-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {},
+    "Nick-kbh": {
+     "Groza": [
+      23,
+      0,
+      0
+     ],
+     "Panzerfaust Projectile": [
+      73,
+      0,
+      1
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      365,
+      2,
+      2
+     ]
+    }
+   }
   },
   {
    "id": "1bdf92f1-0849-4ebe-b5ff-48da33bb08e0",
@@ -1785,7 +2832,24 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/21/08/38327450-dedd-11f1-bde4-deb3722f0c5a-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Mini 14": [
+      46,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {},
+    "Vykso": {
+     "Vector": [
+      59,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "23c8cc8e-2fd5-4907-9f89-2a8e0eb30fcd",
@@ -1845,7 +2909,24 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/21/00/18e7221e-dedc-11f1-b81a-1261cbc15a68-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "MP5K": [
+      19,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      201,
+      1,
+      0
+     ]
+    },
+    "Nick-kbh": {}
+   }
   },
   {
    "id": "51bbd8ea-ae30-455b-b46b-9fd07266db2e",
@@ -1891,7 +2972,38 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/12/20/40/569c7bc4-ded9-11f1-bcab-223bd6c4e567-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "UMP9": [
+      357,
+      2,
+      4
+     ],
+     "M16A4": [
+      136,
+      1,
+      1
+     ],
+     "Mini 14": [
+      216,
+      0,
+      1
+     ]
+    },
+    "92Diamond": {
+     "M24": [
+      394,
+      3,
+      1
+     ],
+     "RPD": [
+      159,
+      0,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "09d215bd-c228-4f46-b0c9-f474f1efb544",
@@ -1965,7 +3077,52 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/10/22/03/946fbda6-dd52-11f1-911e-1a744f1adae2-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "MP5K": [
+      192,
+      2,
+      1
+     ],
+     "Frag Grenade": [
+      14,
+      0,
+      1
+     ],
+     "Kar98k": [
+      29,
+      0,
+      1
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      42,
+      0,
+      0
+     ],
+     "MP5K": [
+      62,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      77,
+      1,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "M249": [
+      236,
+      1,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "188e1a79-e78e-439e-a463-7231e21df5ae",
@@ -2039,7 +3196,72 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/10/21/32/41a2b53e-dd4e-11f1-9c35-beb18acd0ffe-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "M24": [
+      120,
+      1,
+      1
+     ]
+    },
+    "Vykso": {
+     "Dragunov": [
+      141,
+      1,
+      1
+     ],
+     "Bluezone Grenade": [
+      20,
+      0,
+      0
+     ],
+     "M24": [
+      300,
+      1,
+      2
+     ]
+    },
+    "Nick-kbh": {
+     "Lynx AMR": [
+      266,
+      1,
+      1
+     ],
+     "M249": [
+      100,
+      0,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "RPD": [
+      63,
+      0,
+      1
+     ],
+     "Kar98k": [
+      100,
+      1,
+      1
+     ],
+     "Molotov Fire": [
+      8,
+      0,
+      0
+     ],
+     "Molotov Fire Damage": [
+      40,
+      0,
+      0
+     ],
+     "Mk14 EBR": [
+      96,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "28685829-2c45-474e-b965-e0b7037dfa97",
@@ -2113,7 +3335,82 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/10/21/02/17ded753-dd4a-11f1-8a56-066546d20bdb-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Micro Uzi": [
+      143,
+      1,
+      2
+     ],
+     "M16A4": [
+      37,
+      1,
+      1
+     ]
+    },
+    "Vykso": {
+     "Tommy Gun": [
+      174,
+      2,
+      2
+     ],
+     "Kar98k": [
+      45,
+      0,
+      0
+     ],
+     "Mini 14": [
+      242,
+      2,
+      0
+     ],
+     "Køretøj": [
+      126,
+      1,
+      0
+     ],
+     "MP5K": [
+      195,
+      2,
+      2
+     ]
+    },
+    "Nick-kbh": {
+     "ACE32": [
+      155,
+      0,
+      2
+     ],
+     "Mk12": [
+      260,
+      2,
+      3
+     ]
+    },
+    "92EFFEKTEN": {
+     "S686": [
+      79,
+      1,
+      1
+     ],
+     "M16A4": [
+      273,
+      2,
+      1
+     ],
+     "UMP9": [
+      26,
+      0,
+      0
+     ],
+     "MP5K": [
+      102,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "81ae87f4-5708-4e82-ab39-fde7e5372a34",
@@ -2173,7 +3470,40 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/10/20/37/9a2a6eec-dd46-11f1-911e-1a744f1adae2-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "M24": [
+      64,
+      0,
+      0
+     ],
+     "Vector": [
+      43,
+      0,
+      0
+     ]
+    },
+    "Vykso": {
+     "MP5K": [
+      71,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "M24": [
+      123,
+      0,
+      0
+     ],
+     "M416": [
+      144,
+      2,
+      2
+     ]
+    }
+   }
   },
   {
    "id": "2147c0da-7eec-4e67-acc7-23cd839bdaaa",
@@ -2247,7 +3577,72 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/08/21/25/fc188d03-dbba-11f1-968c-9e9a5b29a715-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "VSS": [
+      328,
+      1,
+      4
+     ],
+     "MP5K": [
+      124,
+      2,
+      2
+     ],
+     "Frag Grenade": [
+      49,
+      0,
+      0
+     ]
+    },
+    "92Diamond": {
+     "Kar98k": [
+      136,
+      1,
+      1
+     ],
+     "M416": [
+      44,
+      0,
+      0
+     ],
+     "Frag Grenade": [
+      25,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      617,
+      2,
+      3
+     ],
+     "Frag Grenade": [
+      88,
+      0,
+      0
+     ],
+     "MP5K": [
+      7,
+      0,
+      1
+     ]
+    },
+    "92EFFEKTEN": {
+     "M249": [
+      37,
+      0,
+      0
+     ],
+     "Mk12": [
+      41,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "5e70829b-bece-4846-bf45-01c04c1b8411",
@@ -2321,7 +3716,52 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/08/21/01/9f5e7c50-dbb7-11f1-a106-8a91d6c19641-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {
+     "Kar98k": [
+      123,
+      1,
+      0
+     ],
+     "UMP9": [
+      86,
+      1,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "SLR": [
+      168,
+      0,
+      0
+     ],
+     "Frag Grenade": [
+      26,
+      1,
+      1
+     ]
+    },
+    "92Diamond": {
+     "Mini 14": [
+      56,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "SLR": [
+      322,
+      0,
+      0
+     ],
+     "RPD": [
+      43,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "6470e1cb-8b93-4e8d-a598-cff3ef68f01e",
@@ -2367,7 +3807,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/08/20/53/77c88503-dbb6-11f1-9f95-42e3a9e79ed9-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "Vykso": {},
+    "92EFFEKTEN": {}
+   }
   },
   {
    "id": "7f16b20d-41ac-45e5-a83f-d73241bbc749",
@@ -2413,7 +3857,33 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/08/20/40/b3ec71bf-dbb4-11f1-a390-760c43de28e2-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "MP5K": [
+      29,
+      1,
+      1
+     ],
+     "Kar98k": [
+      136,
+      1,
+      1
+     ]
+    },
+    "Nick-kbh": {
+     "M416": [
+      163,
+      0,
+      0
+     ],
+     "M24": [
+      64,
+      0,
+      0
+     ]
+    }
+   }
   },
   {
    "id": "ec8ce8c3-1b29-429f-bb90-e02dc922b5e9",
@@ -2459,7 +3929,43 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/08/20/32/7d6225b2-dbb3-11f1-9f95-42e3a9e79ed9-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "weapons": {
+    "92Diamond": {
+     "Micro Uzi": [
+      109,
+      0,
+      1
+     ],
+     "SKS": [
+      30,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "M24": [
+      100,
+      1,
+      1
+     ],
+     "Molotov Fire": [
+      24,
+      0,
+      0
+     ],
+     "Molotov Fire Damage": [
+      50,
+      0,
+      0
+     ],
+     "Frag Grenade": [
+      13,
+      0,
+      1
+     ]
+    }
+   }
   },
   {
    "id": "c955190a-2fe0-494d-8b99-43689b893c40",
@@ -3989,6 +5495,7 @@
   "a5bbfaa3-ed7f-469b-a37c-5bf28d47d7d4": "2026-11-20T20:54:35Z",
   "14296efd-411e-4ebe-8fa8-fb4fe445e92a": "2026-11-20T20:30:12Z",
   "fda26c5c-40ec-44d8-80c8-5cdc24703572": "2026-11-20T21:15:40Z",
-  "895e0402-e549-4fc6-8f99-ff5b284c5f83": "2026-11-20T21:35:15Z"
+  "895e0402-e549-4fc6-8f99-ff5b284c5f83": "2026-11-20T21:35:15Z",
+  "75f2b33c-c9d5-4b7a-9803-8ef24cf00857": "2026-11-20T21:54:02Z"
  }
 }
