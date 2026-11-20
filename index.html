@@ -66,7 +66,7 @@
   .tagline { font-family: var(--cond); font-size: 22px; color: var(--text-2); letter-spacing: 0.04em; margin-top: 4px; line-height: 1.1; }
   .sub { color: var(--muted); margin: 10px 0 0; font-size: 13px; }
 
-  .toolbar { display: flex; justify-content: flex-end; margin: 28px 0 -24px; }
+  .toolbar { display: flex; justify-content: flex-end; margin: 24px 0 -30px; }
   .controls { display: flex; gap: 10px; align-items: center; }
   .controls label { font-family: var(--cond); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2); font-size: 16px; line-height: 1; }
   .seg { display: inline-flex; background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 3px; }
@@ -84,7 +84,12 @@
   .card { background: var(--surface); border: 1px solid var(--ring); border-radius: 14px; }
 
   /* Squad-KPI'er */
-  .kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 16px; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .delta { font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .delta.up { color: var(--win); } .delta.down { color: #ff7b7b; } .delta.same { color: var(--muted); }
+  .lineups td:first-child { white-space: normal; min-width: 200px; }
+  .lineups .keys { display: inline-flex; gap: 3px; margin-right: 8px; vertical-align: middle; }
+  .lineups .size { color: var(--muted); font-size: 12px; margin-left: 6px; }
   .kpi { padding: 14px 16px; }
   .kpi .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
   .kpi .v { font-family: var(--cond); font-size: 40px; line-height: 1; margin-top: 6px; font-weight: 500; }
@@ -212,8 +217,7 @@
     .hero svg.zone { width: 300px; height: 300px; right: -110px; top: -60px; opacity: 0.6; }
   }
   @media (max-width: 460px) {
-    .toolbar { justify-content: flex-start; margin-bottom: -16px; }
-    .kpis .kpi:last-child { grid-column: span 2; }
+    .toolbar { justify-content: flex-start; margin-bottom: -20px; }
     .tiles { grid-template-columns: repeat(2, 1fr); }
     .records { grid-template-columns: 1fr; }
     .ptabs .seg { margin-left: 0; }
@@ -248,10 +252,9 @@
     </div>
   </header>
 
-  <section id="kpis"></section>
   <div class="toolbar">
     <div class="controls">
-      <label id="ctl-label">Kampe pr. spiller</label>
+      <label id="ctl-label">Seneste</label>
       <div class="seg" role="group" aria-labelledby="ctl-label" id="seg">
         <button data-n="10" aria-pressed="false">10</button>
         <button data-n="20" aria-pressed="true">20</button>
@@ -261,6 +264,7 @@
       </div>
     </div>
   </div>
+  <section id="kpis"></section>
   <main id="app"></main>
 
   <footer>
@@ -369,8 +373,19 @@ function summarise(p, n) {
   };
 }
 
-function kpi(label, value, sub) {
-  return el('div', { class: 'card kpi' }, el('div', { class: 'l' }, label), el('div', { class: 'v' }, value), sub ? el('div', { class: 's' }, sub) : null);
+function teamStats(list) {
+  const count = list.length || 0;
+  const sum = (f) => list.reduce((s, x) => s + f(x), 0);
+  const wins = list.filter((x) => x.t.won).length;
+  const top10 = list.filter((x) => x.t.rank <= 10).length;
+  return {
+    count, wins, top10,
+    winRate: count ? (wins / count) * 100 : 0,
+    top10Rate: count ? (top10 / count) * 100 : 0,
+    avgPlace: count ? sum((x) => x.t.rank) / count : 0,
+    dmg: count ? sum((x) => x.t.players.reduce((a, p) => a + p.damage, 0)) / count : 0,
+    kills: count ? sum((x) => x.t.players.reduce((a, p) => a + p.kills, 0)) / count : 0,
+  };
 }
 
 function render() {
@@ -387,25 +402,71 @@ function render() {
     return;
   }
 
-  // --- Squad-overblik (alle gemte kampe) ---
-  const teams = data.matches.flatMap((m) => m.teams.map((t) => ({ m, t })));
-  const dinners = teams.filter((x) => x.t.won).length;
-  const top10 = teams.filter((x) => x.t.rank <= 10).length;
-  const avgPlace = teams.reduce((s, x) => s + x.t.rank, 0) / teams.length;
-  const squadDmg = teams.reduce((s, x) => s + x.t.players.reduce((a, p) => a + p.damage, 0), 0);
-  document.getElementById('kpis').replaceChildren(el('div', { class: 'kpis' },
-    kpi('Fælles kampe', fmt(teams.length), `siden ${dayFmt.format(new Date(data.matches.at(-1).createdAt))}`),
-    kpi('Chicken dinners', fmt(dinners), `${fmt((dinners / teams.length) * 100, 1)} % win rate`),
-    kpi('Top 10', `${fmt((top10 / teams.length) * 100)} %`, `${top10} af ${teams.length} kampe`),
-    kpi('Gns. placering', `#${fmt(avgPlace, 1)}`, 'som hold'),
-    kpi('Skade i alt', fmt(squadDmg), 'hele squaddet'),
-  ));
-
   const n = state.n;
   const players = playerGames().map((p) => summarise(p, n));
   const ranked = [...players].sort((a, b) => (b.count > 0) - (a.count > 0) || b.avgDmg - a.avgDmg);
   const maxAvg = Math.max(1, ...players.map((p) => p.avgDmg));
   const nLabel = n === 'year' ? 'seneste år' : n ? `sidste ${n} kampe` : 'alle gemte kampe';
+
+  // --- Holdet (følger filteret) ---
+  const allTeams = data.matches.flatMap((m) => m.teams.map((t) => ({ m, t })))
+    .sort((a, b) => Date.parse(b.m.createdAt) - Date.parse(a.m.createdAt));
+  const teams = n === 'year' ? allTeams.filter((x) => Date.parse(x.m.createdAt) > Date.now() - 365 * 864e5)
+    : n ? allTeams.slice(0, n) : allTeams;
+  const T = teamStats(teams), A = teamStats(allTeams);
+  const cmp = typeof n === 'number' && n > 0 && teams.length < allTeams.length;
+  // delta: sammenlign perioden med alle kampe; better = 'high' eller 'low'
+  const delta = (cur, all, better, unit = '', dec = 1) => {
+    if (!cmp) return null;
+    const d = cur - all;
+    if (Math.abs(d) < Math.pow(10, -dec) / 2) return el('span', { class: 'delta same' }, '= som alle kampe');
+    const good = better === 'high' ? d > 0 : d < 0;
+    const text = better === 'low'
+      ? `${fmt(Math.abs(d), dec)} pladser ${good ? 'bedre' : 'dårligere'} end alle`
+      : `${d > 0 ? '+' : '−'}${fmt(Math.abs(d), dec)}${unit} vs. alle`;
+    return el('span', { class: 'delta ' + (good ? 'up' : 'down') }, `${good ? '▲' : '▼'} ${text}`);
+  };
+  const kpiD = (label, value, sub, d) => el('div', { class: 'card kpi' }, el('div', { class: 'l' }, label), el('div', { class: 'v' }, value),
+    el('div', { class: 's' }, sub), d ? el('div', {}, d) : null);
+  const kpis = document.getElementById('kpis');
+  kpis.replaceChildren(
+    el('h2', {}, 'Holdet', el('small', {}, teams.length < allTeams.length ? `${nLabel.replace('kampe', 'fælles kampe')}` : 'alle fælles kampe')),
+    el('div', { class: 'kpis' },
+      kpiD('Fælles kampe', fmt(T.count), T.count ? `siden ${dayFmt.format(new Date(teams.at(-1).m.createdAt))}` : '–'),
+      kpiD('Chicken dinners', fmt(T.wins), `${fmt(T.winRate, 1)} % win rate`, delta(T.winRate, A.winRate, 'high', ' pt')),
+      kpiD('Top 10', `${fmt(T.top10Rate)} %`, `${T.top10} af ${T.count} kampe`, delta(T.top10Rate, A.top10Rate, 'high', ' pt', 0)),
+      kpiD('Gns. placering', `#${fmt(T.avgPlace, 1)}`, 'som hold', delta(T.avgPlace, A.avgPlace, 'low')),
+      kpiD('Skade pr. kamp', fmt(T.dmg), 'holdet samlet', delta(T.dmg, A.dmg, 'high', '', 0)),
+      kpiD('Kills pr. kamp', fmt(T.kills, 1), 'holdet samlet', delta(T.kills, A.kills, 'high')),
+    ));
+
+  // Bedste opstillinger
+  const lineups = new Map();
+  for (const x of teams) {
+    const names = x.t.players.map((p) => p.name).sort((a, b) => a.localeCompare(b));
+    const key = names.join('|');
+    if (!lineups.has(key)) lineups.set(key, { names, list: [] });
+    lineups.get(key).list.push(x);
+  }
+  const lrows = [...lineups.values()].map((l) => ({ ...l, s: teamStats(l.list) }))
+    .sort((a, b) => b.s.count - a.s.count || a.s.avgPlace - b.s.avgPlace).slice(0, 6);
+  if (lrows.length > 1) {
+    const colorByName = new Map(state.config.members.map((nm, i) => [nm.toLowerCase(), `var(--s${i + 1})`]));
+    const bestPlace = Math.min(...lrows.filter((r) => r.s.count >= 3).map((r) => r.s.avgPlace));
+    const tb = el('tbody');
+    for (const r of lrows) {
+      tb.append(el('tr', {},
+        el('td', {}, el('span', { class: 'keys' }, r.names.map((nm) => el('span', { class: 'key', style: `background:${colorByName.get(nm.toLowerCase()) || 'var(--muted)'}` }))),
+          r.names.join(', '), el('span', { class: 'size' }, r.names.length === 2 ? 'duo' : r.names.length === 3 ? 'trio' : 'fuld squad'),
+          r.s.count >= 3 && r.s.avgPlace === bestPlace ? el('span', { class: 'size', style: 'color:var(--pubg)' }, '★ bedste placering') : null),
+        el('td', {}, r.s.count), el('td', {}, r.s.wins), el('td', {}, `${fmt(r.s.top10Rate)} %`),
+        el('td', {}, `#${fmt(r.s.avgPlace, 1)}`), el('td', {}, fmt(r.s.dmg)), el('td', {}, fmt(r.s.kills, 1))));
+    }
+    kpis.append(
+      el('h3', { style: 'font-family:var(--cond);font-weight:500;font-size:20px;letter-spacing:.06em;text-transform:uppercase;margin:20px 0 10px;color:var(--text-2)' }, 'Opstillinger'),
+      el('div', { class: 'card tablewrap lineups' }, el('table', {},
+        el('thead', {}, el('tr', {}, ['Hvem spillede', 'Kampe', 'Dinners', 'Top 10', 'Gns. plac.', 'Skade/kamp', 'Kills/kamp'].map((h) => el('th', { scope: 'col' }, h)))), tb)));
+  }
 
   // --- Top 4 ---
   app.append(el('h2', {}, `Top ${Math.min(4, ranked.length)}`, el('small', {}, `gns. skade · ${nLabel}`)));
