@@ -204,11 +204,32 @@
   .wbar { height: 14px; }
   .wbar i { display: block; height: 100%; border-radius: 0 4px 4px 0; min-width: 2px; }
   .note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+  .wfavs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+  .wfav { padding: 14px 16px; }
+  .wfav .wf-w { font-family: var(--cond); font-size: 30px; line-height: 1; margin-top: 8px; font-weight: 500; }
+  .wfav .s { color: var(--text-2); font-size: 12px; }
+  .whead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; margin-bottom: 12px; }
+  .whead h3 { margin: 0; }
+  .wlegend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--text-2); }
+  .wlegend span { display: inline-flex; align-items: center; gap: 6px; }
+  .wstack { display: grid; gap: 8px; }
+  .wsrow { display: grid; grid-template-columns: 110px 1fr 92px; gap: 10px; align-items: center; font-size: 14px; }
+  .wsrow .wn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wsrow .wv { text-align: right; font-weight: 650; white-space: nowrap; }
+  .wsrow .wv small { color: var(--muted); font-weight: 400; font-size: 12px; }
+  .wtrack { display: block; }
+  .wsbar { display: flex; gap: 2px; height: 16px; min-width: 4px; }
+  .wsbar i { display: block; height: 100%; min-width: 2px; outline: none; }
+  .wsbar i:first-child { border-radius: 0; }
+  .wsbar i:last-child { border-radius: 0 4px 4px 0; }
+  .wsbar i:hover, .wsbar i:focus-visible { filter: brightness(1.3); }
+  .wsbar i:focus-visible { box-shadow: 0 0 0 2px var(--pubg); }
 
   @media (max-width: 900px) { .podium { grid-template-columns: repeat(2, 1fr); } .kpis { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 700px) {
     .multi { grid-template-columns: 1fr; }
     .profile { grid-template-columns: 1fr; }
+    .wfavs { grid-template-columns: repeat(2, 1fr); }
     .records { grid-template-columns: repeat(2, 1fr); }
     .mlist > div { grid-template-columns: 1fr auto; }
     .mlist .when { grid-column: 1 / -1; font-size: 13px; }
@@ -219,6 +240,8 @@
   @media (max-width: 460px) {
     .toolbar { justify-content: flex-start; margin-bottom: -20px; }
     .tiles { grid-template-columns: repeat(2, 1fr); }
+    .wsrow { grid-template-columns: 78px 1fr 64px; font-size: 13px; }
+    .wsrow .wv small { display: none; }
     .records { grid-template-columns: 1fr; }
     .ptabs .seg { margin-left: 0; }
     .best { grid-template-columns: 1fr; }
@@ -509,6 +532,8 @@ function render() {
   requestAnimationFrame(drawAll);
   window.onresize = () => { clearTimeout(window._rz); window._rz = setTimeout(drawAll, 100); };
 
+  renderWeapons(app, teams, players);
+
   // --- Tabel ---
   app.append(el('h2', {}, 'Alle stats', el('small', {}, nLabel)));
   const head = ['Spiller', 'Kampe', 'Gns. skade', 'Bedste', 'Kills/kamp', 'K/D', 'Knocks/kamp', 'Assists/kamp', 'Headshots', 'Dinners', 'Top 10', 'Gns. plac.'];
@@ -702,6 +727,90 @@ function showTip(evt, g) {
   tip.style.top = Math.max(8, evt.clientY - h - 12) + 'px';
 }
 const hideTip = () => { tip.style.opacity = '0'; };
+// ================= Våben (fra kamplog) =================
+function renderWeapons(app, teams, players) {
+  const withData = teams.filter((x) => x.m.weapons);
+  const colorBy = new Map(players.map((p) => [p.name.toLowerCase(), p.color]));
+  const order = players.map((p) => p.name);
+  app.append(el('h2', {}, 'Våben', el('small', {}, withData.length
+    ? `skade pr. våben · ${withData.length} af ${teams.length} kampe har våbendata`
+    : 'ingen våbendata i perioden')));
+  if (!withData.length) {
+    app.append(el('div', { class: 'card empty' }, 'Våbendata findes for kampe fra de seneste 14 dage. Spil en kamp, så dukker den op her.'));
+    return;
+  }
+  // Saml: våben -> spiller -> [skade, knocks, kills]
+  const agg = new Map();
+  const perPlayer = new Map(order.map((n) => [n, { total: 0, w: new Map() }]));
+  for (const x of withData) {
+    for (const pl of x.t.players) {
+      const ws = x.m.weapons[pl.name] || {};
+      const key = order.find((n) => n.toLowerCase() === pl.name.toLowerCase()) || pl.name;
+      for (const [w, [dmg, kn, k]] of Object.entries(ws)) {
+        if (!agg.has(w)) agg.set(w, { name: w, total: 0, kn: 0, k: 0, by: new Map() });
+        const a = agg.get(w);
+        a.total += dmg; a.kn += kn; a.k += k;
+        const b = a.by.get(key) || [0, 0, 0];
+        a.by.set(key, [b[0] + dmg, b[1] + kn, b[2] + k]);
+        const pp = perPlayer.get(key);
+        if (pp) { pp.total += dmg; pp.w.set(w, (pp.w.get(w) || 0) + dmg); }
+      }
+    }
+  }
+  const all = [...agg.values()].sort((a, b) => b.total - a.total);
+  const top = all.slice(0, 10);
+  const rest = all.slice(10);
+  if (rest.length) {
+    const o = { name: `Andre (${rest.length})`, total: 0, kn: 0, k: 0, by: new Map() };
+    for (const r of rest) { o.total += r.total; o.kn += r.kn; o.k += r.k; for (const [n, v] of r.by) { const b = o.by.get(n) || [0, 0, 0]; o.by.set(n, [b[0] + v[0], b[1] + v[1], b[2] + v[2]]); } }
+    top.push(o);
+  }
+  const max = Math.max(1, ...top.map((t) => t.total));
+  const sumAll = all.reduce((s, a) => s + a.total, 0) || 1;
+
+  // Favoritvåben pr. spiller
+  const favs = el('div', { class: 'wfavs' });
+  for (const n of order) {
+    const pp = perPlayer.get(n);
+    if (!pp || !pp.total) continue;
+    const [w, d] = [...pp.w.entries()].sort((a, b) => b[1] - a[1])[0];
+    favs.append(el('div', { class: 'card wfav' },
+      el('div', { class: 'who' }, el('span', { class: 'key', style: `background:${colorBy.get(n.toLowerCase())}` }), n),
+      el('div', { class: 'wf-w' }, w),
+      el('div', { class: 's' }, `${fmt(d)} skade · ${fmt((d / pp.total) * 100)} % af spillerens skade`)));
+  }
+
+  const legend = el('div', { class: 'wlegend' }, order.filter((n) => perPlayer.get(n)?.total).map((n) =>
+    el('span', {}, el('span', { class: 'key', style: `background:${colorBy.get(n.toLowerCase())}` }), n)));
+  const rows = el('div', { class: 'wstack' });
+  for (const t of top) {
+    const bar = el('div', { class: 'wsbar', style: `width:${(t.total / max) * 100}%` });
+    for (const n of order) {
+      const v = t.by.get(n);
+      if (!v || v[0] <= 0) continue;
+      const seg = el('i', { tabindex: '0', style: `flex:${v[0]} 0 0;background:${colorBy.get(n.toLowerCase())}`, 'aria-label': `${n}: ${fmt(v[0])} skade med ${t.name}` });
+      const nodes = () => [
+        el('div', { class: 'v' }, `${fmt(v[0])} `, el('span', { class: 'r', style: 'font:400 13px system-ui,sans-serif' }, `skade · ${t.name}`)),
+        el('div', {}, el('b', {}, n), ` · ${fmt((v[0] / t.total) * 100)} % af holdets skade med våbnet`),
+        el('div', { class: 'r' }, `${v[1]} knocks · ${v[2]} kills`),
+      ];
+      seg.addEventListener('pointermove', (e) => showTipNodes(e, nodes()));
+      seg.addEventListener('pointerleave', hideTip);
+      seg.addEventListener('focus', () => { const rc = seg.getBoundingClientRect(); showTipNodes({ clientX: rc.left + rc.width / 2, clientY: rc.top }, nodes()); });
+      seg.addEventListener('blur', hideTip);
+      bar.append(seg);
+    }
+    rows.append(el('div', { class: 'wsrow' },
+      el('span', { class: 'wn' }, t.name),
+      el('span', { class: 'wtrack' }, bar),
+      el('span', { class: 'wv' }, fmt(t.total), el('small', {}, ` ${fmt((t.total / sumAll) * 100)} %`))));
+  }
+  app.append(favs, el('div', { class: 'card pcard' },
+    el('div', { class: 'whead' }, el('h3', {}, 'Holdets skade pr. våben', el('small', {}, 'top 10 · fordelt på spillere')), legend),
+    rows,
+    el('div', { class: 'note' }, 'Fra PUBG\'s kamplog. Kun skade på fjender tæller. Kamplog findes kun i 14 dage, så ældre kampe har ingen våbendata.')));
+}
+
 function showTipNodes(evt, nodes) {
   tip.replaceChildren(...nodes);
   tip.style.opacity = '1';

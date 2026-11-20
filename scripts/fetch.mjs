@@ -253,7 +253,7 @@ data.matches.sort((x, y) => Date.parse(y.createdAt) - Date.parse(x.createdAt));
 await fs.mkdir(replayDir, { recursive: true });
 let builtReplays = 0;
 for (const match of data.matches) {
-  if (match.replay || Date.parse(match.createdAt) < now - 13.5 * 864e5) continue;
+  if ((match.replay && match.weapons) || Date.parse(match.createdAt) < now - 13.5 * 864e5) continue;
   try {
     if (!match.telemetry) {
       const json = await api(`/matches/${match.id}`, { auth: false });
@@ -264,7 +264,9 @@ for (const match of data.matches) {
     if (!res.ok) { console.warn(`Telemetri for ${match.id}: HTTP ${res.status}`); continue; }
     const replay = buildReplay(await res.json(), { matchId: match.id, memberIds });
     if (!replay) continue;
-    await fs.writeFile(new URL(`${match.id}.json`, replayDir), JSON.stringify(replay));
+    match.weapons = replay.weapons;   // våbenskade pr. spiller (bruges på forsiden)
+    delete replay.weapons;
+    if (!match.replay) await fs.writeFile(new URL(`${match.id}.json`, replayDir), JSON.stringify(replay));
     match.replay = 1;
     builtReplays++;
   } catch (err) {
@@ -277,7 +279,7 @@ for (const match of data.matches.filter((x) => x.replay).slice(REPLAY_FULL_KEEP)
   const r = await readJson(file, null);
   if (r?.others?.length) { r.others = []; await fs.writeFile(file, JSON.stringify(r)); }
 }
-if (builtReplays) console.log(`${builtReplays} nye 2D-replays bygget.`);
+if (builtReplays) console.log(`${builtReplays} kampe fik replay/våbendata.`);
 
 // 3) Profiler (karriere, sidste år, våben) – kun hver X. time pga. rate limit
 const due = !prof.profilesAt || now - Date.parse(prof.profilesAt) > PROFILE_REFRESH_HOURS * 3600e3 || process.env.FORCE_PROFILES;

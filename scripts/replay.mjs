@@ -75,11 +75,24 @@ export function buildReplay(events, { matchId, memberIds }) {
     tr.push(Math.round(t * 10) / 10, m(c.location.x), m(c.location.y));
   };
 
+  // Våbenstatistik pr. spiller: { navn: { våben: [skade, knocks, kills] } }
+  const weapons = Object.fromEntries(team.map((p) => [p.name, {}]));
+  const wAdd = (who, w, i, v) => {
+    if (!weapons[who] || !w) return;
+    (weapons[who][w] ??= [0, 0, 0])[i] += v;
+  };
+  const wName = (cat, id) => (/Vehicle/i.test(cat || '') ? 'Køretøj' : weapon(id));
+
   const ev = [];
   for (const e of events) {
     const t = T(e);
     if (t < 0) continue;
     switch (e._T) {
+      case 'LogPlayerTakeDamage':
+        if (isUs(e.attacker) && e.victim && e.victim.teamId !== e.attacker.teamId && e.damage > 0) {
+          wAdd(e.attacker.name, wName(e.damageTypeCategory, e.damageCauserName), 0, e.damage);
+        }
+        break;
       case 'LogVehicleLeave':
         if (e.vehicle?.vehicleType === 'TransportAircraft' && isUs(e.character) && jumped.get(e.character.accountId) === t) {
           ev.push({ t, k: 'jump', a: e.character.name, x: m(e.character.location.x), y: m(e.character.location.y), us: 1 });
@@ -99,6 +112,7 @@ export function buildReplay(events, { matchId, memberIds }) {
             d: Math.round((e.distance ?? 0) / 100), x: m(e.victim.location.x), y: m(e.victim.location.y), us: isUs(e.attacker) ? 1 : 0,
           });
           addPoint(e.attacker, t); addPoint(e.victim, t);
+          if (isUs(e.attacker) && e.victim.teamId !== e.attacker.teamId) wAdd(e.attacker.name, wName(e.damageTypeCategory, e.damageCauserName), 1, 1);
         }
         break;
       case 'LogPlayerKillV2': {
@@ -111,6 +125,7 @@ export function buildReplay(events, { matchId, memberIds }) {
             d: Math.max(0, Math.round((info?.distance ?? 0) / 100)), x: m(loc.x), y: m(loc.y), us: isUs(actor) ? 1 : 0,
           });
           if (isUs(e.victim) && loc.x) addPoint(e.victim, t);
+          if (isUs(e.killer) && e.victim.teamId !== e.killer.teamId) wAdd(e.killer.name, wName(e.killerDamageInfo?.damageTypeCategory, e.killerDamageInfo?.damageCauserName), 2, 1);
         }
         break;
       }
@@ -155,6 +170,7 @@ export function buildReplay(events, { matchId, memberIds }) {
     team: team.map((p) => ({ name: p.name, accountId: p.accountId })),
     tracks,
     others: [...others.entries()].map(([id, p]) => ({ d: death.get(id) ?? null, p })),
+    weapons: Object.fromEntries(Object.entries(weapons).map(([n, w]) => [n, Object.fromEntries(Object.entries(w).map(([k, v]) => [k, [Math.round(v[0]), v[1], v[2]]]))])),
     zone, plane, alive, events: ev.sort((a, b) => a.t - b.t),
   };
 }
