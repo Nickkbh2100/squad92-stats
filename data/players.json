@@ -1,6 +1,6 @@
 {
- "updatedAt": "2026-11-23T08:52:11.388Z",
- "profilesAt": "2026-11-23T03:20:30.080Z",
+ "updatedAt": "2026-11-23T10:33:56.829Z",
+ "profilesAt": "2026-11-23T10:33:56.822Z",
  "seasons": {
   "at": "2026-11-23T03:19:29.030Z",
   "current": "division.bro.official.pc-2018-44",
@@ -4212,6 +4212,19 @@
    "name": "92Diamond",
    "games": [
     {
+     "id": "69882aad-f33b-4059-ba73-69f5215e2565",
+     "at": "2026-11-23T08:25:58Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 140,
+     "k": 0,
+     "kn": 0,
+     "place": 37,
+     "lk": 0,
+     "t": 428
+    },
+    {
      "id": "e7789a2c-49ab-433e-bc97-5ca715874fa6",
      "at": "2026-11-23T08:15:02Z",
      "mode": "duo-fpp",
@@ -5370,19 +5383,19 @@
     }
    ],
    "lifetime": {
-    "rounds": 5801,
+    "rounds": 5803,
     "wins": 273,
     "top10s": 2020,
-    "kills": 6113,
-    "damage": 874222.7,
+    "kills": 6114,
+    "damage": 874637.9,
     "headshots": 1516,
-    "dbnos": 3596,
-    "assists": 1346,
+    "dbnos": 3597,
+    "assists": 1347,
     "revives": 1242,
-    "seconds": 4455142.3,
+    "seconds": 4456028.3,
     "longestKill": 666,
     "roundMostKills": 27,
-    "walkKm": 6471.6,
+    "walkKm": 6473.3,
     "rideKm": 7966.3
    },
    "weapons": [
@@ -5412,20 +5425,20 @@
      "id": "Item_Weapon_M24_C",
      "name": "M24",
      "kills": 385,
-     "damage": 63307,
+     "damage": 63350,
      "headshots": 302,
      "knocks": 244,
      "longestKill": 519,
      "mostKillsInAGame": 11,
-     "level": 40
+     "level": 41
     },
     {
      "id": "Item_Weapon_VSS_C",
      "name": "VSS",
      "kills": 305,
-     "damage": 40828,
+     "damage": 40986,
      "headshots": 135,
-     "knocks": 167,
+     "knocks": 168,
      "longestKill": 387,
      "mostKillsInAGame": 13,
      "level": 48
@@ -5574,6 +5587,17 @@
      "level": 60
     },
     {
+     "id": "Item_Weapon_UZI_C",
+     "name": "Micro UZI",
+     "kills": 96,
+     "damage": 11191,
+     "headshots": 50,
+     "knocks": 38,
+     "longestKill": 51,
+     "mostKillsInAGame": 4,
+     "level": 48
+    },
+    {
      "id": "Item_Weapon_AK47_C",
      "name": "AKM",
      "kills": 95,
@@ -5583,17 +5607,6 @@
      "longestKill": 245,
      "mostKillsInAGame": 7,
      "level": 57
-    },
-    {
-     "id": "Item_Weapon_UZI_C",
-     "name": "Micro UZI",
-     "kills": 95,
-     "damage": 11074,
-     "headshots": 50,
-     "knocks": 38,
-     "longestKill": 51,
-     "mostKillsInAGame": 4,
-     "level": 47
     },
     {
      "id": "Item_Weapon_Grenade_C",
@@ -5621,8 +5634,8 @@
      "id": "Item_Weapon_RPD_C",
      "name": "RPD",
      "kills": 71,
-     "damage": 8997,
-     "headshots": 30,
+     "damage": 9095,
+     "headshots": 31,
      "knocks": 48,
      "longestKill": 130,
      "mostKillsInAGame": 6,
@@ -5993,19 +6006,19 @@
     }
    ],
    "year": {
-    "rounds": 1344,
+    "rounds": 1346,
     "wins": 93,
     "top10s": 547,
-    "kills": 2217,
-    "damage": 300627.6,
+    "kills": 2218,
+    "damage": 301042.7,
     "headshots": 549,
-    "dbnos": 1452,
-    "assists": 441,
+    "dbnos": 1453,
+    "assists": 442,
     "revives": 286,
-    "seconds": 1089827,
+    "seconds": 1090713,
     "longestKill": 558,
     "roundMostKills": 27,
-    "walkKm": 2160.3,
+    "walkKm": 2162,
     "rideKm": 2234.1
    }
   }
@@ -6387,19 +6400,19 @@
     "rideKm": 407
    },
    "division.bro.official.pc-2018-44": {
-    "rounds": 88,
+    "rounds": 90,
     "wins": 12,
     "top10s": 48,
-    "kills": 160,
-    "damage": 21902.1,
+    "kills": 161,
+    "damage": 22317.2,
     "headshots": 40,
-    "dbnos": 100,
-    "assists": 28,
+    "dbnos": 101,
+    "assists": 29,
     "revives": 21,
-    "seconds": 80301,
+    "seconds": 81187,
     "longestKill": 456.6,
     "roundMostKills": 9,
-    "walkKm": 153.8,
+    "walkKm": 155.5,
     "rideKm": 187.5
    }
   }
@@ -6545,6 +6558,7 @@
   "fda26c5c-40ec-44d8-80c8-5cdc24703572": "2026-11-20T21:15:40Z",
   "895e0402-e549-4fc6-8f99-ff5b284c5f83": "2026-11-20T21:35:15Z",
   "75f2b33c-c9d5-4b7a-9803-8ef24cf00857": "2026-11-20T21:54:02Z",
-  "e7789a2c-49ab-433e-bc97-5ca715874fa6": "2026-11-23T08:15:02Z"
+  "e7789a2c-49ab-433e-bc97-5ca715874fa6": "2026-11-23T08:15:02Z",
+  "69882aad-f33b-4059-ba73-69f5215e2565": "2026-11-23T08:25:58Z"
  }
 }
