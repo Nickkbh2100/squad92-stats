@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-23T10:33:56.825Z",
+ "updatedAt": "2026-11-23T20:57:12.258Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -19,6 +19,114 @@
   }
  ],
  "matches": [
+  {
+   "id": "f3a87f72-f381-4846-9506-e2f88e7f544e",
+   "createdAt": "2026-11-23T20:20:59Z",
+   "map": "Neon_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1470,
+   "teams": [
+    {
+     "rank": 8,
+     "won": false,
+     "players": [
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 175.5,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1157,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 8
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 62.4,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1129,
+       "longestKill": 0,
+       "deathType": "byzone",
+       "winPlace": 8
+      },
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 121.2,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1112,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 8
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 1,
+       "timeSurvived": 1094,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 8
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/23/20/46/f79f270f-e77e-11f1-af6b-ae3ade858ce5-telemetry.json",
+   "weapons": {
+    "Vykso": {
+     "VSS": [
+      20,
+      0,
+      0
+     ],
+     "JS9": [
+      101,
+      1,
+      0
+     ]
+    },
+    "92Diamond": {},
+    "Nick-kbh": {
+     "Kar98k": [
+      101,
+      0,
+      0
+     ],
+     "RPD": [
+      74,
+      1,
+      0
+     ]
+    },
+    "92EFFEKTEN": {
+     "Kar98k": [
+      62,
+      1,
+      0
+     ]
+    }
+   },
+   "replay": 1
+  },
   {
    "id": "75f2b33c-c9d5-4b7a-9803-8ef24cf00857",
    "createdAt": "2026-11-20T21:54:02Z",
@@ -5498,6 +5606,7 @@
   "895e0402-e549-4fc6-8f99-ff5b284c5f83": "2026-11-20T21:35:15Z",
   "75f2b33c-c9d5-4b7a-9803-8ef24cf00857": "2026-11-20T21:54:02Z",
   "e7789a2c-49ab-433e-bc97-5ca715874fa6": "2026-11-23T08:15:02Z",
-  "69882aad-f33b-4059-ba73-69f5215e2565": "2026-11-23T08:25:58Z"
+  "69882aad-f33b-4059-ba73-69f5215e2565": "2026-11-23T08:25:58Z",
+  "f3a87f72-f381-4846-9506-e2f88e7f544e": "2026-11-23T20:20:59Z"
  }
 }
