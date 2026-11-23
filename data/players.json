@@ -1,6 +1,6 @@
 {
- "updatedAt": "2026-11-23T21:53:13.043Z",
- "profilesAt": "2026-11-23T17:24:38.693Z",
+ "updatedAt": "2026-11-23T23:52:34.696Z",
+ "profilesAt": "2026-11-23T23:52:34.692Z",
  "seasons": {
   "at": "2026-11-23T03:19:29.030Z",
   "current": "division.bro.official.pc-2018-44",
@@ -747,20 +747,20 @@
     }
    ],
    "lifetime": {
-    "rounds": 5091,
+    "rounds": 5095,
     "wins": 240,
-    "top10s": 1836,
-    "kills": 4537,
-    "damage": 806716.3,
-    "headshots": 1086,
-    "dbnos": 3988,
-    "assists": 1538,
-    "revives": 1401,
-    "seconds": 3958054.7,
+    "top10s": 1840,
+    "kills": 4541,
+    "damage": 807599.2,
+    "headshots": 1087,
+    "dbnos": 3992,
+    "assists": 1539,
+    "revives": 1404,
+    "seconds": 3962775.7,
     "longestKill": 671.3,
     "roundMostKills": 13,
-    "walkKm": 5567.2,
-    "rideKm": 6934.1
+    "walkKm": 5576.5,
+    "rideKm": 6947.4
    },
    "weapons": [
     {
@@ -777,10 +777,10 @@
     {
      "id": "Item_Weapon_AUG_C",
      "name": "AUG",
-     "kills": 225,
-     "damage": 35720,
+     "kills": 226,
+     "damage": 35803,
      "headshots": 191,
-     "knocks": 186,
+     "knocks": 187,
      "longestKill": 158,
      "mostKillsInAGame": 6,
      "level": 11
@@ -788,10 +788,10 @@
     {
      "id": "Item_Weapon_HK416_C",
      "name": "M416",
-     "kills": 197,
-     "damage": 30204,
+     "kills": 198,
+     "damage": 30282,
      "headshots": 157,
-     "knocks": 162,
+     "knocks": 163,
      "longestKill": 265,
      "mostKillsInAGame": 5,
      "level": 28
@@ -821,13 +821,13 @@
     {
      "id": "Item_Weapon_Mk12_C",
      "name": "Mk12",
-     "kills": 169,
-     "damage": 51031,
-     "headshots": 278,
+     "kills": 170,
+     "damage": 51347,
+     "headshots": 280,
      "knocks": 200,
      "longestKill": 560,
      "mostKillsInAGame": 3,
-     "level": 70
+     "level": 71
     },
     {
      "id": "Item_Weapon_UMP_C",
@@ -855,7 +855,7 @@
      "id": "Item_Weapon_AK47_C",
      "name": "AKM",
      "kills": 118,
-     "damage": 17811,
+     "damage": 17896,
      "headshots": 64,
      "knocks": 99,
      "longestKill": 232,
@@ -877,12 +877,12 @@
      "id": "Item_Weapon_Kar98k_C",
      "name": "Kar98k",
      "kills": 95,
-     "damage": 22790,
+     "damage": 22892,
      "headshots": 108,
      "knocks": 123,
      "longestKill": 671,
      "mostKillsInAGame": 4,
-     "level": 86
+     "level": 87
     },
     {
      "id": "Item_Weapon_SKS_C",
@@ -931,10 +931,10 @@
     {
      "id": "Item_Weapon_Dragunov_C",
      "name": "Dragunov",
-     "kills": 71,
-     "damage": 20966,
-     "headshots": 99,
-     "knocks": 87,
+     "kills": 72,
+     "damage": 21113,
+     "headshots": 100,
+     "knocks": 88,
      "longestKill": 510,
      "mostKillsInAGame": 4,
      "level": 71
@@ -1130,9 +1130,9 @@
      "id": "Item_Weapon_RPD_C",
      "name": "RPD",
      "kills": 25,
-     "damage": 3465,
+     "damage": 3539,
      "headshots": 14,
-     "knocks": 14,
+     "knocks": 15,
      "longestKill": 138,
      "mostKillsInAGame": 5,
      "level": 26
@@ -1348,20 +1348,20 @@
     }
    ],
    "year": {
-    "rounds": 821,
+    "rounds": 825,
     "wins": 52,
-    "top10s": 358,
-    "kills": 938,
-    "damage": 165209.9,
-    "headshots": 250,
-    "dbnos": 860,
-    "assists": 295,
-    "revives": 297,
-    "seconds": 698055,
+    "top10s": 362,
+    "kills": 942,
+    "damage": 166092.8,
+    "headshots": 251,
+    "dbnos": 864,
+    "assists": 296,
+    "revives": 300,
+    "seconds": 702776,
     "longestKill": 671.3,
     "roundMostKills": 9,
-    "walkKm": 1332.1,
-    "rideKm": 1715.3
+    "walkKm": 1341.3,
+    "rideKm": 1728.6
    }
   },
   "account.5a44325cf7ce46f78d3fb7ce9d2cd74b": {
@@ -2071,29 +2071,29 @@
     }
    ],
    "lifetime": {
-    "rounds": 6880,
+    "rounds": 6884,
     "wins": 354,
-    "top10s": 2598,
-    "kills": 7653,
-    "damage": 1297301.2,
+    "top10s": 2602,
+    "kills": 7654,
+    "damage": 1297994.1,
     "headshots": 1680,
-    "dbnos": 6395,
-    "assists": 2327,
-    "revives": 2217,
-    "seconds": 5526063.2,
+    "dbnos": 6399,
+    "assists": 2331,
+    "revives": 2220,
+    "seconds": 5530375.2,
     "longestKill": 669.4,
     "roundMostKills": 11,
-    "walkKm": 8103.9,
-    "rideKm": 9400.5
+    "walkKm": 8113.9,
+    "rideKm": 9413
    },
    "weapons": [
     {
      "id": "Item_Weapon_MP5K_C",
      "name": "MP5K",
      "kills": 960,
-     "damage": 148043,
-     "headshots": 781,
-     "knocks": 863,
+     "damage": 148135,
+     "headshots": 782,
+     "knocks": 864,
      "longestKill": 119,
      "mostKillsInAGame": 6,
      "level": 47
@@ -2113,8 +2113,8 @@
      "id": "Item_Weapon_Mini14_C",
      "name": "Mini 14",
      "kills": 240,
-     "damage": 71275,
-     "headshots": 353,
+     "damage": 71332,
+     "headshots": 354,
      "knocks": 244,
      "longestKill": 473,
      "mostKillsInAGame": 4,
@@ -2146,9 +2146,9 @@
      "id": "Item_Weapon_JS9_C",
      "name": "JS9",
      "kills": 187,
-     "damage": 30394,
-     "headshots": 179,
-     "knocks": 176,
+     "damage": 30495,
+     "headshots": 180,
+     "knocks": 177,
      "longestKill": 79,
      "mostKillsInAGame": 8,
      "level": 93
@@ -2179,7 +2179,7 @@
      "id": "Item_Weapon_Kar98k_C",
      "name": "Kar98k",
      "kills": 168,
-     "damage": 44538,
+     "damage": 44582,
      "headshots": 178,
      "knocks": 204,
      "longestKill": 669,
@@ -2201,7 +2201,7 @@
      "id": "Item_Weapon_M24_C",
      "name": "M24",
      "kills": 133,
-     "damage": 42720,
+     "damage": 42805,
      "headshots": 175,
      "knocks": 180,
      "longestKill": 527,
@@ -2245,7 +2245,7 @@
      "id": "Item_Weapon_Grenade_C",
      "name": "Grenade",
      "kills": 90,
-     "damage": 14190,
+     "damage": 14244,
      "headshots": 0,
      "knocks": 71,
      "longestKill": 88,
@@ -2256,7 +2256,7 @@
      "id": "Item_Weapon_VSS_C",
      "name": "VSS",
      "kills": 80,
-     "damage": 19517,
+     "damage": 19537,
      "headshots": 94,
      "knocks": 74,
      "longestKill": 427,
@@ -2267,7 +2267,7 @@
      "id": "Item_Weapon_Dragunov_C",
      "name": "Dragunov",
      "kills": 79,
-     "damage": 23467,
+     "damage": 23491,
      "headshots": 99,
      "knocks": 102,
      "longestKill": 373,
@@ -2300,12 +2300,12 @@
      "id": "Item_Weapon_P90_C",
      "name": "P90",
      "kills": 69,
-     "damage": 7484,
-     "headshots": 39,
-     "knocks": 47,
+     "damage": 7664,
+     "headshots": 42,
+     "knocks": 48,
      "longestKill": 83,
      "mostKillsInAGame": 6,
-     "level": 41
+     "level": 42
     },
     {
      "id": "Item_Weapon_Thompson_C",
@@ -2442,13 +2442,13 @@
     {
      "id": "Item_Weapon_RPD_C",
      "name": "RPD",
-     "kills": 23,
-     "damage": 3140,
+     "kills": 24,
+     "damage": 3176,
      "headshots": 16,
-     "knocks": 22,
+     "knocks": 23,
      "longestKill": 76,
      "mostKillsInAGame": 6,
-     "level": 26
+     "level": 27
     },
     {
      "id": "Item_Weapon_DP12_C",
@@ -2705,20 +2705,20 @@
     }
    ],
    "year": {
-    "rounds": 822,
+    "rounds": 826,
     "wins": 53,
-    "top10s": 390,
-    "kills": 906,
-    "damage": 166752.9,
+    "top10s": 394,
+    "kills": 907,
+    "damage": 167445.9,
     "headshots": 199,
-    "dbnos": 845,
-    "assists": 329,
-    "revives": 318,
-    "seconds": 723708,
+    "dbnos": 849,
+    "assists": 333,
+    "revives": 321,
+    "seconds": 728020,
     "longestKill": 493.3,
     "roundMostKills": 8,
-    "walkKm": 1646.1,
-    "rideKm": 1830.2
+    "walkKm": 1656.1,
+    "rideKm": 1842.7
    }
   },
   "account.a4b778ccd1024edc8934a50ed618d5a8": {
@@ -3701,20 +3701,20 @@
     }
    ],
    "lifetime": {
-    "rounds": 6020,
+    "rounds": 6023,
     "wins": 259,
-    "top10s": 2045,
-    "kills": 6420,
-    "damage": 1132720,
+    "top10s": 2047,
+    "kills": 6421,
+    "damage": 1133240.5,
     "headshots": 1792,
-    "dbnos": 4979,
-    "assists": 1888,
-    "revives": 1242,
-    "seconds": 4682706,
+    "dbnos": 4982,
+    "assists": 1890,
+    "revives": 1243,
+    "seconds": 4685788,
     "longestKill": 538.7,
     "roundMostKills": 18,
-    "walkKm": 6634.6,
-    "rideKm": 7724.9
+    "walkKm": 6641.2,
+    "rideKm": 7734.1
    },
    "weapons": [
     {
@@ -3743,9 +3743,9 @@
      "id": "Item_Weapon_UMP_C",
      "name": "UMP45",
      "kills": 213,
-     "damage": 30186,
+     "damage": 30343,
      "headshots": 147,
-     "knocks": 121,
+     "knocks": 122,
      "longestKill": 151,
      "mostKillsInAGame": 6,
      "level": 54
@@ -3754,7 +3754,7 @@
      "id": "Item_Weapon_AK47_C",
      "name": "AKM",
      "kills": 202,
-     "damage": 29921,
+     "damage": 29964,
      "headshots": 159,
      "knocks": 110,
      "longestKill": 265,
@@ -3775,10 +3775,10 @@
     {
      "id": "Item_Weapon_Kar98k_C",
      "name": "Kar98k",
-     "kills": 171,
-     "damage": 51694,
-     "headshots": 234,
-     "knocks": 220,
+     "kills": 172,
+     "damage": 51967,
+     "headshots": 235,
+     "knocks": 222,
      "longestKill": 469,
      "mostKillsInAGame": 3,
      "level": 32
@@ -3897,7 +3897,7 @@
      "id": "Item_Weapon_Grenade_C",
      "name": "Grenade",
      "kills": 56,
-     "damage": 9077,
+     "damage": 9123,
      "headshots": 0,
      "knocks": 38,
      "longestKill": 84,
@@ -4335,20 +4335,20 @@
     }
    ],
    "year": {
-    "rounds": 680,
+    "rounds": 683,
     "wins": 45,
-    "top10s": 294,
-    "kills": 817,
-    "damage": 147715.3,
+    "top10s": 296,
+    "kills": 818,
+    "damage": 148235.8,
     "headshots": 250,
-    "dbnos": 570,
-    "assists": 263,
-    "revives": 151,
-    "seconds": 576374,
+    "dbnos": 573,
+    "assists": 265,
+    "revives": 152,
+    "seconds": 579456,
     "longestKill": 467.4,
     "roundMostKills": 18,
-    "walkKm": 1159.1,
-    "rideKm": 1350.6
+    "walkKm": 1165.7,
+    "rideKm": 1359.8
    }
   },
   "account.2b7c5c7edded414fb1031fece86cda59": {
@@ -5578,20 +5578,20 @@
     }
    ],
    "lifetime": {
-    "rounds": 5803,
+    "rounds": 5807,
     "wins": 273,
-    "top10s": 2020,
-    "kills": 6114,
-    "damage": 874637.9,
+    "top10s": 2024,
+    "kills": 6118,
+    "damage": 874971.6,
     "headshots": 1516,
-    "dbnos": 3597,
-    "assists": 1347,
-    "revives": 1242,
-    "seconds": 4456028.3,
+    "dbnos": 3601,
+    "assists": 1348,
+    "revives": 1244,
+    "seconds": 4460630.3,
     "longestKill": 666,
     "roundMostKills": 27,
-    "walkKm": 6473.3,
-    "rideKm": 7966.3
+    "walkKm": 6482.6,
+    "rideKm": 7979.4
    },
    "weapons": [
     {
@@ -5609,7 +5609,7 @@
      "id": "Item_Weapon_Kar98k_C",
      "name": "Kar98k",
      "kills": 465,
-     "damage": 75840,
+     "damage": 75884,
      "headshots": 382,
      "knocks": 344,
      "longestKill": 564,
@@ -5674,10 +5674,10 @@
     {
      "id": "Item_Weapon_Mini14_C",
      "name": "Mini 14",
-     "kills": 248,
-     "damage": 38799,
+     "kills": 249,
+     "damage": 38856,
      "headshots": 160,
-     "knocks": 128,
+     "knocks": 129,
      "longestKill": 666,
      "mostKillsInAGame": 7,
      "level": 75
@@ -5773,13 +5773,13 @@
     {
      "id": "Item_Weapon_Vector_C",
      "name": "Vector",
-     "kills": 115,
-     "damage": 14256,
+     "kills": 116,
+     "damage": 14355,
      "headshots": 54,
-     "knocks": 58,
+     "knocks": 59,
      "longestKill": 44,
      "mostKillsInAGame": 5,
-     "level": 60
+     "level": 61
     },
     {
      "id": "Item_Weapon_UZI_C",
@@ -5850,13 +5850,13 @@
     {
      "id": "Item_Weapon_SCAR-L_C",
      "name": "SCAR-L",
-     "kills": 58,
-     "damage": 7331,
+     "kills": 60,
+     "damage": 7466,
      "headshots": 19,
-     "knocks": 40,
+     "knocks": 42,
      "longestKill": 256,
      "mostKillsInAGame": 13,
-     "level": 50
+     "level": 51
     },
     {
      "id": "Item_Weapon_BizonPP19_C",
@@ -6201,20 +6201,20 @@
     }
    ],
    "year": {
-    "rounds": 1346,
+    "rounds": 1350,
     "wins": 93,
-    "top10s": 547,
-    "kills": 2218,
-    "damage": 301042.7,
+    "top10s": 551,
+    "kills": 2222,
+    "damage": 301376.5,
     "headshots": 549,
-    "dbnos": 1453,
-    "assists": 442,
-    "revives": 286,
-    "seconds": 1090713,
+    "dbnos": 1457,
+    "assists": 443,
+    "revives": 288,
+    "seconds": 1095315,
     "longestKill": 558,
     "roundMostKills": 27,
-    "walkKm": 2162,
-    "rideKm": 2234.1
+    "walkKm": 2171.2,
+    "rideKm": 2247.2
    }
   }
  },
@@ -6301,20 +6301,20 @@
     "rideKm": 238.9
    },
    "division.bro.official.pc-2018-44": {
-    "rounds": 46,
+    "rounds": 50,
     "wins": 6,
-    "top10s": 30,
-    "kills": 84,
-    "damage": 12590.1,
-    "headshots": 25,
-    "dbnos": 60,
-    "assists": 21,
-    "revives": 23,
-    "seconds": 48961,
+    "top10s": 34,
+    "kills": 88,
+    "damage": 13473,
+    "headshots": 26,
+    "dbnos": 64,
+    "assists": 22,
+    "revives": 26,
+    "seconds": 53682,
     "longestKill": 319.5,
     "roundMostKills": 9,
-    "walkKm": 93.5,
-    "rideKm": 119.6
+    "walkKm": 102.7,
+    "rideKm": 132.9
    }
   },
   "account.5a44325cf7ce46f78d3fb7ce9d2cd74b": {
@@ -6399,20 +6399,20 @@
     "rideKm": 272
    },
    "division.bro.official.pc-2018-44": {
-    "rounds": 49,
+    "rounds": 53,
     "wins": 7,
-    "top10s": 32,
-    "kills": 60,
-    "damage": 11967,
+    "top10s": 36,
+    "kills": 61,
+    "damage": 12660,
     "headshots": 17,
-    "dbnos": 56,
-    "assists": 23,
-    "revives": 17,
-    "seconds": 52202,
+    "dbnos": 60,
+    "assists": 27,
+    "revives": 20,
+    "seconds": 56514,
     "longestKill": 493.3,
     "roundMostKills": 7,
-    "walkKm": 114.6,
-    "rideKm": 131.4
+    "walkKm": 124.6,
+    "rideKm": 143.9
    }
   },
   "account.a4b778ccd1024edc8934a50ed618d5a8": {
@@ -6497,20 +6497,20 @@
     "rideKm": 243.9
    },
    "division.bro.official.pc-2018-44": {
-    "rounds": 64,
+    "rounds": 67,
     "wins": 6,
-    "top10s": 30,
-    "kills": 90,
-    "damage": 16924.6,
+    "top10s": 32,
+    "kills": 91,
+    "damage": 17445.1,
     "headshots": 44,
-    "dbnos": 47,
-    "assists": 29,
-    "revives": 13,
-    "seconds": 59872,
+    "dbnos": 50,
+    "assists": 31,
+    "revives": 14,
+    "seconds": 62954,
     "longestKill": 369.9,
     "roundMostKills": 7,
-    "walkKm": 112.5,
-    "rideKm": 127
+    "walkKm": 119.1,
+    "rideKm": 136.2
    }
   },
   "account.2b7c5c7edded414fb1031fece86cda59": {
@@ -6595,20 +6595,20 @@
     "rideKm": 407
    },
    "division.bro.official.pc-2018-44": {
-    "rounds": 90,
+    "rounds": 94,
     "wins": 12,
-    "top10s": 48,
-    "kills": 161,
-    "damage": 22317.2,
+    "top10s": 52,
+    "kills": 165,
+    "damage": 22651,
     "headshots": 40,
-    "dbnos": 101,
-    "assists": 29,
-    "revives": 21,
-    "seconds": 81187,
+    "dbnos": 105,
+    "assists": 30,
+    "revives": 23,
+    "seconds": 85789,
     "longestKill": 456.6,
     "roundMostKills": 9,
-    "walkKm": 155.5,
-    "rideKm": 187.5
+    "walkKm": 164.7,
+    "rideKm": 200.6
    }
   }
  },
