@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T21:06:02.830Z",
+ "updatedAt": "2026-11-24T22:10:10.928Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -19,6 +19,307 @@
   }
  ],
  "matches": [
+  {
+   "id": "a5df8b33-a52a-4160-862a-7828c6c37442",
+   "createdAt": "2026-11-24T21:12:28Z",
+   "map": "Savage_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1367,
+   "teams": [
+    {
+     "rank": 1,
+     "won": true,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 273.1,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 1,
+       "timeSurvived": 1367,
+       "longestKill": 91.9,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 35.2,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 1367,
+       "longestKill": 0,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 305.1,
+       "kills": 3,
+       "assists": 0,
+       "dbnos": 1,
+       "headshots": 1,
+       "revives": 0,
+       "timeSurvived": 1367,
+       "longestKill": 163.5,
+       "deathType": "alive",
+       "winPlace": 1
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 418,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 1
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/24/21/36/1b0b6572-e84f-11f1-b824-2a2d0735d109-telemetry.json",
+   "weapons": {
+    "92Diamond": {
+     "M416": [
+      35,
+      0,
+      0
+     ]
+    },
+    "Nick-kbh": {
+     "Dragunov": [
+      100,
+      0,
+      1
+     ],
+     "MP5K": [
+      127,
+      1,
+      1
+     ],
+     "Kar98k": [
+      78,
+      0,
+      1
+     ]
+    },
+    "92EFFEKTEN": {},
+    "Vykso": {
+     "MP5K": [
+      173,
+      0,
+      2
+     ],
+     "Lynx AMR": [
+      100,
+      1,
+      1
+     ]
+    }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "92Diamond": 2
+   },
+   "replay": 1
+  },
+  {
+   "id": "b00bb0c6-90c8-4494-af07-d734edaec51a",
+   "createdAt": "2026-11-24T20:56:15Z",
+   "map": "Baltic_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1688,
+   "teams": [
+    {
+     "rank": 13,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 267,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "92Diamond",
+       "accountId": "account.2b7c5c7edded414fb1031fece86cda59",
+       "damage": 82.1,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 823,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 190,
+       "kills": 1,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 822,
+       "longestKill": 39.8,
+       "deathType": "byplayer",
+       "winPlace": 13
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 938,
+       "longestKill": 0,
+       "deathType": "byzone",
+       "winPlace": 13
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/24/21/25/91e57b6a-e84d-11f1-94b1-665c3c769973-telemetry.json",
+   "weapons": {
+    "Vykso": {},
+    "Nick-kbh": {
+     "VSS": [
+      27,
+      0,
+      0
+     ],
+     "UMP9": [
+      163,
+      0,
+      1
+     ]
+    },
+    "92Diamond": {
+     "Mini 14": [
+      23,
+      0,
+      0
+     ],
+     "M249": [
+      59,
+      0,
+      0
+     ]
+    },
+    "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "Vykso": 1,
+    "92Diamond": 1,
+    "Nick-kbh": 1
+   },
+   "replay": 1
+  },
+  {
+   "id": "784b47cf-42b4-45cc-a8bb-9d6d826ab01c",
+   "createdAt": "2026-11-24T20:53:09Z",
+   "map": "Savage_Main",
+   "gameMode": "squad-fpp",
+   "matchType": "official",
+   "duration": 1353,
+   "teams": [
+    {
+     "rank": 27,
+     "won": false,
+     "players": [
+      {
+       "name": "Vykso",
+       "accountId": "account.5a44325cf7ce46f78d3fb7ce9d2cd74b",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 637,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 27
+      },
+      {
+       "name": "Nick-kbh",
+       "accountId": "account.f6559dc6972f41b4832f875cf21451b4",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 651,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 27
+      },
+      {
+       "name": "92EFFEKTEN",
+       "accountId": "account.a4b778ccd1024edc8934a50ed618d5a8",
+       "damage": 0,
+       "kills": 0,
+       "assists": 0,
+       "dbnos": 0,
+       "headshots": 0,
+       "revives": 0,
+       "timeSurvived": 572,
+       "longestKill": 0,
+       "deathType": "byplayer",
+       "winPlace": 27
+      }
+     ]
+    }
+   ],
+   "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/24/21/17/66de04d5-e84c-11f1-af6b-ae3ade858ce5-telemetry.json",
+   "weapons": {
+    "Vykso": {},
+    "Nick-kbh": {},
+    "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "Vykso": 1
+   },
+   "replay": 1
+  },
   {
    "id": "579c4ea8-13d3-4a9b-8eb5-8d0e686548aa",
    "createdAt": "2026-11-24T20:30:40Z",
@@ -6864,6 +7165,9 @@
   "a92e19e9-413a-41a5-9467-6fe908cdf49a": "2026-11-23T20:59:17Z",
   "579c4ea8-13d3-4a9b-8eb5-8d0e686548aa": "2026-11-24T20:30:40Z",
   "d90f1649-f3d3-4561-8df5-1880e024d612": "2026-11-24T20:17:41Z",
-  "ccaff959-dcc6-4bab-9baf-e1b64e2d763a": "2026-11-24T20:10:47Z"
+  "ccaff959-dcc6-4bab-9baf-e1b64e2d763a": "2026-11-24T20:10:47Z",
+  "a5df8b33-a52a-4160-862a-7828c6c37442": "2026-11-24T21:12:28Z",
+  "b00bb0c6-90c8-4494-af07-d734edaec51a": "2026-11-24T20:56:15Z",
+  "784b47cf-42b4-45cc-a8bb-9d6d826ab01c": "2026-11-24T20:53:09Z"
  }
 }
