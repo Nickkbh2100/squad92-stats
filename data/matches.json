@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-23T21:53:13.037Z",
+ "updatedAt": "2026-11-24T13:32:43.290Z",
  "members": [
   {
    "name": "Nick-kbh",
@@ -115,7 +115,17 @@
      ]
     }
    },
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "92Diamond": 1
+   }
   },
   {
    "id": "a92e19e9-413a-41a5-9467-6fe908cdf49a",
@@ -234,7 +244,35 @@
      ]
     }
    },
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ],
+    [
+     "92EFFEKTEN",
+     "Nick-kbh"
+    ],
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ],
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "Nick-kbh": 3,
+    "92EFFEKTEN": 2,
+    "92Diamond": 1
+   }
   },
   {
    "id": "c00f0e03-03f8-4aab-9a95-6384133dc1a8",
@@ -363,7 +401,19 @@
      ]
     }
    },
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "92Diamond": 1,
+    "Vykso": 1,
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "f3a87f72-f381-4846-9506-e2f88e7f544e",
@@ -471,7 +521,23 @@
      ]
     }
    },
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ],
+    [
+     "Vykso",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 2,
+    "92Diamond": 1,
+    "Nick-kbh": 1,
+    "Vykso": 1
+   }
   },
   {
    "id": "75f2b33c-c9d5-4b7a-9803-8ef24cf00857",
@@ -605,7 +671,27 @@
      ]
     }
    },
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ],
+    [
+     "Nick-kbh",
+     "92EFFEKTEN"
+    ],
+    [
+     "Nick-kbh",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1,
+    "92Diamond": 2,
+    "92EFFEKTEN": 2,
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "895e0402-e549-4fc6-8f99-ff5b284c5f83",
@@ -703,6 +789,12 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 2,
+    "92Diamond": 1,
+    "92EFFEKTEN": 1
    }
   },
   {
@@ -801,6 +893,17 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "Nick-kbh": 2,
+    "Vykso": 1,
+    "92EFFEKTEN": 1
    }
   },
   {
@@ -904,6 +1007,12 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1,
+    "92EFFEKTEN": 1,
+    "Vykso": 1
    }
   },
   {
@@ -1002,6 +1111,20 @@
       1
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "Nick-kbh"
+    ],
+    [
+     "Nick-kbh",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "Nick-kbh": 2,
+    "92EFFEKTEN": 3
    }
   },
   {
@@ -1089,6 +1212,11 @@
       3
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1,
+    "92EFFEKTEN": 1
    }
   },
   {
@@ -1192,6 +1320,17 @@
       1
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "Nick-kbh": 1,
+    "92EFFEKTEN": 2
    }
   },
   {
@@ -1305,6 +1444,21 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ],
+    [
+     "Nick-kbh",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "92EFFEKTEN": 2,
+    "Nick-kbh": 1
    }
   },
   {
@@ -1423,6 +1577,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "Nick-kbh"
+    ],
+    [
+     "Vykso",
+     "Nick-kbh"
+    ],
+    [
+     "Nick-kbh",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 2,
+    "Nick-kbh": 2,
+    "Vykso": 1
    }
   },
   {
@@ -1516,6 +1689,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92Diamond"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ],
+    [
+     "Nick-kbh",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 3,
+    "Vykso": 1,
+    "Nick-kbh": 1
    }
   },
   {
@@ -1609,6 +1801,17 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1,
+    "Nick-kbh": 1,
+    "92Diamond": 1
    }
   },
   {
@@ -1712,6 +1915,20 @@
       3
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ],
+    [
+     "92EFFEKTEN",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1,
+    "92Diamond": 2
    }
   },
   {
@@ -1815,6 +2032,20 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ],
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 3,
+    "Vykso": 1
    }
   },
   {
@@ -1912,6 +2143,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ],
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "92Diamond": 1,
+    "Vykso": 3
    }
   },
   {
@@ -2026,6 +2276,38 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ],
+    [
+     "92Diamond",
+     "Vykso"
+    ],
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "92EFFEKTEN",
+     "92Diamond"
+    ],
+    [
+     "92Diamond",
+     "Vykso"
+    ],
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "Vykso": 4,
+    "92EFFEKTEN": 2,
+    "Nick-kbh": 1,
+    "92Diamond": 2
    }
   },
   {
@@ -2155,6 +2437,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "92EFFEKTEN"
+    ],
+    [
+     "Nick-kbh",
+     "Vykso"
+    ],
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 3,
+    "Vykso": 2,
+    "92Diamond": 1
    }
   },
   {
@@ -2269,6 +2570,20 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 3,
+    "Vykso": 2
    }
   },
   {
@@ -2351,6 +2666,10 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
    }
   },
   {
@@ -2439,6 +2758,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ],
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 2,
+    "Vykso": 2,
+    "92Diamond": 1
    }
   },
   {
@@ -2521,6 +2859,16 @@
       3
      ]
     }
+   },
+   "revives": [
+    [
+     "92Diamond",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "92Diamond": 1
    }
   },
   {
@@ -2608,6 +2956,11 @@
      ]
     },
     "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "Vykso": 1
    }
   },
   {
@@ -2685,6 +3038,21 @@
       1
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 2,
+    "92Diamond": 1,
+    "Vykso": 1
    }
   },
   {
@@ -2735,6 +3103,10 @@
    "weapons": {
     "Vykso": {},
     "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "Vykso": 1
    }
   },
   {
@@ -2791,6 +3163,10 @@
      ]
     },
     "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1
    }
   },
   {
@@ -2858,6 +3234,10 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1
    }
   },
   {
@@ -2976,6 +3356,23 @@
       1
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ],
+    [
+     "Vykso",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 3
    }
   },
   {
@@ -3079,6 +3476,16 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 2,
+    "Nick-kbh": 1
    }
   },
   {
@@ -3144,6 +3551,11 @@
     "92Diamond": {},
     "Nick-kbh": {},
     "Vykso": {}
+   },
+   "revives": [],
+   "downs": {
+    "Vykso": 1,
+    "Nick-kbh": 1
    }
   },
   {
@@ -3226,6 +3638,21 @@
       2
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ],
+    [
+     "Vykso",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "92Diamond": 1,
+    "Nick-kbh": 1
    }
   },
   {
@@ -3303,6 +3730,16 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "Nick-kbh": 1
    }
   },
   {
@@ -3380,6 +3817,11 @@
      ]
     },
     "Nick-kbh": {}
+   },
+   "revives": [],
+   "downs": {
+    "Vykso": 1,
+    "92Diamond": 1
    }
   },
   {
@@ -3457,6 +3899,10 @@
       1
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
    }
   },
   {
@@ -3576,6 +4022,22 @@
       1
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "92Diamond"
+    ],
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 1,
+    "92EFFEKTEN": 2,
+    "Nick-kbh": 1,
+    "Vykso": 1
    }
   },
   {
@@ -3715,6 +4177,15 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 1
    }
   },
   {
@@ -3864,6 +4335,25 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "Vykso",
+     "Nick-kbh"
+    ],
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ],
+    [
+     "Vykso",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "Nick-kbh": 2,
+    "92EFFEKTEN": 2,
+    "92Diamond": 2
    }
   },
   {
@@ -3957,6 +4447,17 @@
       2
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1,
+    "92EFFEKTEN": 1,
+    "92Diamond": 1
    }
   },
   {
@@ -4096,6 +4597,15 @@
       0
      ]
     }
+   },
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1
    }
   },
   {
@@ -4215,6 +4725,12 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "92Diamond": 1,
+    "Vykso": 1
    }
   },
   {
@@ -4265,6 +4781,10 @@
    "weapons": {
     "Vykso": {},
     "92EFFEKTEN": {}
+   },
+   "revives": [],
+   "downs": {
+    "Vykso": 1
    }
   },
   {
@@ -4337,6 +4857,10 @@
       0
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
    }
   },
   {
@@ -4419,6 +4943,10 @@
       1
      ]
     }
+   },
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
    }
   },
   {
@@ -4465,7 +4993,16 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/06/21/47/a7497e4d-da2b-11f1-8d13-0214ec190f7d-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Vykso",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 2
+   }
   },
   {
    "id": "ced74ed9-859b-4a2c-b48d-95eedd77c436",
@@ -4511,7 +5048,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/06/21/26/aa154531-da28-11f1-b985-066546d20bdb-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 2
+   }
   },
   {
    "id": "1b0d6e18-e2db-4aff-99e5-e4b2046df2bd",
@@ -4557,7 +5098,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/06/21/11/ad11914b-da26-11f1-839c-be1827717208-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92EFFEKTEN": 1
+   }
   },
   {
    "id": "f9a396d0-e4b9-40bf-abca-7f2a4fc82539",
@@ -4603,7 +5148,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/22/59/7f215bc8-d96c-11f1-a749-760de79705a4-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "51e89cef-5c1f-4a89-a8ea-0cd0130c0274",
@@ -4649,7 +5198,17 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/22/47/f1dc92b9-d96a-11f1-b1c3-32aea8a767cd-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 1,
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "09b97d9b-7cc7-438f-b398-f3bb78e3404d",
@@ -4695,7 +5254,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/22/39/d0cee231-d969-11f1-b1c3-32aea8a767cd-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "a49b3332-4483-4e55-81e3-8043c5c2e55b",
@@ -4741,7 +5304,21 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/22/10/c204f88c-d965-11f1-98ae-a6d515c6a035-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "Nick-kbh": 1,
+    "92Diamond": 2
+   }
   },
   {
    "id": "7da5a1ba-b92a-49cf-9802-328a28c7eb97",
@@ -4787,7 +5364,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/11/10/76f99d50-d909-11f1-8db9-fa5a2093e0b7-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "8dcc360f-05dd-414a-97ed-dbb00d31e628",
@@ -4833,7 +5414,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/10/58/db45c8e5-d907-11f1-8aef-a21b0a317a5d-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "8dc95bc2-965a-4544-9e8e-395dbb6692d4",
@@ -4879,7 +5464,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/10/53/2200ac0a-d907-11f1-98ae-a6d515c6a035-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "dc0e2f78-d58a-4b97-8d07-07b142f126a3",
@@ -4925,7 +5514,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/10/50/aa206cd5-d906-11f1-b24b-ee186e914786-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "0bb269ce-375f-4b99-b392-609559bd1151",
@@ -4971,7 +5564,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/10/41/8742d569-d905-11f1-8db9-fa5a2093e0b7-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "f7dca995-c879-4c21-b025-dc21e18cd62a",
@@ -5017,7 +5614,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/10/18/4342b8f9-d902-11f1-b24b-ee186e914786-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "4ad33767-4c21-43e8-96d3-f75447cb14ce",
@@ -5063,7 +5664,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/08/35/da872b8a-d8f3-11f1-9577-c230d1be22a8-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "6e14a26d-2266-4e44-a528-48e869730c99",
@@ -5109,7 +5714,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/08/15/0dac3311-d8f1-11f1-9acd-1af9a12b44de-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Nick-kbh": 1
+   }
   },
   {
    "id": "7bb765b4-f174-486c-95d1-2920ec46ff83",
@@ -5155,7 +5764,20 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/05/07/52/d941711c-d8ed-11f1-8db9-fa5a2093e0b7-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ],
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "Nick-kbh": 3
+   }
   },
   {
    "id": "cfa0be73-04cb-4392-9288-a345f7dd284f",
@@ -5229,7 +5851,23 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/22/04/bb13f13b-d89b-11f1-b17f-9686d5900d72-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Nick-kbh",
+     "Vykso"
+    ],
+    [
+     "Nick-kbh",
+     "92Diamond"
+    ]
+   ],
+   "downs": {
+    "Vykso": 1,
+    "92Diamond": 2,
+    "Nick-kbh": 1,
+    "92EFFEKTEN": 1
+   }
   },
   {
    "id": "87ba725b-c600-4442-8735-8bd16abe04fc",
@@ -5303,7 +5941,18 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/21/32/2e7d951c-d897-11f1-9304-22e6b926d6c1-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "92EFFEKTEN",
+     "Vykso"
+    ]
+   ],
+   "downs": {
+    "92Diamond": 1,
+    "Vykso": 2,
+    "92EFFEKTEN": 1
+   }
   },
   {
    "id": "a7b67311-5f2c-47ac-b03d-f7622fc8365e",
@@ -5377,7 +6026,31 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/21/04/48a65ad0-d893-11f1-b57c-66dd242acd5e-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "92Diamond",
+     "Vykso"
+    ],
+    [
+     "Nick-kbh",
+     "92EFFEKTEN"
+    ],
+    [
+     "92Diamond",
+     "Nick-kbh"
+    ],
+    [
+     "92Diamond",
+     "92EFFEKTEN"
+    ]
+   ],
+   "downs": {
+    "Vykso": 2,
+    "92EFFEKTEN": 3,
+    "Nick-kbh": 1,
+    "92Diamond": 1
+   }
   },
   {
    "id": "4e5f37ba-94fd-4530-9da5-8f954c69a88e",
@@ -5451,7 +6124,18 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/20/57/5ccaa6fc-d892-11f1-9577-c230d1be22a8-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [
+    [
+     "Vykso",
+     "Nick-kbh"
+    ]
+   ],
+   "downs": {
+    "92EFFEKTEN": 1,
+    "Nick-kbh": 2,
+    "Vykso": 1
+   }
   },
   {
    "id": "89a222dd-0547-4111-960a-6227b91e53bb",
@@ -5497,7 +6181,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/20/47/02647d09-d891-11f1-b17f-9686d5900d72-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "Vykso": 1
+   }
   },
   {
    "id": "42b43b71-b26a-4828-97cb-527898e8b76c",
@@ -5543,7 +6231,11 @@
     }
    ],
    "telemetry": "https://telemetry-cdn.pubg.com/bluehole-pubg/steam/2026/11/04/20/34/282f0a26-d88f-11f1-a749-760de79705a4-telemetry.json",
-   "replay": 1
+   "replay": 1,
+   "revives": [],
+   "downs": {
+    "92Diamond": 1
+   }
   },
   {
    "id": "5ed91df8-f31f-41d4-ae66-e8cb035b309a",
