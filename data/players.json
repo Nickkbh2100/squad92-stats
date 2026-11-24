@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T19:25:47.493Z",
+ "updatedAt": "2026-11-24T21:06:02.834Z",
  "profilesAt": "2026-11-24T19:25:47.487Z",
  "seasons": {
   "at": "2026-11-24T06:18:54.122Z",
@@ -1368,6 +1368,45 @@
    "name": "Vykso",
    "games": [
     {
+     "id": "579c4ea8-13d3-4a9b-8eb5-8d0e686548aa",
+     "at": "2026-11-24T20:30:40Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Baltic_Main",
+     "dmg": 13,
+     "k": 0,
+     "kn": 0,
+     "place": 5,
+     "lk": 0,
+     "t": 1252
+    },
+    {
+     "id": "d90f1649-f3d3-4561-8df5-1880e024d612",
+     "at": "2026-11-24T20:17:41Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 269,
+     "k": 2,
+     "kn": 1,
+     "place": 26,
+     "lk": 6,
+     "t": 612
+    },
+    {
+     "id": "ccaff959-dcc6-4bab-9baf-e1b64e2d763a",
+     "at": "2026-11-24T20:10:47Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 24,
+     "k": 0,
+     "kn": 0,
+     "place": 33,
+     "lk": 0,
+     "t": 271
+    },
+    {
      "id": "5629af87-fbce-485c-9fcf-3a933569834d",
      "at": "2026-11-23T21:23:48Z",
      "mode": "squad-fpp",
@@ -2724,6 +2763,45 @@
   "account.a4b778ccd1024edc8934a50ed618d5a8": {
    "name": "92EFFEKTEN",
    "games": [
+    {
+     "id": "579c4ea8-13d3-4a9b-8eb5-8d0e686548aa",
+     "at": "2026-11-24T20:30:40Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Baltic_Main",
+     "dmg": 403,
+     "k": 2,
+     "kn": 2,
+     "place": 5,
+     "lk": 7,
+     "t": 1242
+    },
+    {
+     "id": "d90f1649-f3d3-4561-8df5-1880e024d612",
+     "at": "2026-11-24T20:17:41Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Neon_Main",
+     "dmg": 252,
+     "k": 2,
+     "kn": 1,
+     "place": 26,
+     "lk": 18,
+     "t": 252
+    },
+    {
+     "id": "ccaff959-dcc6-4bab-9baf-e1b64e2d763a",
+     "at": "2026-11-24T20:10:47Z",
+     "mode": "duo-fpp",
+     "type": "official",
+     "map": "Savage_Main",
+     "dmg": 0,
+     "k": 0,
+     "kn": 0,
+     "place": 33,
+     "lk": 0,
+     "t": 289
+    },
     {
      "id": "a92e19e9-413a-41a5-9467-6fe908cdf49a",
      "at": "2026-11-23T20:59:17Z",
@@ -6758,6 +6836,9 @@
   "f3a87f72-f381-4846-9506-e2f88e7f544e": "2026-11-23T20:20:59Z",
   "5629af87-fbce-485c-9fcf-3a933569834d": "2026-11-23T21:23:48Z",
   "c00f0e03-03f8-4aab-9a95-6384133dc1a8": "2026-11-23T20:42:06Z",
-  "a92e19e9-413a-41a5-9467-6fe908cdf49a": "2026-11-23T20:59:17Z"
+  "a92e19e9-413a-41a5-9467-6fe908cdf49a": "2026-11-23T20:59:17Z",
+  "579c4ea8-13d3-4a9b-8eb5-8d0e686548aa": "2026-11-24T20:30:40Z",
+  "d90f1649-f3d3-4561-8df5-1880e024d612": "2026-11-24T20:17:41Z",
+  "ccaff959-dcc6-4bab-9baf-e1b64e2d763a": "2026-11-24T20:10:47Z"
  }
 }
