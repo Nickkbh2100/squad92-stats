@@ -249,7 +249,21 @@ for (const p of Object.values(prof.players)) {
 }
 data.matches.sort((x, y) => Date.parse(y.createdAt) - Date.parse(x.createdAt));
 
+// Revives/knocks pr. kamp ud fra replay-hændelser: hvem rejste hvem, og hvor ofte hver blev knocked
+function teamEvents(match, events) {
+  const ours = new Set(match.teams.flatMap((t) => t.players.map((p) => p.name)));
+  match.revives = events.filter((e) => e.k === 'revive' && ours.has(e.a) && ours.has(e.v)).map((e) => [e.a, e.v]);
+  match.downs = {};
+  for (const e of events) if (e.k === 'knock' && ours.has(e.v)) match.downs[e.v] = (match.downs[e.v] || 0) + 1;
+}
+
 // 2) 2D-replays for fælles kampe (telemetri findes kun i 14 dage)
+// Udfyld revives/knocks for ældre kampe ud fra de replay-filer, vi allerede har
+for (const match of data.matches) {
+  if (!match.replay || match.revives) continue;
+  const r = await readJson(new URL(`${match.id}.json`, replayDir), null);
+  if (r?.events) teamEvents(match, r.events);
+}
 await fs.mkdir(replayDir, { recursive: true });
 let builtReplays = 0;
 for (const match of data.matches) {
@@ -265,6 +279,7 @@ for (const match of data.matches) {
     const replay = buildReplay(await res.json(), { matchId: match.id, memberIds });
     if (!replay) continue;
     match.weapons = replay.weapons;   // våbenskade pr. spiller (bruges på forsiden)
+    teamEvents(match, replay.events);
     delete replay.weapons;
     if (!match.replay) await fs.writeFile(new URL(`${match.id}.json`, replayDir), JSON.stringify(replay));
     match.replay = 1;

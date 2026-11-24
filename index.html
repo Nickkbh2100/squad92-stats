@@ -204,6 +204,13 @@
   .wbar { height: 14px; }
   .wbar i { display: block; height: 100%; border-radius: 0 4px 4px 0; min-width: 2px; }
   .note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+  .rvlist { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; margin-top: 14px; font-size: 13px; align-items: baseline; }
+  .rvlist span { color: var(--muted); font-size: 12px; }
+  .rvlist b { text-align: right; font-weight: 650; overflow-wrap: anywhere; }
+  .rmatrix td.rm-cell { text-align: center; font-weight: 650; border-radius: 0; }
+  .rmatrix td.rm-self { text-align: center; color: var(--muted); }
+  .rmatrix th { text-align: center; }
+  .rmatrix th:first-child { text-align: left; }
   .wfavs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
   .wfav { padding: 14px 16px; }
   .wfav .wf-w { font-family: var(--cond); font-size: 30px; line-height: 1; margin-top: 8px; font-weight: 500; }
@@ -242,6 +249,10 @@
     .tiles { grid-template-columns: repeat(2, 1fr); }
     .wsrow { grid-template-columns: 78px 1fr 64px; font-size: 13px; }
     .wsrow .wv small { display: none; }
+    .rmatrix .rm-nm { display: none; }
+    .rmatrix th, .rmatrix td { padding: 9px 6px; }
+    .rvlist { grid-template-columns: 1fr; gap: 0; }
+    .rvlist b { text-align: left; margin-bottom: 4px; }
     .records { grid-template-columns: 1fr; }
     .ptabs .seg { margin-left: 0; }
     .best { grid-template-columns: 1fr; }
@@ -387,6 +398,7 @@ function summarise(p, n) {
     avgKills: count ? kills / count : 0,
     kd: deaths ? kills / deaths : kills,
     avgAssists: count ? sum((x) => x.me.assists) / count : 0,
+    revives: sum((x) => x.me.revives || 0),
     avgKnocks: count ? sum((x) => x.me.dbnos) / count : 0,
     wins: g.filter((x) => x.team.won).length,
     top10: g.filter((x) => x.team.rank <= 10).length,
@@ -533,17 +545,18 @@ function render() {
   window.onresize = () => { clearTimeout(window._rz); window._rz = setTimeout(drawAll, 100); };
 
   renderWeapons(app, teams, players);
+  renderRevives(app, teams, players);
 
   // --- Tabel ---
   app.append(el('h2', {}, 'Alle stats', el('small', {}, nLabel)));
-  const head = ['Spiller', 'Kampe', 'Gns. skade', 'Bedste', 'Kills/kamp', 'K/D', 'Knocks/kamp', 'Assists/kamp', 'Headshots', 'Dinners', 'Top 10', 'Gns. plac.'];
+  const head = ['Spiller', 'Kampe', 'Gns. skade', 'Bedste', 'Kills/kamp', 'K/D', 'Knocks/kamp', 'Assists/kamp', 'Revives', 'Headshots', 'Dinners', 'Top 10', 'Gns. plac.'];
   const tbody = el('tbody');
   for (const p of ranked) {
     tbody.append(el('tr', {},
       el('td', {}, el('span', { class: 'who' }, el('span', { class: 'key', style: `background:${p.color}` }), p.name)),
       el('td', {}, p.count), el('td', {}, fmt(p.avgDmg)), el('td', {}, fmt(p.bestDmg)),
       el('td', {}, fmt(p.avgKills, 2)), el('td', {}, fmt(p.kd, 2)), el('td', {}, fmt(p.avgKnocks, 2)),
-      el('td', {}, fmt(p.avgAssists, 2)), el('td', {}, p.headshots), el('td', {}, p.wins),
+      el('td', {}, fmt(p.avgAssists, 2)), el('td', {}, p.revives), el('td', {}, p.headshots), el('td', {}, p.wins),
       el('td', {}, p.top10), el('td', {}, p.count ? fmt(p.avgPlace, 1) : '–')));
   }
   app.append(el('div', { class: 'card tablewrap' },
@@ -727,6 +740,72 @@ function showTip(evt, g) {
   tip.style.top = Math.max(8, evt.clientY - h - 12) + 'px';
 }
 const hideTip = () => { tip.style.opacity = '0'; };
+// ================= Revives =================
+function renderRevives(app, teams, players) {
+  const order = players.map((p) => p.name);
+  const canon = (n) => order.find((o) => o.toLowerCase() === n.toLowerCase()) || n;
+  const colorBy = new Map(players.map((p) => [p.name.toLowerCase(), p.color]));
+  const keyEl = (n) => el('span', { class: 'key', style: `background:${colorBy.get(n.toLowerCase()) || 'var(--muted)'}` });
+  // Officielle revives (alle kampe) + detaljer fra kamplog (kampe med replay)
+  const st = new Map(order.map((n) => [n, { given: 0, games: 0, downs: 0, gotUp: 0, to: new Map() }]));
+  let detailed = 0;
+  for (const x of teams) {
+    for (const pl of x.t.players) {
+      const s = st.get(canon(pl.name)); if (!s) continue;
+      s.given += pl.revives || 0; s.games++;
+    }
+    if (!x.m.revives) continue;
+    detailed++;
+    const inTeam = new Set(x.t.players.map((p) => p.name));
+    for (const [a, v] of x.m.revives) {
+      if (!inTeam.has(a) || !inTeam.has(v)) continue;
+      const s = st.get(canon(a)); if (!s) continue;
+      s.to.set(canon(v), (s.to.get(canon(v)) || 0) + 1);
+      const sv = st.get(canon(v)); if (sv) sv.gotUp++;
+    }
+    for (const [n, c] of Object.entries(x.m.downs || {})) if (inTeam.has(n)) { const s = st.get(canon(n)); if (s) s.downs += c; }
+  }
+  const total = [...st.values()].reduce((a, s) => a + s.given, 0);
+  app.append(el('h2', {}, 'Revives', el('small', {}, `hvem rejser holdet · ${total} revives i ${teams.length} kampe`)));
+  if (!total) { app.append(el('div', { class: 'card empty' }, 'Ingen revives i perioden.')); return; }
+
+  const ranked = order.map((n) => ({ n, ...st.get(n) })).filter((r) => r.games).sort((a, b) => b.given - a.given || a.games - b.games);
+  const cards = el('div', { class: 'podium' });
+  ranked.forEach((r, i) => {
+    const fav = [...r.to.entries()].sort((a, b) => b[1] - a[1])[0];
+    cards.append(el('article', { class: 'card p' + (i === 0 ? ' first' : ''), style: `--c:${colorBy.get(r.n.toLowerCase())}` },
+      el('div', { class: 'top' }, el('div', { class: 'rank' }, `#${i + 1}`),
+        i === 0 ? el('div', { class: 'role' }, el('span', { class: 'armband', style: 'background:var(--win);color:#06210d', title: 'Feltlæge' }, '+'), 'Feltlæge') : null),
+      el('div', { class: 'name' }, keyEl(r.n), r.n),
+      el('div', { class: 'big' }, r.given),
+      el('div', { class: 'unit' }, `revives · ${fmt(r.given / r.games, 2)} pr. kamp`),
+      el('div', { class: 'rvlist' },
+        el('span', {}, 'Rejste oftest'), el('b', {}, fav ? `${fav[0]} · ${fav[1]}×` : '–'),
+        el('span', {}, 'Blev knocked'), el('b', {}, `${r.downs}×`),
+        el('span', {}, 'Blev rejst igen'), el('b', {}, r.downs ? `${r.gotUp}× · ${fmt((r.gotUp / r.downs) * 100)} %` : '–'))));
+  });
+
+  // Hvem rejser hvem
+  const maxCell = Math.max(1, ...ranked.flatMap((r) => [...r.to.values()]));
+  const head = el('tr', {}, el('th', { scope: 'col' }, 'Rejste ↓ · blev rejst →'), order.map((n) => el('th', { scope: 'col', title: n }, el('span', { class: 'who' }, keyEl(n), el('span', { class: 'rm-nm' }, n)))), el('th', { scope: 'col' }, 'I alt'));
+  const body = el('tbody');
+  for (const a of order) {
+    const s = st.get(a); if (!s.games) continue;
+    const sum = [...s.to.values()].reduce((x, y) => x + y, 0);
+    body.append(el('tr', {}, el('td', {}, el('span', { class: 'who' }, keyEl(a), a)),
+      order.map((v) => {
+        if (v === a) return el('td', { class: 'rm-self' }, '–');
+        const c = s.to.get(v) || 0;
+        return el('td', { class: 'rm-cell', style: c ? `background:rgba(47,194,74,${0.12 + 0.55 * (c / maxCell)})` : '' }, c || '·');
+      }),
+      el('td', {}, el('b', {}, sum))));
+  }
+  app.append(cards, el('div', { class: 'card pcard', style: 'margin-top:12px' },
+    el('h3', {}, 'Hvem rejser hvem', el('small', {}, `${detailed} af ${teams.length} kampe har detaljer`)),
+    el('div', { class: 'tablewrap' }, el('table', { class: 'rmatrix' }, el('thead', {}, head), body)),
+    el('div', { class: 'note' }, 'Antal revives i kortene er PUBG\'s officielle tal. "Hvem rejser hvem", knocks og hvor ofte man blev rejst kommer fra kamploggen, som kun findes for kampe med 2D-replay.')));
+}
+
 // ================= Våben (fra kamplog) =================
 function renderWeapons(app, teams, players) {
   const withData = teams.filter((x) => x.m.weapons);
